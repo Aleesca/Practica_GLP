@@ -21,12 +21,12 @@ $$V_{liq\_dia} = \frac{m_{dia}}{\rho} = \frac{1.264,52}{506} = 2,499 \text{ m}^3
 $$V_{geom} = \frac{V_{liq\_dia} \cdot A}{f_u} = \frac{2,499 \cdot 30}{0,65} = 115,34 \text{ m}^3 = 115.341 \text{ litros}$$
 
 ## 3. Selección Comercial
-Se selecciona una configuración de batería detallada en [seleccion_deposito.md](seleccion_deposito.md):
-- **Modelo:** **2 x LPVI 59A-22**
-- **Capacidad Total:** $118.800 \text{ litros}$
+Se selecciona una configuración de batería ajustada a las dimensiones de la parcela (ver evolución en [seleccion_deposito.md](seleccion_deposito.md)):
+- **Modelo:** **1 x LP46A-22 (Modelo Especial)** + **3 x LP26A-22**
+- **Capacidad Total:** $125.100 \text{ litros}$
 
 ## 4. Conclusión
-La instalación garantiza una autonomía real de **30,9 días**, cumpliendo con los requisitos del proyecto.
+La instalación garantiza una autonomía real de **32,5 días**, cumpliendo con los 30 días requeridos por la TAREA 3.
 
 ---
 **Véase también:**
