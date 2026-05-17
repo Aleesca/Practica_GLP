@@ -27,6 +27,8 @@ Segun la tabla tecnica utilizada en `calculos/calculos.ipynb`, el **VIA 150** ti
 - Capacidad de vaporizacion forzada: **150 kg/h**.
 - Potencia minima de caldera: **17,5 kW**.
 
+La consulta documental al notebook `GLP` confirma el mismo valor para el **VIA 150** y permite identificar que el armario **VPC30C** incorpora una caldera de **45 kW**.
+
 La capacidad total garantizada con el sistema mixto queda:
 
 $$
@@ -47,11 +49,21 @@ $$
 P_{armario,min} = 17,5\ \text{kW}
 $$
 
-El armario seleccionado, identificado en la documentacion del proyecto como **VPC30C**, debe acreditar una potencia termica igual o superior a **17,5 kW** para ser coherente con el vaporizador interno adoptado. Al no quedar confirmada en esta implementacion una potencia nominal adicional desde NotebookLM o ficha tecnica accesible, no se introduce un valor nominal distinto del requisito minimo documentado.
+El armario seleccionado, identificado en la documentacion del proyecto como **VPC30C**, incorpora una caldera de **45 kW**. La comprobacion de suficiencia queda:
+
+$$
+45,0\ \text{kW} \ge 17,5\ \text{kW}
+$$
+
+Por tanto, el margen de potencia termica disponible en el armario es:
+
+$$
+P_{margen} = 45,0 - 17,5 = 27,5\ \text{kW}
+$$
 
 ## 4. Conclusion
 
-La instalacion del armario de calefaccion es necesaria porque la vaporizacion natural disponible en las condiciones criticas de diseno no garantiza el caudal requerido por la instalacion. Con el vaporizador interno **VIA 150** y una potencia minima de caldera de **17,5 kW**, el sistema mixto alcanza **281,30 kg/h**, suficiente para cubrir la demanda punta de **187,81 kg/h**.
+La instalacion del armario de calefaccion es necesaria porque la vaporizacion natural disponible en las condiciones criticas de diseno no garantiza el caudal requerido por la instalacion. Con el vaporizador interno **VIA 150** y una potencia minima de caldera de **17,5 kW**, el sistema mixto alcanza **281,30 kg/h**, suficiente para cubrir la demanda punta de **187,81 kg/h**. El armario **VPC30C**, con **45 kW**, cubre la potencia minima exigida.
 
 ---
 **Vease tambien:**
