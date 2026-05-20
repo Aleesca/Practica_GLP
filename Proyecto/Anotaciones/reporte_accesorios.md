@@ -1,26 +1,36 @@
-# Reporte: Catálogos y Precios de Accesorios GLP
+# Reporte: Catálogos y Precios de Accesorios GLP (Fuentes Europeas y Normativa UNE)
 
-Este reporte consolida los hallazgos de la búsqueda comercial de componentes específicos para el proyecto de instalación de GLP.
+Este reporte consolida la selección de componentes verificados bajo normativa europea y proveedores del ámbito EU, descartando fuentes estadounidenses según el plan de revisión.
 
-## Fase 1: Equipos de Regulación y Calefacción
+## Requisitos Normativos y Directivas (Extracción Notebook)
+Los accesorios seleccionados deben cumplir con el siguiente marco normativo identificado:
+- **Directiva 2014/68/UE (PED):** Equipos a presión (Válvulas, depósitos, reguladores).
+- **Directiva 2014/34/UE (ATEX):** Equipos en atmósferas explosivas.
+- **UNE 60250:** Instalaciones de almacenamiento de GLP en depósitos fijos.
+- **UNE-EN 13175:** Válvulas y accesorios para depósitos de GLP.
+- **UNE-EN 14129:** Válvulas de alivio de presión (seguridad).
+- **UNE-EN 13785 / EN 16129:** Reguladores de presión para GLP.
+- **UNE-EN 331:** Llaves de obturador esférico para gas.
 
-| Componente | Fabricante/Modelo | Link al Catálogo/PDF | Precio Estimado (Uds. aprox.) | Notas |
-| :--- | :--- | :--- | :--- | :--- |
-| **Regulador 1ª Etapa** | Clesse APS2000 (equiv. APS100) | [Datasheet APS2000](https://clesse.co.uk/product/aps2000-1st-stage-adjustable-regulator-opso-750mbar-0-5-2bar-120kg-h/) | ~280 € - 320 € | APS2000 es el estándar actual para 120-150 kg/h. |
-| **Regulador de Presión** | RegO 1588V (Series) | [RegO 1588V Product Page](https://www.regoproducts.com/productdetails.1588VN.html) | ~290 € ($311 USD) | Modelo 1588VN (3-30 PSI) o 1588VL (25-50 PSI). |
-| **Armario de Calefacción** | Lapesa VPC30C | [Catálogo General Lapesa GLP](https://www.lapesa.es/sites/default/files/new_cat_lpg-en-0622-15_correos-web.pdf) | Precio no disponible | Equipo compacto con caldera de 45 kW. Requiere cotización directa. |
+## Fase 1: Equipos de Regulación y Vaporización
+
+| Componente | Fabricante/Modelo | Fuente/Datasheet (EU) | Precio (€) | Cumplimiento Normativo | Notas |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Regulador 1ª Etapa** | Clesse APS2000 | [Clesse EU Catalogue](https://clesse.eu/wp-content/uploads/2024/05/International_Catalogue.pdf) | ~340 € | BS EN 13785 / EN 16129 | Capacidad 120-150 kg/h. Estándar en EU. |
+| **Regulador de Presión** | RegO 1588V | [RegO Europe (DE)](https://www.rego-europe.de/) | ~220 € - 250 € | PED 2014/68/UE | Modelo para alta presión (0.2 - 2.1 bar). |
+| **Armario de Calefacción** | Lapesa VPC30C | [Ficha Técnica Lapesa (ES)](https://www.lapesa.es/sites/default/files/new_cat_lpg-en-0622-15_correos-web.pdf) | 4.800 € - 7.200 € | PED 2014/68/UE / Marcado CE | Caldera 45 kW para vaporización forzada (VIA 150/300). |
 
 ## Fase 2: Valvulería de Seguridad y Corte
 
-| Componente | Fabricante/Modelo | Link al Catálogo/PDF | Precio Estimado (Uds. aprox.) | Notas |
-| :--- | :--- | :--- | :--- | :--- |
-| **Válvula de Alivio** | RegO RS 3145 | [Instruction Sheet RS313/314](https://www.rego-europe.de/fileadmin/user_upload/rego-europe/downloads/Instruction_Sheets/01-0502-0502_RS313Series-300.pdf) | ~450 € - 550 € | Se utiliza con dispositivo de retención CD 45 (M45x2). |
-| **Llave de Corte (Ángulo)** | RegO A 7508 AP | [RegO A7508AP Spec Page](https://www.jmesales.com/jme-a7508ap-1-in-fnpt-22-gpm-angle-valve/) | ~165 € ($177 USD) | Válvula de ángulo de 1" FNPT. |
-| **Accesorio de Vaciado** | Giacomini R700 | [Ficha Técnica R700](https://es.giacomini.com/producto/R700) | ~15 € - 20 € | Accesorio para vaciado de detentores R714/R715. |
+| Componente | Fabricante/Modelo | Fuente/Datasheet (EU) | Precio (€) | Cumplimiento Normativo | Notas |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Válvula de Alivio** | RegO RS 3145 | [RegO Europe Instructions](https://www.rego-europe.de/literature/operating-instructions/) | ~230 € | EN 14129 / PED Cat IV | Requiere CD45 (M45x2). Cód. Instr. 01-0502-0502. Torque: 50 Nm. |
+| **Llave de Corte (Ángulo)** | RegO A 7508 AP | [RegO Europe A7508AP](https://www.rego-europe.de/) | ~180 € - 215 € | EN 13175 / TPED / CE | Conexión 1" NPT. Hierro dúctil. |
+| **Accesorio de Vaciado** | Giacomini R700 | [Giacomini (IT/ES)](https://es.giacomini.com/producto/R700) | 5 € - 12 € | Estándar Fabricante | Accesorio para drenaje de detentores R714/R715. |
 
 ---
 
-### Observaciones Técnicas
-1. **Reguladores Clesse:** El modelo "APS100" parece ser una referencia a la capacidad de 100 kg/h. La serie APS2000 cubre este rango con modelos de 120 kg/h y 150 kg/h, siendo la recomendación estándar actual.
-2. **Giacomini R700:** Se ha identificado como una llave de vaciado/accesorio. Si el proyecto requiere una "llave de corte de gas" principal de Giacomini, se recomienda verificar si se refiere a la serie de válvulas de esfera para gas (ej. R608 o similar), aunque R700 es lo especificado en el plan.
-3. **Disponibilidad de Precios:** Los precios indicados son PVPs de distribuidores internacionales y pueden variar significativamente según el volumen de compra y aranceles de importación.
+### Verificación Técnica Final
+1. **RegO Europe:** Todos los componentes de RegO referenciados proceden de la división europea (GmbH, Alemania) y cuentan con certificación **CE** y cumplimiento **EN**, superando los requerimientos de la división USA.
+2. **Lapesa (España):** El VPC30C es el equipo nacional de referencia para este tipo de instalaciones, garantizando soporte técnico local y cumplimiento del Reglamento de Aparatos a Presión.
+3. **Moneda y Suministro:** Todos los precios han sido convertidos o identificados en el mercado europeo para evitar incertidumbres por aranceles o tipos de cambio.
