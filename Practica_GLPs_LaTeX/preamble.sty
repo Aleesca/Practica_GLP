@@ -133,6 +133,9 @@
 %\renewcommand{\cfttabpresnum}{Tabla~\thetable\quad}
 %\renewcommand{\cfttabaftersnum}{}
 
+% --- Mini índices por capítulo (etoc) ---
+\usepackage[lof,lot]{etoc}
+
 % Se activan hipervinculos
 \usepackage{hyperref}
 \hypersetup{
@@ -144,6 +147,7 @@
     pdfstartview={FitH},
     pdfpagemode={UseNone}
 }
+\RemoveFromHook{cmd/addcontentsline/before}[hyp]
 
 % Redefinir formato de referencias de figuras y tablas
 \AtBeginDocument{%
@@ -164,9 +168,6 @@
   \hyperref[#1]{Tabla~\ref*{#1}}%
 }
 \makeatother
-
-% --- Mini índices por capítulo (etoc) ---
-\usepackage[lof,lot]{etoc}
 \newcommand{\secttoc}{%
   \etocsettocstyle{\section*{Índice de contenidos}}{}%
   \etocsetnexttocdepth{3}%
