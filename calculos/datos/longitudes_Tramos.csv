@@ -1,0 +1,14 @@
+﻿Nº;Tramo / zona;Designación;Longitud (m)
+1;Derivación vertical en CADA depósito;D1, D2, D3, D4;1,90
+2;Colector superior desde zona de depósitos;D4-A;15,12
+3;Derivación hacia C1;A-C1;1,81
+4;Bajante a C2;A-B;4,97
+5;Derivación hacia C2;B-C2;21,79
+6;Bajante a C3;B-C;17,32
+7;Derivación hacia C3;C-C3;1,75
+8;Línea hasta C4;C-D;10,77
+9;Derivación hacia C4;D-C4;1,68
+10;Línea hasta C5;D-E;13,06
+11;Derivación hacia C5;E-C5;1,69
+12;Línea hasta C6;E-C6;14,46
+;;;

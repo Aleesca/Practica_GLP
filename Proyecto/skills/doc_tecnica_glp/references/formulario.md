@@ -120,7 +120,7 @@ Donde:
 $$ P_A - P_B = 25076 \cdot d_c \cdot L_c \cdot \frac{Q^{1.82}}{D^{4.82}} $$
 
 ## Longitudes de cálculo
-- **BP:** $L_c = 1.05 \times L$
+- **BP:** $L_c = 1.20 \times L$
 - **MP:** $L_c = 1.05 \times L$
 
 ## Pérdida de carga lineal
