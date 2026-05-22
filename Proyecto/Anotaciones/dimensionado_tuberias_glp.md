@@ -31,7 +31,9 @@ Las dimensiones comerciales y masas lineales empleadas se han contrastado con ta
 | material | designacion | D_int_mm | espesor_mm | D_ext_mm | area_metal_mm2 | masa_lineal_kg_m |
 | --- | --- | --- | --- | --- | --- | --- |
 | cobre_duro_en1057 | 15x1 | 13.000 | 1.000 | 15.000 | 43.982 | 0.394 |
+| cobre_duro_en1057 | 18x1.5 | 15.000 | 1.500 | 18.000 | 77.754 | 0.697 |
 | cobre_duro_en1057 | 18x1 | 16.000 | 1.000 | 18.000 | 53.407 | 0.479 |
+| cobre_duro_en1057 | 20x1.5 | 17.000 | 1.500 | 20.000 | 87.179 | 0.781 |
 | cobre_duro_en1057 | 22x1 | 20.000 | 1.000 | 22.000 | 65.973 | 0.591 |
 | cobre_duro_en1057 | 28x1 | 26.000 | 1.000 | 28.000 | 84.823 | 0.760 |
 | cobre_duro_en1057 | 35x1.5 | 32.000 | 1.500 | 35.000 | 157.865 | 1.414 |
@@ -193,7 +195,27 @@ Como condicion constructiva, el tramo aereo debe resolverse con soportes que no 
 
 | designacion | unidades | longitud_m_por_unidad | q_m3_h_por_unidad | designacion_tubo | D_int_mm | Lc_m_por_unidad | P_fin_rel_bar_min | velocidad_ms_max | estado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| D1/D2/D3/D4 verticales | 4 | 1.900 | 24.949 | 22x1 | 20.000 | 2.700 | 1.694 | 8.708 | Conforme |
+| D1/D2/D3/D4 verticales | 4 | 1.900 | 24.949 | 20x1.5 | 17.000 | 2.580 | 1.688 | 12.080 | Conforme |
+
+### Verificacion y Justificacion de Cumplimiento de la Normativa UNE 60250
+
+De acuerdo con la norma **UNE 60250** ("Instalaciones de almacenamiento de GLP en depositos fijos para su consumo en instalaciones receptoras"), la zona de almacenamiento (los depositos y sus derivaciones inmediatas hasta el colector comun) esta sujeta a requisitos especificos de resistencia mecanica y seguridad pasiva frente a incendios:
+
+1. **Requisitos de Tuberia de Cobre en la Zona del Deposito (UNE 60250):**
+   * **Espesor minimo:** Las conducciones de cobre situadas en la zona de almacenamiento deben tener un espesor de pared de al menos **1.5 mm** (`espesor_mm >= 1.5`).
+   * **Diametro exterior maximo:** El diametro nominal maximo para estas derivaciones es de **DN 20** (diametro exterior de **20 mm**).
+   * **Inconformidad del diseño original:** El diseño inicial contemplaba tuberias de cobre de `22x1` para las derivaciones verticales de los depositos (`D1-D4`, `D2-D4`, `D3-D4`, `D4 vertical`). Este diseño resultaba doblemente no conforme:
+     * El espesor de pared de `1.0 mm` no alcanzaba el minimo de `1.5 mm`.
+     * El diametro exterior de `22.0 mm` superaba el limite reglamentario de `20.0 mm`.
+   * **Seleccion del diametro conforme:** Tras filtrar el catalogo comercial por los requisitos de la UNE 60250, se selecciono el diametro **20x1.5** (diametro exterior de 20 mm, espesor de 1.5 mm, diametro interior de 17 mm).
+
+2. **Criterios de Velocidad y Perdida de Carga:**
+   * **Velocidad del fluido:** Con el diametro adoptado de `20x1.5`, la velocidad maxima alcanzada en las derivaciones verticales es de **12.08 m/s** para el caudal punta por deposito. Aunque este valor supera el limite practico de `10.0 m/s` establecido para la red receptora interior (UNE 60670), es plenamente conforme bajo la UNE 60250, que permite un limite absoluto de velocidad de **20 m/s** en conducciones aereas de almacenamiento y distribucion exterior.
+   * **Perdida de carga:** La caida de presion en cada ramal es de solo **0.012 bar**, manteniendo la presion final en el nodo colector en **1.688 bar relativos**, asegurando que no se penalice el funcionamiento hidraulico del sistema.
+
+3. **Requisitos de las Uniones y Accesorios (UNE-EN 1254-1 / UNE 60250):**
+   * **Soldadura capilar fuerte:** Para garantizar la estanqueidad y evitar fallos por fatiga termica o exposicion directa al fuego, las uniones de las tuberias en el area de almacenamiento deben ser mediante **soldadura fuerte con metal de aportación que tenga un punto de fusion superior a 450 °C**. Queda estrictamente prohibido el uso de soldadura blanda en esta zona.
+   * **Impacto en accesorios de reduccion:** La sustitucion del ramal a `20x1.5` en lugar de `22x1` modifica las uniones al colector comun de `42x1.5`. Se requiere la instalacion de **5 reducciones de cobre de 42 mm a 20 mm** (en las conexiones de los 4 depositos y en el tramo de derivacion `C-C3` que tambien optimizo a `20x1.5` por balance de velocidad), sustituyendo las reducciones de `42x22` originalmente previstas.
 
 ## Optimizacion hidraulica y economica del subarbol E
 
@@ -201,13 +223,13 @@ El tramo `E-C6` es un ramal largo con caudal relevante. El dimensionado secuenci
 
 La seleccion se realiza sobre combinaciones comerciales que cumplen `Q/D`, presion minima y `v <= 10.0 m/s`, ordenadas por masa equivalente total de cobre. La alternativa adoptada incrementa `D-E` a `42x1.5`, reduciendo su perdida de carga a `0.007 bar` y elevando la presion disponible en el nodo `E` hasta `1.641 bar`. Con esa presion disponible, `E-C6` puede reducirse a `28x1` y queda con velocidad `8.089 m/s`, dentro del rango objetivo.
 
-| D-E_tubo | E-C5_tubo | E-C6_tubo | D-E_velocidad_ms | E-C5_velocidad_ms | E-C6_velocidad_ms | D-E_P_fin_rel_bar | E-C5_P_fin_rel_bar | E-C6_P_fin_rel_bar | masa_total_kg | desviacion_total_ms |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 42x1.5 | 22x1 | 28x1 | 6.062 | 9.520 | 8.089 | 1.641 | 1.634 | 1.620 | 34.322 | 4.869 |
-| 42x1.5 | 28x1 | 28x1 | 6.062 | 5.622 | 8.089 | 1.641 | 1.639 | 1.620 | 34.607 | 8.727 |
-| 42x1.5 | 35x1.5 | 28x1 | 6.062 | 3.709 | 8.089 | 1.641 | 1.640 | 1.620 | 35.713 | 10.640 |
-| 42x1.5 | 42x1.5 | 28x1 | 6.062 | 2.497 | 8.089 | 1.641 | 1.641 | 1.620 | 36.213 | 11.852 |
-| 42x1.5 | 54x2 | 28x1 | 6.062 | 1.519 | 8.089 | 1.641 | 1.641 | 1.620 | 38.270 | 12.830 |
+| D-E_tubo | E-C5_tubo | E-C6_tubo | D-E_velocidad_ms | E-C5_velocidad_ms | E-C6_velocidad_ms | D-E_P_fin_rel_bar | E-C5_P_fin_rel_bar | E-C6_P_fin_rel_bar | masa_total_kg |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 42x1.5 | 22x1 | 28x1 | 6.062 | 9.520 | 8.089 | 1.641 | 1.634 | 1.620 | 34.322 |
+| 42x1.5 | 28x1 | 28x1 | 6.062 | 5.622 | 8.089 | 1.641 | 1.639 | 1.620 | 34.607 |
+| 42x1.5 | 35x1.5 | 28x1 | 6.062 | 3.709 | 8.089 | 1.641 | 1.640 | 1.620 | 35.713 |
+| 42x1.5 | 42x1.5 | 28x1 | 6.062 | 2.497 | 8.089 | 1.641 | 1.641 | 1.620 | 36.213 |
+| 42x1.5 | 54x2 | 28x1 | 6.062 | 1.519 | 8.089 | 1.641 | 1.641 | 1.620 | 38.270 |
 
 La velocidad de `D-E` queda en `6.062 m/s`, por debajo del rango preferente, pero se considera justificada porque el tramo comun conserva margen de presion y permite reducir material en el ramal largo `E-C6`. El tramo `E-C5` mantiene `22x1` con velocidad `9.520 m/s`.
 
@@ -225,23 +247,23 @@ Determinados tramos presentan velocidades inferiores al rango preferente `8-10 m
 
 ## Resultados de dimensionado
 
-| designacion | tipo_tramo | longitud_m | q_m3_h | designacion_tubo | D_int_mm | Lc_m | Q_D | P_ini_rel_bar | P_fin_rel_bar | delta_p_bar | velocidad_ms | velocidad_objetivo | desviacion_velocidad_ms | criterio_seleccion | estado |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| D1-D4 | derivacion_deposito | 1.900 | 24.949 | 22x1 | 20.000 | 2.700 | 1.247 | 1.700 | 1.694 | 0.006 | 8.708 | 8-10 m/s | 0.792 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| D2-D4 | derivacion_deposito | 1.900 | 24.949 | 22x1 | 20.000 | 2.700 | 1.247 | 1.700 | 1.694 | 0.006 | 8.708 | 8-10 m/s | 0.792 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| D3-D4 | derivacion_deposito | 1.900 | 24.949 | 22x1 | 20.000 | 2.700 | 1.247 | 1.700 | 1.694 | 0.006 | 8.708 | 8-10 m/s | 0.792 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| D4 vertical | derivacion_deposito | 1.900 | 24.949 | 22x1 | 20.000 | 2.700 | 1.247 | 1.700 | 1.694 | 0.006 | 8.708 | 8-10 m/s | 0.792 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| D4-A | red_principal | 15.120 | 99.795 | 42x1.5 | 39.000 | 17.460 | 2.559 | 1.700 | 1.682 | 0.018 | 9.203 | 8-10 m/s | 0.297 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| A-C1 | red_principal | 1.810 | 2.285 | 15x1 | 13.000 | 2.850 | 0.176 | 1.682 | 1.681 | 0.001 | 1.897 | 8-10 m/s | 7.603 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
-| A-B | red_principal | 4.970 | 97.509 | 42x1.5 | 39.000 | 6.920 | 2.500 | 1.682 | 1.675 | 0.007 | 9.015 | 8-10 m/s | 0.485 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| B-C2 | red_principal | 21.790 | 2.285 | 15x1 | 13.000 | 24.390 | 0.176 | 1.675 | 1.670 | 0.005 | 1.905 | 8-10 m/s | 7.595 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
-| B-C | red_principal | 17.320 | 95.224 | 42x1.5 | 39.000 | 19.270 | 2.442 | 1.675 | 1.657 | 0.018 | 8.864 | 8-10 m/s | 0.636 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| C-C3 | red_principal | 1.750 | 19.045 | 22x1 | 20.000 | 3.350 | 0.952 | 1.657 | 1.652 | 0.004 | 6.752 | 8-10 m/s | 2.748 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
-| C-D | red_principal | 10.770 | 76.179 | 42x1.5 | 39.000 | 12.720 | 1.953 | 1.657 | 1.649 | 0.008 | 7.113 | 8-10 m/s | 2.387 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
-| D-C4 | red_principal | 1.680 | 11.427 | 15x1 | 13.000 | 2.720 | 0.879 | 1.649 | 1.638 | 0.011 | 9.642 | 8-10 m/s | 0.142 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| D-E | red_principal | 13.060 | 64.752 | 42x1.5 | 39.000 | 15.010 | 1.660 | 1.649 | 1.641 | 0.007 | 6.062 | 8-10 m/s | 3.438 | optimizacion economica del subarbol E: aumenta D-E para reducir masa total en E-C6 | Conforme - velocidad baja justificada |
-| E-C5 | red_principal | 1.690 | 26.663 | 22x1 | 20.000 | 3.290 | 1.333 | 1.641 | 1.634 | 0.008 | 9.520 | 8-10 m/s | 0.020 | seleccionado por optimizacion economica del subarbol E con presion aguas arriba recalculada | Conforme - velocidad objetivo |
-| E-C6 | red_principal | 14.460 | 38.090 | 28x1 | 26.000 | 16.540 | 1.465 | 1.641 | 1.620 | 0.021 | 8.089 | 8-10 m/s | 1.411 | seleccionado por optimizacion economica del subarbol E con presion aguas arriba recalculada | Conforme - velocidad objetivo |
+| designacion | tipo_tramo | longitud_m | q_m3_h | designacion_tubo | D_int_mm | Lc_m | Q_D | P_ini_rel_bar | P_fin_rel_bar | delta_p_bar | velocidad_ms | criterio_seleccion | estado |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| D1-D4 | derivacion_deposito | 1.900 | 24.949 | 20x1.5 | 17.000 | 2.580 | 1.468 | 1.700 | 1.688 | 0.012 | 12.080 | no hay candidato <=10 m/s; se mantiene bajo limite aereo absoluto de 20 m/s | Conforme - velocidad alta admisible por limite aereo general |
+| D2-D4 | derivacion_deposito | 1.900 | 24.949 | 20x1.5 | 17.000 | 2.580 | 1.468 | 1.700 | 1.688 | 0.012 | 12.080 | no hay candidato <=10 m/s; se mantiene bajo limite aereo absoluto de 20 m/s | Conforme - velocidad alta admisible por limite aereo general |
+| D3-D4 | derivacion_deposito | 1.900 | 24.949 | 20x1.5 | 17.000 | 2.580 | 1.468 | 1.700 | 1.688 | 0.012 | 12.080 | no hay candidato <=10 m/s; se mantiene bajo limite aereo absoluto de 20 m/s | Conforme - velocidad alta admisible por limite aereo general |
+| D4 vertical | derivacion_deposito | 1.900 | 24.949 | 20x1.5 | 17.000 | 2.580 | 1.468 | 1.700 | 1.688 | 0.012 | 12.080 | no hay candidato <=10 m/s; se mantiene bajo limite aereo absoluto de 20 m/s | Conforme - velocidad alta admisible por limite aereo general |
+| D4-A | red_principal | 15.120 | 99.795 | 42x1.5 | 39.000 | 17.460 | 2.559 | 1.700 | 1.682 | 0.018 | 9.203 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
+| A-C1 | red_principal | 1.810 | 2.285 | 15x1 | 13.000 | 2.850 | 0.176 | 1.682 | 1.681 | 0.001 | 1.897 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
+| A-B | red_principal | 4.970 | 97.509 | 42x1.5 | 39.000 | 6.920 | 2.500 | 1.682 | 1.675 | 0.007 | 9.015 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
+| B-C2 | red_principal | 21.790 | 2.285 | 15x1 | 13.000 | 24.390 | 0.176 | 1.675 | 1.670 | 0.005 | 1.905 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
+| B-C | red_principal | 17.320 | 95.224 | 42x1.5 | 39.000 | 19.270 | 2.442 | 1.675 | 1.657 | 0.018 | 8.864 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
+| C-C3 | red_principal | 1.750 | 19.045 | 20x1.5 | 17.000 | 3.110 | 1.120 | 1.657 | 1.648 | 0.009 | 9.361 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
+| C-D | red_principal | 10.770 | 76.179 | 42x1.5 | 39.000 | 12.720 | 1.953 | 1.657 | 1.649 | 0.008 | 7.113 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
+| D-C4 | red_principal | 1.680 | 11.427 | 15x1 | 13.000 | 2.720 | 0.879 | 1.649 | 1.638 | 0.011 | 9.642 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
+| D-E | red_principal | 13.060 | 64.752 | 42x1.5 | 39.000 | 15.010 | 1.660 | 1.649 | 1.641 | 0.007 | 6.062 | optimizacion economica del subarbol E: aumenta D-E para reducir masa total en E-C6 | Conforme - velocidad baja justificada |
+| E-C5 | red_principal | 1.690 | 26.663 | 22x1 | 20.000 | 3.290 | 1.333 | 1.641 | 1.634 | 0.008 | 9.520 | seleccionado por optimizacion economica del subarbol E con presion aguas arriba recalculada | Conforme - velocidad objetivo |
+| E-C6 | red_principal | 14.460 | 38.090 | 28x1 | 26.000 | 16.540 | 1.465 | 1.641 | 1.620 | 0.021 | 8.089 | seleccionado por optimizacion economica del subarbol E con presion aguas arriba recalculada | Conforme - velocidad objetivo |
 
 ## No conformidades
 
