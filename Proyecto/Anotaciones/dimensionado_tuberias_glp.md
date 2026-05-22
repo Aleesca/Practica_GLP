@@ -10,7 +10,11 @@ La red se calcula para propano en fase gas. Se adopta densidad corregida Renouar
 
 La red se proyecta para GLP en fase gas y trazado exterior aereo. Se adopta tuberia metalica de cobre duro estirado sin soldadura conforme a EN 1057, con espesor minimo de 1 mm, por su compatibilidad con instalaciones receptoras de GLP y por permitir ejecucion vista protegida. El polietileno se descarta para estos tramos al tratarse de conduccion aerea expuesta; el acero al carbono se considera alternativa tecnica posible si se justifica proteccion frente a corrosion y autorizacion/criterio especifico aplicable a media presion.
 
-El dimensionado se realiza en media presion con presion inicial relativa de 1,70 bar y caida maxima admisible del 5%, por lo que la presion minima de comprobacion es 1,615 bar relativos. Se adopta una velocidad practica de diseno no superior a 10 m/s para limitar ruido y perdidas localizadas, manteniendo 20 m/s como limite absoluto para conducciones aereas generales. El rango operativo preferente se fija en 8-10 m/s; cuando no es alcanzable por diametro comercial minimo o por equilibrio de presion, la velocidad baja se documenta como condicion justificada, no como no conformidad.
+### Criterio de velocidad: limite aereo y limite de proyecto
+
+Para una canalizacion aerea de GLP en fase gas se toma como referencia general el limite maximo de `20 m/s`, asociado a redes generales de distribucion y acometidas aereas. No obstante, el presente proyecto no corresponde a una red general de distribucion de GLP canalizado para distintos abonados, sino a una instalacion receptora alimentada desde almacenamiento propio que suministra a consumidores finales de un unico usuario industrial. De acuerdo con la clasificacion tecnica de instalaciones receptoras, cuando existe un unico usuario la IRG se considera instalacion individual; para instalacion comun o individual el limite de velocidad aplicable es `10 m/s`. Por ello se adopta `10 m/s` como limite de proyecto y `8-10 m/s` como rango operativo preferente. El valor `20 m/s` queda documentado solo como limite maximo de referencia para conducciones aereas generales, pero no gobierna la seleccion de diametros de esta instalacion receptora industrial.
+
+La fuente de calculo empleada establece tres limites de velocidad por tipo de conduccion: `30 m/s` para red general enterrada, `20 m/s` para red general y acometidas aereas, y `10 m/s` para instalacion comun en edificios e instalacion individual. La misma documentacion define que la red de distribucion no existe en GLP a granel y que, si la instalacion receptora suministra a un unico usuario, se considera instalacion individual. En consecuencia, cada tramo se comprueba frente a `v <= 10.0 m/s` como criterio aplicable de proyecto; el valor `v <= 20.0 m/s` se conserva solo como contraste de limite aereo general. La seleccion final prioriza el intervalo `8-10 m/s` cuando el catalogo y la presion disponible lo permiten.
 
 Desde el punto de vista de optimizacion, el diametro seleccionado no se determina unicamente por velocidad. Para cada tramo se comprueba simultaneamente la condicion de aplicacion de Renouard `Q/D < 150`, la presion minima final, la velocidad practica y el catalogo comercial disponible. En tramos terminales de pequeno caudal puede aparecer velocidad baja cuando ya se ha alcanzado el diametro comercial minimo. En ramales de mayor longitud se evalua ademas el equilibrio entre aumentar ligeramente el tramo comun aguas arriba y reducir el diametro del ramal final, usando la masa lineal del tubo como estimador tecnico del coste.
 
@@ -18,7 +22,7 @@ Desde el punto de vista de optimizacion, el diametro seleccionado no se determin
 
 Material adoptado: **Cobre duro estirado sin soldadura EN 1057, espesor minimo 1 mm, instalacion aerea protegida**.
 
-Se selecciona cobre duro estirado sin soldadura como material metalico apto para la red exterior en fase gas para fase gas en GLP y evita la restriccion indicada para redes de acero en media presion salvo autorizacion. El PE se descarta por ser canalizacion aerea exterior. La alternativa de acero al carbono queda tecnicamente posible solo con proteccion pasiva y autorizacion o documentacion especifica. La seleccion queda supeditada a que el material mantenga presion maxima admisible suficiente frente a la presion de servicio y a las condiciones de montaje exterior.
+Se selecciona cobre duro estirado sin soldadura como material metalico apto para la red exterior en fase gas de GLP. Esta solucion evita recurrir a PE en tramos aereos y simplifica la proteccion frente a corrosion respecto al acero al carbono. El PE se descarta por ser canalizacion aerea exterior. La alternativa de acero al carbono queda tecnicamente posible solo con proteccion pasiva y autorizacion o documentacion especifica. La seleccion queda supeditada a que el material mantenga presion maxima admisible suficiente frente a la presion de servicio y a las condiciones de montaje exterior.
 
 El catalogo utilizado incorpora diametro interior, espesor, diametro exterior y masa lineal estimada a partir de la seccion metalica y densidad del cobre `8960 kg/m3`. Esta masa lineal se emplea solo como criterio comparativo interno para seleccionar alternativas equivalentes desde el punto de vista hidraulico.
 
@@ -124,6 +128,8 @@ Los caudales aguas arriba se obtienen por suma de los consumidores descendentes,
 
 El inventario de accesorios se introduce como longitud equivalente proporcional al diametro. Se consideran codos por cambios de direccion, tes en derivaciones, valvulas de corte por consumidor y por salida de deposito, y reducciones cuando el ramal deriva hacia un diametro inferior.
 
+En el tramo `B-C2` se conserva la longitud real `21,79 m`, ya que corresponde a la suma de `0,53 m` a nivel de suelo, `8,00 m` de subida, `5,26 m` de tramo horizontal aereo y `8,00 m` de bajada. La revision no altera dicha longitud geometrica, pero si incorpora cuatro codos de 90 grados asociados a los cambios de direccion suelo-subida, subida-horizontal, horizontal-bajada y conexion final al consumidor. El desnivel no se corrige mediante termino hidrostatico porque el ramal sube y baja hasta una cota final equivalente y la comprobacion se realiza para GLP en fase gas.
+
 | designacion | accesorio | cantidad | coef_leq_D | criterio |
 | --- | --- | --- | --- | --- |
 | D1-D4 | codo_90 | 1 | 30 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
@@ -145,6 +151,7 @@ El inventario de accesorios se introduce como longitud equivalente proporcional 
 | B-C2 | te_desviada | 1 | 60 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | B-C2 | valvula_corte | 1 | 10 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | B-C2 | reduccion | 1 | 10 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
+| B-C2 | codo_90 | 4 | 30 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | B-C | codo_90 | 1 | 30 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | B-C | te_linea | 1 | 20 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | C-C3 | te_desviada | 1 | 60 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
@@ -163,6 +170,24 @@ El inventario de accesorios se introduce como longitud equivalente proporcional 
 | E-C6 | te_desviada | 1 | 60 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | E-C6 | valvula_corte | 1 | 10 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
 | E-C6 | reduccion | 1 | 10 | visible/hipotesis conservadora segun esquema_instalacion.pdf |
+
+### Sensibilidad del tramo B-C2
+
+| subtramo | descripcion | longitud_m | tipo |
+| --- | --- | --- | --- |
+| B-C2.1 | tramo inicial a nivel de suelo | 0.530 | horizontal_suelo |
+| B-C2.2 | subida vertical hasta tramo aereo | 8.000 | vertical_subida |
+| B-C2.3 | tramo horizontal aereo | 5.260 | horizontal_aereo |
+| B-C2.4 | bajada vertical hasta consumidor C2 | 8.000 | vertical_bajada |
+
+La comparacion siguiente muestra el efecto de incorporar los codos del trazado vertical-aereo. El diametro se mantiene en `15x1`, por ser el minimo del catalogo adoptado y porque la presion final sigue por encima del minimo admisible.
+
+| escenario | designacion_tubo | D_int_mm | Lc_m | P_ini_rel_bar | P_fin_rel_bar | delta_p_bar | velocidad_ms | incremento_Lc_m | incremento_delta_p_bar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| anterior: sin codos vertical-aereo adicionales | 15x1 | 13.000 | 22.830 | 1.675 | 1.670 | 0.005 | 1.905 | 0.000 | 0.000 |
+| revisado: con 4 codos 90 por subida/bajada | 15x1 | 13.000 | 24.390 | 1.675 | 1.670 | 0.005 | 1.905 | 1.560 | 0.000 |
+
+Como condicion constructiva, el tramo aereo debe resolverse con soportes que no carguen sobre uniones, separacion respecto a paramentos, proteccion anticorrosiva, identificacion de fase gas y previsiones de dilatacion si la longitud expuesta queda sometida a variaciones termicas relevantes.
 
 ## Derivaciones verticales de deposito
 
@@ -190,7 +215,7 @@ La velocidad de `D-E` queda en `6.062 m/s`, por debajo del rango preferente, per
 
 Determinados tramos presentan velocidades inferiores al rango preferente `8-10 m/s`. Estos casos no se clasifican automaticamente como sobredimensionado, ya que el criterio principal es garantizar simultaneamente presion minima, condicion `Q/D < 150`, diametro comercial disponible y velocidad maxima admisible. La velocidad baja se acepta solo cuando existe una causa tecnica identificable.
 
-- `A-C1` y `B-C2`: ambos alimentan consumidores de `60 kW`, con caudal `2.285 m3/h`. El diametro seleccionado es `15x1`, con diametro interior `13 mm`, que es el minimo del catalogo adoptado. La velocidad resultante queda en torno a `1.9 m/s`; reducir el diametro para aproximarse a `8-10 m/s` exigiria introducir un tubo no contemplado en el catalogo de calculo y con menor robustez mecanica. Por tanto, la baja velocidad se justifica por caudal reducido y diametro comercial minimo.
+- `A-C1` y `B-C2`: ambos alimentan consumidores de `60 kW`, con caudal `2.285 m3/h`. El diametro seleccionado es `15x1`, con diametro interior `13 mm`, que es el minimo del catalogo adoptado. En `B-C2`, la revision del trazado vertical-aereo aumenta la longitud de calculo por los cuatro codos adicionales, pero el diametro no cambia y la presion final permanece conforme. La velocidad resultante queda en torno a `1.9 m/s`; reducir el diametro para aproximarse a `8-10 m/s` exigiria introducir un tubo no contemplado en el catalogo de calculo y con menor robustez mecanica. Por tanto, la baja velocidad se justifica por caudal reducido, diametro comercial minimo y margen de presion suficiente aun incorporando los cambios de direccion.
 
 - `C-C3`: alimenta el consumidor de `500 kW`, con caudal `19.045 m3/h`. El tubo `22x1` proporciona `6.752 m/s`, por debajo del rango preferente pero cumpliendo presion y `Q/D`. El diametro inmediatamente inferior elevaria la velocidad, pero penalizaria la perdida de carga y reduciria el margen de presion disponible en un ramal conectado a la red principal. Se mantiene `22x1` como equilibrio entre margen hidraulico y dimension comercial.
 
@@ -209,7 +234,7 @@ Determinados tramos presentan velocidades inferiores al rango preferente `8-10 m
 | D4-A | red_principal | 15.120 | 99.795 | 42x1.5 | 39.000 | 17.460 | 2.559 | 1.700 | 1.682 | 0.018 | 9.203 | 8-10 m/s | 0.297 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
 | A-C1 | red_principal | 1.810 | 2.285 | 15x1 | 13.000 | 2.850 | 0.176 | 1.682 | 1.681 | 0.001 | 1.897 | 8-10 m/s | 7.603 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
 | A-B | red_principal | 4.970 | 97.509 | 42x1.5 | 39.000 | 6.920 | 2.500 | 1.682 | 1.675 | 0.007 | 9.015 | 8-10 m/s | 0.485 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
-| B-C2 | red_principal | 21.790 | 2.285 | 15x1 | 13.000 | 22.830 | 0.176 | 1.675 | 1.670 | 0.005 | 1.905 | 8-10 m/s | 7.595 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
+| B-C2 | red_principal | 21.790 | 2.285 | 15x1 | 13.000 | 24.390 | 0.176 | 1.675 | 1.670 | 0.005 | 1.905 | 8-10 m/s | 7.595 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
 | B-C | red_principal | 17.320 | 95.224 | 42x1.5 | 39.000 | 19.270 | 2.442 | 1.675 | 1.657 | 0.018 | 8.864 | 8-10 m/s | 0.636 | diametro con velocidad dentro de 8-10 m/s mas cercana a 9.5 m/s | Conforme - velocidad objetivo |
 | C-C3 | red_principal | 1.750 | 19.045 | 22x1 | 20.000 | 3.350 | 0.952 | 1.657 | 1.652 | 0.004 | 6.752 | 8-10 m/s | 2.748 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
 | C-D | red_principal | 10.770 | 76.179 | 42x1.5 | 39.000 | 12.720 | 1.953 | 1.657 | 1.649 | 0.008 | 7.113 | 8-10 m/s | 2.387 | diametro mas cercano al rango objetivo sin superar el limite practico de 10 m/s | Conforme - velocidad baja justificada |
