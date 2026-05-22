@@ -208,15 +208,17 @@
     \vspace*{\fill}
     \cleardoublepage
     \ifstrequal{#1}{Índice General}{}{%
-        \begingroup
-        \hypersetup{linkcolor=black}%
-        \secttoc
-        \cleardoublepage
-        \sectlof
-        \cleardoublepage
-        \sectlot
-        \endgroup
-        \cleardoublepage
+        \ifstrequal{#1}{Planos}{}{%
+            \begingroup
+            \hypersetup{linkcolor=black}%
+            \secttoc
+            \cleardoublepage
+            \sectlof
+            \cleardoublepage
+            \sectlot
+            \endgroup
+            \cleardoublepage
+        }%
     }%
 }
 
