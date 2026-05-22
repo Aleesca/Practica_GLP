@@ -128,7 +128,7 @@ tuberias_cobre = [
 # Accesorios en el tramo
 accesorios = {
     "codo_90": {"cant": 2, "coef": 30},
-    "valvula_bola": {"cant": 1, "coef": 10}
+    "valvula_corte": {"cant": 1, "coef": 10}
 }
 
 print(f"Buscando diámetro comercial óptimo para L_real = {L_real} m y Q = {Q} m3/h...")
