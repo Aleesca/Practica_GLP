@@ -21,3 +21,4 @@ El déficit de **56,51 kg/h** bajo condiciones críticas justifica la necesidad 
 - [Caudales de consumidores](caudales_consumidores.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Selección del depósito](seleccion_deposito.md)
+- [Potencia del armario de calefacción](potencia_armario_calefaccion.md)

@@ -23,3 +23,5 @@ El volumen requerido (115,34 m³) obliga a la instalación de una **batería de 
 **Véase también:**
 - [Cálculo del volumen del depósito](calculo_volumen_deposito.md)
 - [Caudales de consumidores](caudales_consumidores.md)
+- [Selección del depósito](seleccion_deposito.md)
+- [Distancias de seguridad](distancias_seguridad.md)

@@ -28,3 +28,5 @@ Para reducir la huella longitudinal y ganar flexibilidad en la implantación, se
 - [Cálculo del volumen del depósito](calculo_volumen_deposito.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Distancias de seguridad](distancias_seguridad.md)
+- [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)

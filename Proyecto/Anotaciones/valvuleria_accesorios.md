@@ -33,3 +33,5 @@ Para una demanda de **187,81 kg/h** y aplicando el coeficiente de seguridad del 
 - [Selección del depósito](seleccion_deposito.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Trazado de red](trazado_red.md)
+- [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)

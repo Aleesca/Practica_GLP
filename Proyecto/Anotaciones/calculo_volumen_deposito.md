@@ -32,3 +32,5 @@ La instalación garantiza una autonomía real de **32,5 días**, cumpliendo con 
 **Véase también:**
 - [Selección del depósito](seleccion_deposito.md)
 - [Vaporización natural](vaporizacion_natural.md)
+- [Autonomía de 30 días](autonomia_30_dias.md)
+- [Caudales de consumidores](caudales_consumidores.md)

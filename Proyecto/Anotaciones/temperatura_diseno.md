@@ -17,3 +17,4 @@ Esta temperatura es fundamental para la comprobación de la [vaporización natur
 - [Vaporización natural](vaporizacion_natural.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Selección del depósito](seleccion_deposito.md)
+- [Potencia del armario de calefacción](potencia_armario_calefaccion.md)

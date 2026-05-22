@@ -90,3 +90,4 @@ La implantación propuesta para la batería de depósitos (125,1 m³) cumple ín
 - [Cálculo de volumen del depósito](calculo_volumen_deposito.md)
 - [Autonomía 30 días](autonomia_30_dias.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
+- [Trazado de red](trazado_red.md)

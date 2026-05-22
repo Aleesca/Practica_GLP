@@ -22,7 +22,7 @@ Desde el punto de vista de optimizacion, el diametro seleccionado no se determin
 
 Material adoptado: **Cobre duro estirado sin soldadura EN 1057, espesor minimo 1 mm, instalacion aerea protegida**.
 
-Se selecciona cobre duro estirado sin soldadura como material metalico apto para la red exterior en fase gas de GLP. Esta solucion evita recurrir a PE en tramos aereos y simplifica la proteccion frente a corrosion respecto al acero al carbono. El PE se descarta por ser canalizacion aerea exterior. La alternativa de acero al carbono queda tecnicamente posible solo con proteccion pasiva y autorizacion o documentacion especifica. La seleccion queda supeditada a que el material mantenga presion maxima admisible suficiente frente a la presion de servicio y a las condiciones de montaje exterior.
+Se selecciona cobre duro estirado sin soldadura como material metalico apto para la red exterior en fase gas de GLP. Esta solución evita recurrir a PE en tramos aereos y simplifica la proteccion frente a corrosion respecto al acero al carbono. El PE se descarta por ser canalizacion aerea exterior. La alternativa de acero al carbono queda tecnicamente posible solo con proteccion pasiva y autorizacion o documentacion especifica. La seleccion queda supeditada a que el material mantenga presion maxima admisible suficiente frente a la presion de servicio y a las condiciones de montaje exterior.
 
 El catalogo utilizado incorpora diametro interior, espesor, diametro exterior y masa lineal estimada a partir de la seccion metalica y densidad del cobre `8960 kg/m3`. Esta masa lineal se emplea solo como criterio comparativo interno para seleccionar alternativas equivalentes desde el punto de vista hidraulico.
 
@@ -43,15 +43,6 @@ Las dimensiones comerciales y masas lineales empleadas se han contrastado con ta
 | cobre_duro_en1057 | 76.1x2 | 72.100 | 2.000 | 76.100 | 465.584 | 4.172 |
 | cobre_duro_en1057 | 88.9x2 | 84.900 | 2.000 | 88.900 | 546.009 | 4.892 |
 | cobre_duro_en1057 | 108x2.5 | 103.000 | 2.500 | 108.000 | 828.595 | 7.424 |
-
-## Conexiones con otros documentos del proyecto
-
-- [Datos de partida](../Datos.md): potencias nominales de consumidores y documentacion base del encargo.
-- [Caudales de consumidores](caudales_consumidores.md): potencia maxima simultanea y base de demanda de la red.
-- [Trazado de red](trazado_red.md): topologia de la red, longitudes y enlace con el plano de implantacion.
-- [Valvuleria y accesorios](valvuleria_accesorios.md): criterio de valvulas de corte, tes, reducciones y elementos singulares.
-- [Criterios normativos](criterios_normativos.md): marco normativo general de almacenamiento e instalacion de GLP.
-- [Metodologia de longitud de calculo](../Especificaciones/metodologia-longitud-calculo.md): desarrollo metodologico de `Lc`, Renouard y comprobacion de velocidad.
 
 ## Formulacion empleada
 
@@ -284,3 +275,13 @@ El resultado confirma la coherencia entre longitud de calculo, caudal, diametro 
 ## Conclusion tecnica
 
 Con las hipotesis adoptadas, la red queda dimensionada para un caudal punta simultaneo de `187.81 kg/h`, equivalente a `99.79 m3/h`. Todos los tramos cumplen la condicion de aplicacion `Q/D < 150`, la presion minima relativa de `1.615 bar` y el limite practico de velocidad adoptado. Las velocidades bajas que permanecen en ramales concretos responden al diametro comercial minimo o a una decision de equilibrio hidraulico-economico, y quedan justificadas de forma expresa en la tabla de resultados.
+
+---
+**Véase también:**
+- [Datos de partida](../Datos.md)
+- [Caudales de consumidores](caudales_consumidores.md)
+- [Trazado de red](trazado_red.md)
+- [Valvulería y accesorios](valvuleria_accesorios.md)
+- [Criterios normativos](criterios_normativos.md)
+- [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)

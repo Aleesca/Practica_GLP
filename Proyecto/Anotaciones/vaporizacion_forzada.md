@@ -65,3 +65,5 @@ Para la definición de este sistema se han consultado las siguientes fuentes ofi
 - [Vaporización natural](vaporizacion_natural.md)
 - [Selección del depósito](seleccion_deposito.md)
 - [Caudales de consumidores](caudales_consumidores.md)
+- [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)

@@ -66,9 +66,11 @@ $$
 La instalacion del armario de calefaccion es necesaria porque la vaporizacion natural disponible en las condiciones criticas de diseno no garantiza el caudal requerido por la instalacion. Con el vaporizador interno **VIA 150** y una potencia minima de caldera de **17,5 kW**, el sistema mixto alcanza **281,30 kg/h**, suficiente para cubrir la demanda punta de **187,81 kg/h**. El armario **VPC30C**, con **45 kW**, cubre la potencia minima exigida.
 
 ---
-**Vease tambien:**
+**Véase también:**
 - [Caudales de consumidores](caudales_consumidores.md)
-- [Vaporizacion natural](vaporizacion_natural.md)
-- [Vaporizacion forzada](vaporizacion_forzada.md)
-- [Seleccion del deposito](seleccion_deposito.md)
-- [Temperatura exterior de calculo](temperatura_diseno.md)
+- [Vaporización natural](vaporizacion_natural.md)
+- [Vaporización forzada](vaporizacion_forzada.md)
+- [Selección del depósito](seleccion_deposito.md)
+- [Temperatura exterior de cálculo](temperatura_diseno.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
+

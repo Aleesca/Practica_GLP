@@ -17,3 +17,4 @@ Los diámetros y materiales deben cumplir con los [criterios normativos](criteri
 - [Caudales de consumidores](caudales_consumidores.md)
 - [Criterios normativos](criterios_normativos.md)
 - [Dimensionado de tuberías GLP](dimensionado_tuberias_glp.md)
+- [Valvulería y accesorios](valvuleria_accesorios.md)

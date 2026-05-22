@@ -34,3 +34,10 @@ Los accesorios seleccionados deben cumplir con el siguiente marco normativo iden
 1. **RegO Europe:** Todos los componentes de RegO referenciados proceden de la división europea (GmbH, Alemania) y cuentan con certificación **CE** y cumplimiento **EN**, superando los requerimientos de la división USA.
 2. **Lapesa (España):** El VPC30C es el equipo nacional de referencia para este tipo de instalaciones, garantizando soporte técnico local y cumplimiento del Reglamento de Aparatos a Presión.
 3. **Moneda y Suministro:** Todos los precios han sido convertidos o identificados en el mercado europeo para evitar incertidumbres por aranceles o tipos de cambio.
+
+---
+**Véase también:**
+- [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
+- [Valvulería y accesorios](valvuleria_accesorios.md)
+- [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
+- [Criterios normativos](criterios_normativos.md)
