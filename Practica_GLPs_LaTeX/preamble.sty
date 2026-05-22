@@ -1,5 +1,9 @@
 \ProvidesPackage{preamble}
 
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Some font shapes}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -11,6 +15,7 @@
 \usepackage{textcase}
 \usepackage{anyfontsize}
 \usepackage{times}
+
 \usepackage{setspace}
 \onehalfspacing
 \usepackage[bottom]{footmisc}  % Fuerza footnotes al final de la página
@@ -147,7 +152,7 @@
     pdfstartview={FitH},
     pdfpagemode={UseNone}
 }
-\RemoveFromHook{cmd/addcontentsline/before}[hyp]
+
 
 % Redefinir formato de referencias de figuras y tablas
 \AtBeginDocument{%
