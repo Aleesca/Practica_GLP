@@ -20,9 +20,9 @@ Este documento fija el encaje entre la salida primaria en `Proyecto/Especificaci
 | `Proyecto/Especificaciones/vaporizacion.md` | `Memoria` + `Calculos justificados` | `CARACTERÍSTICAS DE LOS EQUIPOS. -> Equipo de vaporización.` y `VAPORIZACIÓN.` | En Memoria se justifica la solución adoptada; en Cálculos se incorpora la comprobación detallada. |
 | `Proyecto/Especificaciones/deposito.md` | `Memoria` | `RESUMEN DE CARACTERÍSTICAS. -> Tipo de instalación`, `Volumen en m3 de almacenamiento. Clasificación.`, `CARACTERÍSTICAS DE LOS EQUIPOS. -> Depósitos.` | Consolidar selección, clasificación y características del almacenamiento. |
 | `Proyecto/Especificaciones/red-distribucion.md` | `Memoria` | `DESCRIPCIÓN Y SISTEMA ELEGIDO.` y `CARACTERÍSTICAS DE LOS EQUIPOS. -> Canalizaciones.` | Describir la arquitectura de red y las características de las conducciones. |
-| `Proyecto/Especificaciones/implantacion-seguridad.md` | `Memoria` + `Planos` | `CLASIFICACIÓN Y DISTANCIAS DE SEGURIDAD.` y `PLANTA DE LA ESTACIÓN...` | La justificación va en Memoria; la expresión gráfica va en Planos. |
+| `Proyecto/Especificaciones/implantacion-seguridad.md` | `Memoria` + `Planos` | `CLASIFICACIÓN Y DISTANCIAS DE SEGURIDAD.` y `Planos` (Plano nº 2) | La justificación va en Memoria; la expresión gráfica va en Planos. |
 | `Proyecto/Especificaciones/conclusiones-limitaciones.md` | `Memoria` | `DESCRIPCIÓN Y SISTEMA ELEGIDO.` y cierre de apartados tecnicos relacionados | Repartir conclusiones dentro del cierre técnico de Memoria, sin crear una nueva subsección. |
-| `Proyecto/Especificaciones/anejos.md` | `Calculos justificados` + `Planos` | `ÍNDICE DE ANEXOS.` e `ÍNDICE DE PLANOS.` | Funciona como guía de ensamblado de anexos y planos. |
+| `Proyecto/Especificaciones/anejos.md` | `Calculos justificados` (3.1) + `Planos` (capítulo) | `ÍNDICE DE ANEXOS.` y `Planos` (Capítulo sin subsecciones) | Funciona como guía de ensamblado de anexos y planos. |
 | `Proyecto/Especificaciones/metodologia.md` | Apoyo transversal | No se vuelca de forma literal | Guía la redacción y la trazabilidad; no debe copiarse completa a LaTeX. |
 
 ## Mapeo por notas tecnicas
