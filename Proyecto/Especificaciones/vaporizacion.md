@@ -1,51 +1,53 @@
-# Especificación: Vaporización Natural y Forzada (Sección 2.2.3)
+# Memoria: Vaporización Natural vs. Vaporización Forzada
 
-## Propósito
-Comprobar la suficiencia de la capacidad de vaporización natural de la batería de depósitos en las condiciones climáticas de diseño y dimensionar el sistema de vaporización forzada de apoyo requerido para abastecer la demanda punta.
+## 1. Verificación del Balance Térmico en Condiciones Críticas
+La capacidad de un depósito aéreo de GLP para auto-vaporizar el gas propano líquido a fase vapor depende de la transferencia de calor del aire exterior a través de la chapa mojada por el fluido líquido. Esta capacidad es menor en invierno debido a las bajas temperaturas y al vaciado progresivo del tanque (menor área de transferencia mojada).
 
-## Contenido obligatorio
-- **Cálculo de Vaporización Natural del Depósito:**
-  - Desarrollar la fórmula de gasificación natural para depósitos cilíndricos horizontales de superficie:
-    $$ Q_{\text{nat}} = \frac{P \cdot S \cdot K \cdot (T_e - T_g)}{CLV} $$
-    donde:
-    - $P$: factor de superficie mojada en el nivel de llenado del $20\%$ ($P = 0,336$).
-    - $S$: superficie expuesta del depósito en $\text{m}^2$.
-    - $K$: coeficiente de transmisión de calor para tanques aéreos ($0,0116\text{ kW/m}^2\cdot\text{ºC}$).
-    - $T_e$: temperatura mínima exterior de diseño de León ($-5\text{ ºC}$).
-    - $T_g$: temperatura de equilibrio del propano comercial ($-15\text{ ºC}$).
-    - $CLV$: calor latente de vaporización del propano ($0,11 \text{ kWh/kg}$).
-  - Calcular la capacidad unitaria de gasificación a $-5\text{ ºC}$ y $20\%$ de llenado para cada depósito:
-    - LP46A ($S = 88,58 \text{ m}^2$): $Q_{\text{nat}} \approx 35,46 \text{ kg/h}$.
-    - LP26A ($S = 51,00 \text{ m}^2$): $Q_{\text{nat}} \approx 20,42 \text{ kg/h}$ por tanque.
-  - Sumar la gasificación natural total de la batería de 4 depósitos:
-    $$ Q_{\text{nat, total}} = 35,46 + 3 \cdot 20,42 = 96,72 \text{ kg/h} $$
-- **Balance Térmico y Determinación de Déficit:**
-  - Comparar la capacidad natural agregada de gasificación ($96,72 \text{ kg/h}$) frente a la demanda punta agregada de la instalación ($187,81 \text{ kg/h}$).
-  - Identificar y cuantificar el déficit térmico resultante:
-    $$ Q_{\text{deficit}} = 187,81 - 96,72 = 91,09 \text{ kg/h} $$
-- **Selección y Dimensionamiento del Vaporizador Forzado:**
-  - Justificar técnicamente la necesidad de un vaporizador eléctrico/calefacción forzado debido al déficit.
-  - Seleccionar el intercambiador de serpentín VIA 150 montado sobre brida DN400 del depósito LP46A, alojado en armario metálico VPC30C.
-  - Dimensionar la potencia de calefacción requerida del armario (caldera de agua caliente):
-    $$ P_{\text{cal}} = Q_{\text{evap}} \cdot CLV = 91,09 \text{ kg/h} \cdot 0,11 \text{ kWh/kg} \approx 10,02 \text{ kW} $$
-  - Justificar la adopción comercial de una caldera de calefacción de agua caliente de $45 \text{ kW}$ para asegurar un margen amplio y cubrir pérdidas térmicas.
+El balance de vaporización natural se verifica bajo las siguientes condiciones de diseño de León:
+*   **Temperatura exterior mínima de cálculo ($T_e$):** $-5\text{ ºC}$.
+*   **Nivel de llenado del depósito (reserva operativa de seguridad):** **$20\%$**.
+*   **Temperatura de equilibrio líquido-gas del propano ($T_g$):** $-15\text{ ºC}$.
+*   **Coeficiente de transmisión de calor global ($K$):** $0,0116\text{ kW/m}^2\cdot\text{ºC}$ (para depósitos aéreos expuestos al viento).
+*   **Calor latente de vaporización del propano ($CLV$):** $0,11\text{ kWh/kg}$.
 
-## Estilo de redacción
-Tono de ingeniería formal y riguroso. Uso de ecuaciones matemáticas LaTeX. Longitud orientativa: 2 páginas.
+## 2. Capacidad de Vaporización Natural de la Batería
+Aplicando las fórmulas de transferencia térmica a la geometría de la batería mixta adoptada a un nivel del $20\%$ de llenado, se obtienen los siguientes caudales de evaporación natural individuales:
+*   **Depósito Principal Lapesa LP46A-22:**
+    *   Superficie exterior total: $88,58\text{ m}^2$.
+    *   Caudal de vaporización natural a $-5\text{ ºC}$ ($Q_{nat, 1}$): **$47,00\text{ kg/h}$**.
+*   **Depósitos de Apoyo Lapesa LP26A-22 (3 unidades):**
+    *   Superficie exterior unitaria: $51,00\text{ m}^2$.
+    *   Caudal de vaporización natural unitario a $-5\text{ ºC}$ ($Q_{nat, 2}$): **$28,10\text{ kg/h}$** por depósito.
+    *   Caudal conjunto de las 3 unidades de apoyo: $3 \times 28,10 = 84,30\text{ kg/h}$.
 
-## Figuras, tablas y resultados
-- **Figuras a integrar:**
-  - [armario_calefaccion.png](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/armario_calefaccion.png): Imagen y esquema del armario de calefacción (modelo VPC30C) de 45 kW que da soporte al intercambiador de calor de serpentín VIA 150.
-- **Tablas obligatorias:**
-  - **Tabla de balance de vaporización:** Vaporización de cada depósito de la batería, suma, demanda y déficit resultante.
-- **Resultado final de diseño:** Capacidad natural total de $96,72 \text{ kg/h}$, déficit de $91,09 \text{ kg/h}$ y potencia del vaporizador adoptado de $45 \text{ kW}$.
+*   **Capacidad de Vaporización Natural Total de la Batería ($Q_{nat, total}$):**
+    $$ Q_{nat, total} = 47,00\text{ kg/h} + 84,30\text{ kg/h} = 131,30\text{ kg/h} $$
 
-## Conexiones
-- **Alcance:** Requisito 3 (Vaporización natural y forzada).
-- **Anotaciones:** [vaporizacion_natural.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/vaporizacion_natural.md) (Cálculo), [vaporizacion_forzada.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/vaporizacion_forzada.md) (Decisión), [potencia_armario_calefaccion.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/potencia_armario_calefaccion.md) (Cálculo).
+## 3. Justificación del Déficit y Elección de la Vaporización Forzada
+La demanda punta agregada de los seis consumidores industriales de la planta asciende a **$187,81\text{ kg/h}$** ($99,79\text{ m}^3/\text{h}$). Al comparar esta demanda con la vaporización natural límite disponible en condiciones de diseño, se constata un déficit significativo:
 
-## Criterios de aceptación
-- [ ] La ecuación de vaporización natural se aplica correctamente a depósitos aéreos horizontales.
-- [ ] La gasificación natural agregada calculada para la batería es de $96,72 \text{ kg/h}$ (al $20\%$ de llenado).
-- [ ] Se cuantifica el déficit de gasificación de $91,09 \text{ kg/h}$.
-- [ ] Se justifica la elección del intercambiador VIA 150 en armario VPC30C y la potencia de $45 \text{ kW}$.
+$$ \text{Déficit} = Q_{\text{demanda}} - Q_{nat, total} = 187,81\text{ kg/h} - 131,30\text{ kg/h} = 56,51\text{ kg/h} $$
+
+Bajo estas condiciones desfavorables, la batería mixta es físicamente incapaz de suministrar gas propano en fase de vapor al caudal requerido por los quemadores, lo que provocaría un enfriamiento excesivo del líquido, caída de presión en la instalación, formación de escarcha exterior y el apagado imprevisto de los hornos. Se justifica, por tanto, la necesidad técnica indispensable de instalar un **sistema de vaporización forzada**.
+
+## 4. Selección del Sistema de Vaporización y Especificaciones de Equipos
+El sistema de vaporización forzada adoptado no constituye un equipo independiente de gas directo, sino un **sistema mixto de agua caliente de circuito cerrado** compuesto por dos componentes diferenciados:
+
+1.  **Elemento Interno (Intercambiador sumergido) - Modelo Lapesa VIA 150:**
+    *   **Naturaleza:** Es un haz tubular en serpentín fabricado en acero inoxidable, que se introduce de forma estanca en el interior del depósito principal LP46A-22, quedando permanentemente sumergido en el propano líquido.
+    *   **Acoplamiento:** Se monta sobre una brida especial de servicio **DN400** en la boca de hombre del depósito, lo que evita ocupar espacio adicional en la parcela y protege el intercambiador del exterior.
+    *   **Capacidad Nominal de Vaporización:** **$150\text{ kg/h}$**.
+2.  **Elemento Externo (Generador de agua caliente) - Armario Lapesa VPC30C:**
+    *   **Naturaleza:** Armario metálico exterior autoportante, con dimensiones de **$800\text{ mm}$ (Largo) x $400\text{ mm}$ (Ancho) x $1.200\text{ mm}$ (Alto)**. Se implanta sobre una solera de hormigón adosada al lateral del depósito LP46A-22.
+    *   **Equipamiento:** Aloja una caldera mural de gas propano de circuito estanco, bomba de circulación, vaso de expansión y cuadro de control con seguridades térmicas. El circuito cerrado de agua caliente de la caldera circula por el interior del serpentín VIA 150 a una temperatura de consigna regulada.
+    *   **Potencia de la caldera:** De cálculo mínimo se requiere una potencia útil de $17,5\text{ kW}$ ($56,51\text{ kg/h} \times 0,11\text{ kWh/kg} \approx 6,2\text{ kW}$ netos, aplicando rendimientos e inercias térmicas). Se adopta la caldera estándar integrada en el armario VPC30C de **$45\text{ kW}$** de potencia térmica, ofreciendo un amplio margen de calentamiento y rapidez de respuesta frente a demandas transitorias.
+
+## 5. Balance Global con Vaporización Forzada y Margen de Seguridad
+Con la entrada en servicio del intercambiador VIA 150 acoplado al depósito principal, la capacidad térmica conjunta del almacenamiento es:
+
+$$ Q_{\text{total, disponible}} = Q_{nat, total} + Q_{\text{forzada}} = 131,30\text{ kg/h} + 150,00\text{ kg/h} = 281,30\text{ kg/h} $$
+
+Este valor total disponible ($281,30\text{ kg/h}$) supera con un **margen de seguridad del $49,8\%$** la demanda punta máxima de la instalación ($187,81\text{ kg/h}$). Este excedente garantiza:
+*   La estabilidad absoluta de la presión de regulación MPB a $1,7\text{ bar}$ en el colector común, eliminando oscilaciones en los quemadores.
+*   Capacidad de respuesta ante eventuales descensos térmicos transitorios por debajo de los $-5\text{ ºC}$ de diseño.
+*   Seguridad de funcionamiento incluso con niveles de almacenamiento residuales inferiores al $20\%$.

@@ -1,40 +1,46 @@
-# Especificación: Hipótesis y Datos de Partida (Sección 2.1)
+# Memoria: Hipótesis y Datos de Partida
 
-## Propósito
-Consolidar las hipótesis de cálculo, los datos base del grupo de trabajo y las propiedades físicas y normativas que gobiernan el desarrollo del proyecto de GLP para el Grupo G1-1.
+## 1. Identificación y Emplazamiento de las Instalaciones
+La instalación de almacenamiento común y red de distribución se ubica en la parcela catastral **8638004TN8183N**, situada en el término municipal de León.
+*   **Zona Climática:** León (Virgen del Camino).
+*   **Temperatura Exterior de Cálculo:** Se adopta una temperatura mínima de diseño de **$-5\text{ ºC}$**, obtenida a partir de la *Guía técnica: Condiciones climáticas exteriores de proyecto* editada por el IDAE, seleccionando el percentil del $99,6\%$ para la estación meteorológica de referencia (León - Virgen del Camino). Esta hipótesis es crítica para garantizar el balance de vaporización natural de los depósitos en las condiciones más desfavorables del invierno leonés.
 
-## Contenido obligatorio
-- **Datos de Emplazamiento y Referencias:**
-  - Ubicación de la parcela catastral `8638004TN8183N` en León.
-  - Temperatura exterior de cálculo de $-5 \text{ ºC}$ justificada por percentil $99,6\%$ del IDAE para León (Virgen del Camino).
-  - Citar normas de referencia: UNE 60250:2008 para almacenamiento y red de estación, UNE 60670:2014 para red receptora general y RD 919/2006.
-- **Consumidores del Proyecto (Grupo G1-1):**
-  - Tabla de consumidores (C1 a C6) con potencias nominales (desde 60 kW hasta 1000 kW), horas de uso diario y potencia agregada total de $2.620 \text{ kW}$.
-- **Propiedades Físicas del Propano y Criterios:**
-  - Tabla de propiedades del propano comercial (PCS $13,95\text{ kWh/kg}$, densidades en fase líquida $506\text{ kg/m}^3$ y gas $1,882\text{ kg/m}^3$, CLV $0,11\text{ kWh/kg}$, coeficiente $K$ para tanques aéreos $0,0116\text{ kW/m}^2\cdot\text{ºC}$ y $T_g = -15 \text{ ºC}$).
-- **Hipótesis Operativas y de Diseño:**
-  - Red aérea en su totalidad, de tuberías de cobre UNE-EN 1057 en barra (espesor $\ge 1,0 \text{ mm}$ en general y $\ge 1,5 \text{ mm}$ en derivaciones de tanques).
-  - Presión de diseño de red MPB: presión inicial de regulación $1,7 \text{ bar relativos}$, pérdida de carga admisible del $5\%$ ($0,085 \text{ bar}$ max).
-  - Límite de velocidad de gas: $10 \text{ m/s}$ máximo para red general y $20 \text{ m/s}$ para la estación de almacenamiento.
-  - Coeficiente de simultaneidad igual a $1$ (escenario punta).
-- **Nomenclatura y Símbolos:**
-  - Tabla de símbolos, variables y unidades empleadas en los cálculos.
+## 2. Reglamentación y Normas Técnicas Consideradas
+El diseño y los cálculos de la instalación se realizan bajo el cumplimiento estricto del marco regulatorio aplicable en España:
+*   **Real Decreto 919/2006:** *Reglamento técnico de distribución y utilización de combustibles gaseosos* y sus Instrucciones Técnicas Complementarias (ITC-ICG 01 a 11).
+*   **Norma UNE 60250:2008:** *Instalaciones de almacenamiento de gases licuados del petróleo (GLP) en depósitos fijos para su consumo en instalaciones receptoras.*
+*   **Norma UNE 60670:2014:** *Instalaciones receptoras de gas suministradas a presiones de operación de hasta 5 bar.*
+*   **Código Técnico de la Edificación (CTE):** Documentos Básicos DB-SI (Seguridad en caso de incendio) y DB-SUA (Seguridad de utilización y accesibilidad).
 
-## Estilo de redacción
-Tono formal, impersonal y técnico de ingeniería. Uso claro de tablas y ecuaciones en formato LaTeX. Longitud orientativa: 2 a 3 páginas.
+## 3. Consumidores de la Planta (Grupo G1-1)
+La instalación común de propano da suministro a seis receptores térmicos independientes que funcionan a turnos definidos por el régimen de producción de la fábrica:
 
-## Figuras, tablas y resultados
-- **Tabla de Emplazamiento:** Parámetros base y referencia de León.
-- **Tabla de Consumidores:** Datos nominales del Grupo G1-1.
-- **Tabla de Propiedades del Gas:** Valores del propano comercial adoptados.
-- **Tabla de Nomenclatura:** Lista consolidada de variables.
+| Consumidor | Identificación | Potencia Nominal ($P_n$) | Horas de Funcionamiento | Energía Diaria Demandada |
+| :--- | :--- | :---: | :---: | :---: |
+| Consumidor 1 | Horno de secado 1 | $60\text{ kW}$ | $12\text{ h/día}$ | $720\text{ kWh/día}$ |
+| Consumidor 2 | Horno de secado 2 | $60\text{ kW}$ | $12\text{ h/día}$ | $720\text{ kWh/día}$ |
+| Consumidor 3 | Caldera de vapor | $500\text{ kW}$ | $10\text{ h/día}$ | $5.000\text{ kWh/día}$ |
+| Consumidor 4 | Caldera de agua caliente | $300\text{ kW}$ | $8\text{ h/día}$ | $2.400\text{ kWh/día}$ |
+| Consumidor 5 | Horno de fusión | $700\text{ kW}$ | $4\text{ h/día}$ | $2.800\text{ kWh/día}$ |
+| Consumidor 6 | Horno de decapado | $1.000\text{ kW}$ | $6\text{ h/día}$ | $6.000\text{ kWh/día}$ |
+| **Total** | **Potencia Agregada** | **$2.620\text{ kW}$** | — | **$17.640\text{ kWh/día}$** |
 
-## Conexiones
-- **Alcance:** Sección 2 (Datos de partida) e hipótesis generales de cálculo.
-- **Anotaciones:** [temperatura_diseno.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/temperatura_diseno.md) (Evidencia), [criterios_normativos.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/criterios_normativos.md) (Criterio Normativo).
+## 4. Características del Gas Suministrado
+Se adopta como combustible el **propano comercial** (según especificaciones técnicas normalizadas):
+*   **Poder Calorífico Superior (PCS):** $13,95\text{ kWh/kg}$ ($12.000\text{ kcal/kg}$).
+*   **Poder Calorífico Inferior (PCI):** $12,838\text{ kWh/kg}$ ($11.040\text{ kcal/kg}$).
+*   **Densidad en Fase Líquida ($\rho_{liq}$):** $506\text{ kg/m}^3$ (a $15\text{ ºC}$).
+*   **Densidad en Fase Gas ($\rho_{gas}$):** $1,882\text{ kg/m}^3$ (en condiciones normales de $1\text{ atm}$ y $0\text{ ºC}$).
+*   **Densidad Relativa del Gas respecto al Aire ($d$):** $1,54$ (al ser mayor que 1, el propano es más pesado que el aire y tiende a acumularse en zonas bajas).
+*   **Calor Latente de Vaporización (CLV):** $0,11\text{ kWh/kg}$ ($94,6\text{ kcal/kg}$).
+*   **Temperatura de Equilibrio Líquido-Gas ($T_g$):** $-15\text{ ºC}$ (temperatura adoptada para el propano líquido dentro del tanque bajo condiciones de máxima evaporación).
 
-## Criterios de aceptación
-- [ ] La temperatura mínima exterior de diseño de León está justificada a $-5 \text{ ºC}$.
-- [ ] La potencia térmica conjunta de los hornos y calderas de G1-1 suma exactamente $2.620 \text{ kW}$.
-- [ ] Se adopta cobre UNE-EN 1057 y velocidad máxima del gas de $10 \text{ m/s}$ para la red.
-- [ ] La presión de regulación de salida inicial es de $1,7 \text{ bar}$.
+## 5. Hipótesis Operativas y de Diseño
+*   **Topología de la Red:** La canalización de gas será **enteramente aérea**, fijada sobre soportes y fachadas en el exterior del edificio, lo cual descarta la necesidad de zanjas, protección catódica activa por ánodos de sacrificio de magnesio, o problemas de flotabilidad de tuberías.
+*   **Material de las Conducciones:** Se emplearán tuberías de **cobre desoxidado al fósforo** en barra (UNE-EN 1057), con un espesor mínimo de $1,0\text{ mm}$ en los tramos generales y $1,5\text{ mm}$ en las conexiones de servicio de los tanques.
+*   **Presiones de Trabajo:** 
+    *   Presión de diseño en Media Presión B (MPB): Presión inicial de regulación regulada a la salida del colector común de depósitos de **$1,7\text{ bar relativos}$**.
+    *   Pérdida de carga admisible en la red exterior de distribución: máxima del $5\%$ de la presión de regulación ($0,085\text{ bar}$).
+    *   Presión de utilización a la entrada de los quemadores: regulada localmente a **$37\text{ mbar}$** (Baja Presión / Media Presión A).
+*   **Límites de Velocidad del Gas:** Se establece un límite de velocidad de circulación del fluido de **$10\text{ m/s}$** para la red general de distribución, extendiéndose a un límite de **$20\text{ m/s}$** únicamente en las tuberías cortas de interconexión y valvulería de la propia estación de almacenamiento.
+*   **Coeficiente de Simultaneidad ($f_s$):** Dado el carácter industrial y continuo de los procesos de fabricación de la planta (hornos de fusión y decapado), se establece un coeficiente de simultaneidad **$f_s = 1$**. Se diseña para el escenario punta más desfavorable en el que todos los equipos demandan potencia máxima al mismo tiempo.

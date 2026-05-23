@@ -1,46 +1,23 @@
-# Especificación: Equipos Auxiliares de la Estación (Secciones 2.13.3, 2.13.5, 2.13.6, 2.13.7)
+# Memoria: Características de los Equipos Auxiliares del Almacenamiento
 
-## Propósito
-Describir detalladamente los componentes mecánicos, de control y de seguridad del almacenamiento de GLP, garantizando su adecuación comercial y normativa.
+## 1. Boca de Carga y Limitador de Llenado
+La operación de llenado de propano líquido en los depósitos se realiza de forma centralizada en el colector común de fase líquida mediante una boca de carga única exterior, diseñada para soportar las presiones de trasvase del camión cisterna:
+*   **Acoplamiento Rápido:** Se adopta un acoplamiento rápido macho de rosca Acme de **$3\text{''}$** (modelo **RegO 7579C** o equivalente) fabricado en latón de alta resistencia al desgaste mecánico.
+*   **Seguridades Antirretorno:** Dispone de una **doble válvula de retención integrada (check valve)** en serie para evitar el escape accidental de gas licuado al desconectar la manguera de llenado.
+*   **Válvula de Purga y Cierre:** Se monta una válvula de purga de bola manual de $1/4\text{''}$ para despresurizar de forma segura el espacio entre acoplamientos antes de la desconexión física.
+*   **Válvula Limitadora de Llenado al $85\%$:** Cada depósito incorpora una válvula interna automática de boya (limitadora de nivel máximo de llenado) que interrumpe mecánicamente el paso de líquido cuando el nivel del propano alcanza el $85\%$ del volumen geométrico del recipiente.
 
-## Contenido obligatorio
+## 2. Equipos de Regulación de Presión y Válvulas de Corte
+Para la estabilidad del flujo y aislamiento de componentes en la estación, se disponen los siguientes equipos:
+*   **Regulador de Primer Salto (MPB):** Acoplado directamente a la salida del colector común de fase de gas de los depósitos. Se utiliza un regulador de alta capacidad **RegO 1588V** o **Clesse APS** tarado a **$1,7\text{ bar relativos}$**. Incorpora válvula de seguridad de mínima presión por bloqueo de seguridad (UPS) y filtro de partículas metálicas en la entrada.
+*   **Válvulas de Corte General:** Válvulas de esfera de paso total de bronce o acero forjado (clase ANSI 300) con accionamiento manual por palanca e indicación de posición abierta/cerrada, situadas a la salida de cada depósito y en la entrada y salida de cada regulador para permitir el aislamiento completo en labores de mantenimiento.
 
-### Sección 2.13.3 Boca de carga.
-- Definir la boca de carga rápida (acoplamiento tipo RegO de 3" o equivalente).
-- Describir la configuración de doble válvula de retención y la purga intermedia para evitar emisiones fugitivas durante el desacoplamiento.
-- Especificar el limitador de llenado automático de seguridad al $85\%$.
+## 3. Equipo de Trasvase (Bomba)
+Para la tipología y demandas operativas de esta planta industrial (donde el GLP fluye por diferencia de presiones gaseosas y por gravedad hacia los vaporizadores), **no se requiere la instalación de una bomba activa de trasvase de líquido** en la estación de almacenamiento. Las operaciones de carga de los depósitos se realizan aprovechando la propia bomba de impulsión de fase líquida del camión cisterna y la línea de retorno de fase de gas (línea de equilibrio de presiones) que une la cisterna con el colector de la estación.
 
-### Sección 2.13.5 Equipos de regulación y medida.
-- Describir la regulación de primera etapa instalada en la salida de fase gas de los depósitos (Regulador RegO 1588V o Clesse APS) que reduce la presión del depósito a la presión de la red de distribución ($1,7 \text{ bar}$).
-- Detallar las llaves de corte general en la salida de cada tanque y las transiciones cobre-acero.
-- Indicar que la medida de consumo individual en los hornos no forma parte de la red de distribución general regulada de primera etapa (o en su caso, justificar la ausencia de contadores generales en la estación de almacenamiento).
-
-### Sección 2.13.6 Equipo de trasvase.
-- Justificar técnicamente la exclusión de bombas o compresores de trasvase activo en esta instalación.
-- Explicar que la descarga del camión cisterna se realiza por diferencia de presión o gravedad, y que el consumo se abastece por la presión del propio gas (apoyado por el vaporizador).
-
-### Sección 2.13.7 Válvulas de seguridad.
-- Describir las válvulas de seguridad instaladas en la fase gas de cada depósito (RegO RS 3145 o similar).
-- Especificar que se montan por duplicado sobre un acoplamiento distribuidor de tres vías (CD45) para posibilitar el mantenimiento de una de ellas sin dejar el depósito desprotegido.
-- Indicar la presión nominal de tarado de las válvulas ($20 \text{ bar}$).
-
-## Estilo de redacción
-Tercera persona del singular, impersonal y tono formal técnico. Longitud orientativa: 1,5 a 2 páginas.
-
-## Figuras, tablas y resultados
-- **Figuras/Planos a integrar (como referencia de equipos):**
-  - [deposito_seleccionado.png](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/deposito_seleccionado.png): Vista del depósito y sus accesorios (boca de carga, válvulas, manómetro y limitador de llenado) sobre la brida superior.
-  - [plano_Esquema_instalacion.pdf](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/plano_Esquema_instalacion.pdf): Esquema de principio hidráulico (P&ID) que muestra la interconexión de todos los equipos y valvulería de la estación.
-- **Tablas obligatorias:**
-  - **Tabla de componentes comerciales:** Recuento de reguladores, acoplamientos, válvulas de corte y seguridad indicando modelo comercial, fabricante, diámetro nominal ($DN$) y presión nominal ($PN$).
-- **Resultados de catálogo:** Tarados de presión del regulador general ($1,7 \text{ bar}$) y válvulas de seguridad ($20 \text{ bar}$).
-
-## Conexiones
-- **Alcance:** Requisito 4 (Características principales del depósito y equipos) y Requisito 5 (Conducción - regulación).
-- **Anotaciones:** [valvuleria_accesorios.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/valvuleria_accesorios.md) (Decisión), [reporte_accesorios.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/reporte_accesorios.md) (Evidencia), [pliego_condiciones_equipos_glp.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/pliego_condiciones_equipos_glp.md) (Criterio Normativo).
-
-## Criterios de aceptación
-- [ ] Se detalla el modelo de boca de carga rápida comercial.
-- [ ] Queda justificada la presión de regulación de salida a $1,7 \text{ bar}$.
-- [ ] Se justifica formalmente el descarte del equipo de trasvase activo.
-- [ ] Se describe el acoplamiento de tres vías (CD45) y tarado a 20 bar de las válvulas de seguridad.
+## 4. Válvulas de Seguridad por Sobrepresión
+Para proteger los depósitos de almacenamiento frente a sobrepresiones excesivas debidas a la radiación solar estacional o al calor de un incendio cercano, cada depósito está equipado con:
+*   **Configuración:** **Dos unidades de válvulas de seguridad independientes** de resorte por depósito (taradas a la misma presión de apertura).
+*   **Modelo de Válvula:** Válvula de alivio de presión **RegO RS 3145** (o equivalente de Lapesa) fabricada en bronce y acero inoxidable.
+*   **Presión de Tarado:** Apertura completa a **$20\text{ bar relativos}$**, presión inferior a la presión de prueba del recipiente ($25\text{ bar}$) para garantizar que no se supera el límite elástico del acero del depósito en caso de emergencia.
+*   **Acoplamiento y Colector de Escape:** Las válvulas se montan sobre colectores de desvío de tres vías (**colectores de acoplamiento CD45**), lo que permite desmontar e inspeccionar periódicamente una de las dos válvulas de seguridad sin necesidad de desgasificar o vaciar el depósito de almacenamiento, garantizando que al menos una de las válvulas de alivio permanece en servicio en todo momento. Las descargas se conducen de forma vertical a la atmósfera mediante tubos deflectores que sobresalen por encima del depósito.

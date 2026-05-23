@@ -1,50 +1,25 @@
-# Especificación: Red de Distribución (Sección 2.2.5)
+# Memoria: Red de Distribución y Regulación
 
-## Propósito
-Describir y justificar la arquitectura geométrica y el dimensionamiento hidráulico de la red de tuberías aéreas de propano comercial que alimenta a los 6 consumidores del Grupo G1-1.
+## 1. Arquitectura y Trazado de la Red de Canalización
+La red de distribución transporta el propano en fase gas desde el colector común de la estación de almacenamiento hasta los puntos de consumo de la planta industrial. 
 
-## Contenido obligatorio
-- **Descripción de la Arquitectura de Red:**
-  - Definir la topología de la red aérea (trazado visto en fachadas y soportes elevados).
-  - Justificar el descarte de canalización enterrada (evitando obra en zanjas, tuberías de polietileno, problemas de inundaciones y la instalación de protección catódica).
-  - Especificar el material de conducción: cobre en barra estirado sin soldadura (UNE-EN 1057) para todos los tramos.
-- **Criterios e Ecuaciones de Dimensionamiento Hidráulico:**
-  - Desarrollar la fórmula de Renouard para Media Presión B ($0,05\text{ bar} < P < 5\text{ bar}$):
-    $$ P_A^2 - P_B^2 = 51,5 \cdot d_c \cdot L_c \cdot \frac{Q^{1,82}}{D^{4,82}} $$
-    donde:
-    - $P_A, P_B$: presiones absolutas inicial y final en el tramo [bar a] ($P_{\text{relativa}} + 1,01325 \text{ bar}$).
-    - $d_c$: densidad corregida del propano ($d_c = 1,16$).
-    - $Q$: caudal volumétrico de diseño [$m^3/h$].
-    - $D$: diámetro interior de la tubería [mm].
-    - $L_c$: longitud de cálculo del tramo en metros. Para MPB se aplica la longitud mayorada por singularidades de accesorios: $L_c = 1,05 \cdot L_{\text{real}}$.
-  - Ecuación de velocidad de gas para consistencia dimensional:
-    $$ v = 378,04 \cdot \frac{Q}{P_{\text{media\_abs}} \cdot D^2} $$
-    donde $P_{\text{media\_abs}}$ es la presión absoluta media en el tramo.
-- **Resumen de Resultados por Tramo:**
-  - Detallar los resultados de diseño de la red:
-    - Presión de entrada inicial a la salida de los depósitos: $1,70 \text{ bar relativos}$ ($2,713 \text{ bar absolutos}$).
-    - Pérdida de carga máxima admisible del $5\%$ ($0,085 \text{ bar}$), exigiendo presión mínima en consumidores de $1,615 \text{ bar relativos}$.
-    - Límite máximo de velocidad de gas en tramos generales: $10 \text{ m/s}$.
-    - Diámetros nominales de cobre comercial propuestos por tramo ($\phi 54$, $\phi 42$, $\phi 35$, $\phi 28$, $\phi 22$) y sus espesores.
+Se adopta un diseño de **canalización enteramente aérea, vista y fijada en fachada y soportes estructurales metálicos**, discurriendo en el exterior del edificio industrial hasta las derivaciones individuales. 
+*   **Justificación del material:** Se selecciona **tubería de cobre desoxidado al fósforo en barra (UNE-EN 1057)**. Este material ofrece una excelente resistencia a la corrosión atmosférica exterior, una baja rugosidad interna que minimiza las pérdidas de carga por fricción y una gran facilidad de ejecución de las uniones soldadas mediante soldadura fuerte (punto de fusión $> 450\text{ ºC}$ con aleaciones de plata/cobre).
+*   **Espesores de tubería:** Se adopta un espesor de pared de $\ge 1,0\text{ mm}$ para las tuberías de distribución general, aumentándose a un mínimo de $\ge 1,5\text{ mm}$ en las liras de conexión flexible y derivaciones en la zona de salida de los depósitos para soportar mayores esfuerzos mecánicos de vibración.
+*   **Señalización y Acabado:** Toda la tubería exterior de gas de acero y cobre estará pintada de **color amarillo (RAL 1021)** de acuerdo con las especificaciones de seguridad industrial para la identificación inmediata del fluido inflamable transportado.
+*   **Dilatación y Soportación:** Debido a la gran longitud de los tramos exteriores expuestos a oscilaciones de temperatura estacional (sol y nieve de León), se dispondrán **liras de dilatación en U** en los tramos rectos de más de 15 metros de longitud y apoyos deslizantes en combinación con soportes rígidos para absorber las tensiones de dilatación térmica. La separación entre abrazaderas de soporte se dimensiona a un máximo de **3,0 metros** para evitar flechas o pandeos.
 
-## Estilo de redacción
-Tono de ingeniería formal y descriptivo. Uso de expresiones matemáticas LaTeX. Longitud orientativa: 2 páginas.
+## 2. Sistema de Regulación de Presión (Doble Salto)
+La presión del gas propano en el interior de los depósitos varía sustancialmente en función de la temperatura del líquido ($2\text{ bar}$ a $-5\text{ ºC}$, hasta más de $8\text{ bar}$ en verano). Para garantizar un suministro estable y seguro a los quemadores de los hornos y calderas, se diseña un sistema de regulación de **doble salto**:
 
-## Figuras, tablas y resultados
-- **Figuras/Planos a integrar:**
-  - [plano_Esquema_instalacion.pdf](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/plano_Esquema_instalacion.pdf): Plano y esquema de principio (P&ID) de la red de tuberías aéreas de propano comercial y acometidas de consumo de la instalación.
-- **Tablas obligatorias:**
-  - **Tabla resumen de tramos de la red:** Código del tramo (ej. Tramo A-B, B-C, etc.), longitud real, longitud de cálculo, caudal, diámetro exterior/interior adoptado, velocidad de flujo y presión final del tramo.
-- **Resultado final:** Presión final del consumidor más desfavorable ($1,623 \text{ bar relativos}$, cumpliendo con el límite mínimo de $1,615 \text{ bar}$).
+1.  **Regulación de Primer Salto (Media Presión B - MPB):**
+    *   **Ubicación:** Centralizada en la salida del colector común de los depósitos en la estación de almacenamiento.
+    *   **Función:** Reduce la presión variable de fase gas del almacenamiento a una presión de red exterior de **$1,7\text{ bar relativos}$**.
+    *   **Equipo:** Se seleccionan reguladores comerciales de alta capacidad con margen de seguridad del $30\%$ sobre la demanda de cálculo máxima ($187,81\text{ kg/h} \times 1,3 = 244,15\text{ kg/h}$), adoptándose el modelo **RegO 1588V** o regulador **Clesse APS** tarado a $1,7\text{ bar}$, el cual incorpora válvula de seguridad por sobrepresión (de escape conducido) y válvula de seguridad por defecto de presión (cierre rápido de seguridad UPS).
+2.  **Regulación de Segundo Salto (Baja Presión / Media Presión A - MPA):**
+    *   **Ubicación:** Descentralizada, ubicada en armarios metálicos de regulación individuales adosados a la entrada de cada uno de los seis consumidores.
+    *   **Función:** Reduce la presión de la red de distribución general ($1,7\text{ bar}$) a la presión nominal que exigen las especificaciones técnicas de los quemadores de cada máquina: **$37\text{ mbar}$** (o $300\text{ mbar}$ según modelo específico del horno).
+    *   **Equipo:** Reguladores de segunda etapa de membrana con válvula de seguridad de mínima presión de rearme manual, que bloquean el paso de gas si la presión en la red cae por debajo de la presión mínima admisible del quemador.
 
-## Conexiones
-- **Alcance:** Requisito 5 (Cálculo de la conducción de distribución: diámetros, presiones y pérdidas de carga) y Requisito 6 (Esquema de distribución).
-- **Anotaciones:** [dimensionado_tuberias_glp.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/dimensionado_tuberias_glp.md) (Cálculo), [trazado_red.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/trazado_red.md) (Decisión), [metodologia-longitud-calculo.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Especificaciones/metodologia-longitud-calculo.md) (Cálculo).
-- **Planos:** Esquema de instalación general (`plano_Esquema_instalacion.pdf`).
-
-## Criterios de aceptación
-- [ ] Se describe formalmente el trazado aéreo de cobre UNE-EN 1057.
-- [ ] Se detalla la ecuación de pérdidas de carga de Renouard MPB y de velocidad.
-- [ ] La presión final en el punto más desfavorable calculada supera los $1,615 \text{ bar}$.
-- [ ] La velocidad del fluido en todas las conducciones de distribución es inferior a $10 \text{ m/s}$.
-- [ ] Se incluye la longitud equivalente con el factor de mayoración de $1,05$.
+## 3. Dispositivos de Medida
+Para el control de consumos de la planta fabril y balances de eficiencia térmica de los procesos, se dispondrán **contadores de gas de turbina o de pistones rotativos** con compensación térmica integrados en el interior de los armarios de regulación secundarios de cada consumidor, aguas abajo del segundo salto de regulación y protegidos contra intemperie.

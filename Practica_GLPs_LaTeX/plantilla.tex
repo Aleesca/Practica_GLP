@@ -1,3 +1,4 @@
+\pdfminorversion=7
 \documentclass[12pt]{article}
 \usepackage{preamble}
 
@@ -5,7 +6,7 @@
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
@@ -78,6 +79,7 @@
 }
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Contenido %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,79 +90,380 @@
     \label{Memoria}
 
         \subsection{IDENTIFICACIÓN.}
+        El presente proyecto aborda el diseño, dimensionado y justificación de una instalación de almacenamiento y distribución de Gases Licuados del Petróleo (GLP), concretamente propano comercial en fase gas, para el suministro de energía térmica a una planta industrial situada en el término municipal de León.
         
+        Las hipótesis generales del diseño se basan en las condiciones climáticas locales y en los perfiles de consumo de los diferentes receptores industriales de la planta. Conforme a las bases del proyecto, se establecen los siguientes parámetros generales:
         
+        \begin{itemize}
+            \item \underline{Emplazamiento:} Parcela catastral \texttt{8638004TN8183N}, León.
+            \item \underline{Temperatura exterior de cálculo:} $-5\ ^{\circ}\text{C}$, justificada mediante el percentil del $99,6\%$ de las bases de datos del IDAE para León (estación de León-Virgen del Camino).
+            \item \underline{Presión de diseño en red general (MPB):} $1,7\text{ bar}$ (relativos) a la salida de la estación de almacenamiento, con una pérdida de carga admisible máxima del $5\%$ ($0,085\text{ bar}$), fijando una presión mínima en el punto de consumo de $1,615\text{ bar}$ relativos.
+            \item \underline{Presión de regulación de segunda etapa:} $37\text{ mbar}$ a la entrada de cada consumidor industrial.
+            \item \underline{Coeficiente de simultaneidad ($f_s$):} $1,0$ (escenario punta simultáneo para garantizar el suministro a todos los equipos).
+            \item \underline{Velocidad máxima admisible del gas:} $10\text{ m/s}$ en la red receptora interior (UNE 60670 \cite{une60670}) y $20\text{ m/s}$ en las conducciones de la estación de almacenamiento y derivaciones exteriores (UNE 60250 \cite{une60250}).
+        \end{itemize}
 
+        La planta cuenta con seis consumidores específicos identificados como $C_1$ a $C_6$, cuyas potencias nominales, regímenes de funcionamiento diario y consumos energéticos resultantes se detallan en la Tabla~\ref{tab:consumidores}.
+
+        \begin{table}[H]
+            \centering
+            \caption{Tabla maestra de consumidores industriales de la planta metalúrgica. Fuente: Elaboración propia.}
+            \label{tab:consumidores}
+            \resizebox{\textwidth}{!}{%
+            \begin{tabular}{llccc}
+                \toprule
+                \textbf{Consumidor} & \textbf{Denominación} & \textbf{Potencia (kW)} & \textbf{Horas (h/día)} & \textbf{Energía (kWh/día)} \\
+                \midrule
+                $C_1$ & Horno de secado 1 & 60 & 12 & 720 \\
+                $C_2$ & Horno de secado 2 & 60 & 12 & 720 \\
+                $C_3$ & Caldera de vapor & 500 & 10 & 5.000 \\
+                $C_4$ & Caldera de agua caliente & 300 & 8 & 2.400 \\
+                $C_5$ & Horno de fusión & 700 & 4 & 2.800 \\
+                $C_6$ & Horno de decapado & 1.000 & 6 & 6.000 \\
+                \midrule
+                \textbf{Total} & & \textbf{2.620} & & \textbf{17.640} \\
+                \bottomrule
+            \end{tabular}%
+            }
+        \end{table}
+
+        Para los cálculos termodinámicos y dimensionales se adoptan las propiedades físicas del propano comercial establecidas en la Tabla~\ref{tab:propiedades_gas}.
+
+        \begin{table}[H]
+            \centering
+            \caption{Propiedades físicas del propano comercial adoptadas para el diseño. Fuente: Elaboración propia a partir de ficha técnica y UNE 60250 \cite{une60250}.}
+            \label{tab:propiedades_gas}
+            \begin{tabular}{lcrc}
+                \toprule
+                \textbf{Propiedad} & \textbf{Símbolo} & \textbf{Valor} & \textbf{Unidad} \\
+                \midrule
+                Poder Calorífico Superior & $PCS$ & $13,95$ & $\text{kWh/kg}$ \\
+                Densidad en fase líquida (a $20\ ^{\circ}\text{C}$) & $\rho_{\text{liq}}$ & $506,00$ & $\text{kg/m}^3$ \\
+                Densidad en fase gas (de diseño) & $\rho_{\text{gas}}$ & $1,882$ & $\text{kg/m}^3$ \\
+                Calor Latente de Vaporización & $CLV$ & $0,11$ & $\text{kWh/kg}$ \\
+                Coef. transmisión de calor (recipientes aéreos) & $K$ & $0,0116$ & $\text{kW/m}^2\cdot^{\circ}\text{C}$ \\
+                Temperatura de equilibrio del gas & $T_g$ & $-15,00$ & $^{\circ}\text{C}$ \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
 
         \clearpage
         \subsection{OBJETO.}
-        ~
-
+        El objeto del presente proyecto es definir las características técnicas, justificar el dimensionado y realizar la clasificación reglamentaria del sistema común de almacenamiento de GLP a granel y de su red aérea de distribución en Media Presión B (MPB). Dicha instalación tiene por finalidad suministrar propano comercial en fase gas a los seis consumidores industriales de la planta industrial, con una potencia térmica simultánea agregada de $2.620\text{ kW}$ y un caudal de cálculo de $187,81\text{ kg/h}$.
+        
+        El proyecto abarca desde la boca de carga del camión cisterna, el conjunto de la batería de depósitos fijos aéreos horizontales y el sistema de vaporización forzada (intercambiador VIA 150 y caldera exterior de $45\text{ kW}$), hasta la regulación individual de segunda etapa instalada a la entrada de cada uno de los consumidores industriales. Se asegura el cumplimiento estricto de la normativa de seguridad industrial y de utilización de combustibles gaseosos en vigor.
+ 
         \subsection{ANTECEDENTES.}
-        ~
+        La planta industrial, dedicada a procesos térmicos metalúrgicos y de generación de vapor, requiere un combustible limpio, con alto poder calorífico superior ($13,95\text{ kWh/kg}$) y con un suministro continuo que garantice la estabilidad operacional de los hornos de secado, fusión, decapado y las calderas de servicio.
+        
+        La planta de producción consta de seis consumidores principales independientes cuyos datos de partida operativos (potencia nominal y régimen de funcionamiento diario) se detallan en la Tabla~\ref{tab:consumidores}. La distribución espacial y la disposición de estos consumidores sobre la parcela industrial de referencia se representa en la Figura~\ref{fig:parcela_consumidores}.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth,trim={0 0 0 1.7cm},clip=true]{Figuras/parcela_consumidores.pdf}
+            \caption{Disposición y distribución espacial de los consumidores en la parcela catastral. Fuente: Elaboración propia.}
+            \label{fig:parcela_consumidores}
+        \end{figure}
+        
+        Ante la inexistencia de una red de distribución pública de gas natural en las proximidades del emplazamiento en León, se opta por el propano comercial como la solución técnico-económica óptima. Esto proporciona una excelente autonomía de almacenamiento, alta flexibilidad operativa y un menor impacto ambiental comparado con combustibles líquidos pesados como el gasóleo o el fuelóleo.
+        
+        La dirección técnica de la planta industrial ha solicitado la redacción de este documento para la definición constructiva, la justificación de los cálculos técnicos, la evaluación de las distancias de seguridad y la posterior legalización de la estación de almacenamiento común ante las autoridades competentes del área de industria, conforme a las exigencias del Real Decreto 919/2006.
 
         \subsection{RESUMEN DE CARACTERÍSTICAS.}
             \subsubsection{Titular de la instalación.}
-            ~
+            El titular legal e institucional de la instalación es la Escuela de Ingenierías Industrial, Informática y Aeroespacial de la Universidad de León.
+            
             \subsubsection{Emplazamiento.}
-            ~
+            La estación de almacenamiento de GLP y las conducciones se ubican en la parcela industrial identificada con la referencia catastral \texttt{8638004TN8183N}.
+            
             \subsubsection{Localidad.}
-
-            flkjhlfkjs
-            ~
+            La instalación se sitúa en el término municipal de León (Virgen del Camino), provincia de León.
+            
             \subsubsection{Tipo de instalación (aérea o enterrada).}
-            ~
+            La instalación de almacenamiento está clasificada como de superficie o aérea, compuesta por depósitos cilíndricos horizontales aéreos montados paralelos sobre cunas de hormigón armado.
+            
             \subsubsection{Volumen en \texorpdfstring{m\textsuperscript{3}}{m³} de almacenamiento. Clasificación.}
-            ~
+            El volumen geométrico total acumulado en el almacenamiento es de $124,30\text{ m}^3$ (equivalente a $124.300\text{ litros}$), distribuido en una batería mixta de cuatro depósitos (un depósito de $46,60\text{ m}^3$ y tres de $25,90\text{ m}^3$).
+            
+            Al superar una capacidad total de $100\text{ m}^3$ e inferior a $500\text{ m}^3$, el almacenamiento se clasifica como una estación de \textbf{Categoría A-500} de acuerdo con el anexo B de la norma UNE 60250:2008 \cite{une60250} y la ITC-ICG 03 del RD 919/2006 \cite{rd919}.
+            
             \subsubsection{Instalación receptora. Actividad que utiliza en GLP.}
-            ~
+            La instalación receptora alimenta procesos de combustión industrial consistentes en: hornos de secado, hornos de fusión de metales, hornos de decapado químico-térmico y calderas industriales para la producción de vapor y calefacción.
+            
             \subsubsection{Potencia térmica total de la instalación en KW.}
-            ~
+            La potencia térmica simultánea de cálculo agregada de los seis consumidores industriales instalados es de \textbf{2.620 kW}.
+            
             \subsubsection{Presupuesto total.}
-            ~
+            El Presupuesto de Ejecución Material (PEM) asciende a un total de $176.555,02\text{ \euro}$. Aplicando un Impuesto sobre el Valor Añadido (IVA) del $21\%$ ($37.076,55\text{ \euro}$), se obtiene un Presupuesto de Ejecución por Contrata (PEC) de \textbf{213.631,57 \euro}.
         
         \subsection{PROMOTOR DE LA INSTALACIÓN.}
-        ~
+        El promotor del proyecto es la Escuela de Ingenierías Industrial, Informática y Aeroespacial de la Universidad de León. La autoría del diseño, redacción y justificación técnica del presente documento corresponde a la oficina técnica de ingeniería responsable del proyecto, figurando Alberto España Carrete, Carlos Fernández Palanca, Rubén Modino López y Juan Diego Niño González como proyectistas principales de la instalación, bajo la tutoría y supervisión técnica del ingeniero Roberto Getino de la Mano en el marco de la Universidad de León.
+        
         \subsection{EMPLAZAMIENTO DE LAS INSTALACIONES.}
-        ~
+        Las instalaciones se emplazan en una parcela industrial dentro del término municipal de León, de alta accesibilidad logística. Los límites espaciales del emplazamiento y sus distancias geométricas se definen sobre la parcela catastral \texttt{8638004TN8183N}. La ubicación de la estación se ha elegido en una zona perimetral del solar para cumplir con la normativa de seguridad de forma óptima, aprovechando las alineaciones ciegas y delimitando el espacio mediante muros cortafuegos en los lindes de propiedad más comprometidos.
 
         \clearpage
         \subsection{REGLAMENTACIÓN Y NORMAS TÉCNICAS CONSIDERADAS.}
-        ~
+        El proyecto de almacenamiento y distribución de GLP se redacta y justifica bajo el estricto cumplimiento del marco legal español e internacional en materia de seguridad industrial e instalaciones de gas. La normativa básica considerada comprende:
+        
+        \begin{itemize}
+            \item \underline{Real Decreto 919/2006, de 28 de julio \cite{rd919}}: Aprueba el Reglamento técnico de distribución y utilización de combustibles gaseosos y sus Instrucciones Técnicas Complementarias (ITC-ICG 01 a 11), siendo de aplicación directa la \textbf{ITC-ICG 03} sobre instalaciones de almacenamiento de gases licuados del petróleo en depósitos fijos.
+            \item \underline{Norma UNE 60250:2008 \cite{une60250}}: "Instalaciones de almacenamiento de gases licuados del petróleo (GLP) en depósitos fijos para su consumo en instalaciones receptoras".
+            \item \underline{Norma UNE 60670:2023 \cite{une60670}}: "Instalaciones receptoras de gas suministradas a una presión máxima de operación (MOP) inferior o igual a $5\text{ bar}$" (Partes 1 a 13).
+            \item \underline{Código Técnico de la Edificación (CTE) - Documento Básico DB-SI \cite{rd314}}: "Seguridad en caso de incendio", de aplicación para la justificación de los muros cortafuegos.
+            \item \underline{Directiva 2014/34/UE (ATEX)}: Sobre la aproximación de las legislaciones de los Estados miembros bajo aparatos y sistemas de protección para uso en atmósferas potencialmente explosivas.
+            \item \underline{Norma UNE-EN 1057 \cite{une1057}}: Relativa a tubos redondos de cobre sin soldadura para agua y gas en aplicaciones sanitarias y de calefacción.
+        \end{itemize}
+
         \subsection{PLAZO DE EJECUCIÓN.}
-        ~
+        El plazo total estimado para la ejecución material de las obras civiles y el montaje mecánico, eléctrico y de instrumentación de la estación de almacenamiento y la red de distribución es de \textbf{tres (3) meses}. El cronograma de hitos propuesto se detalla en la Tabla~\ref{tab:cronograma}.
+        
+        \begin{table}[H]
+            \centering
+            \caption{Cronograma de hitos y plazos de ejecución del proyecto. Fuente: Elaboración propia.}
+            \label{tab:cronograma}
+            \begin{tabularx}{\textwidth}{c X c}
+                \toprule
+                \textbf{Fase} & \textbf{Descripción del Hito de Ejecución} & \textbf{Plazo Estimado} \\
+                \midrule
+                1 & Movimiento de tierras, cimentación y losas de hormigón para depósitos & Mes 1 \\
+                2 & Montaje mecánico de los depósitos, cunas de apoyo y anclajes & Mes 2 \\
+                3 & Instalación del vaporizador forzado VIA 150 y el armario VPC30C & Mes 2 - 3 \\
+                4 & Tendido aéreo de tuberías de cobre UNE-EN 1057 y montaje de valvulería & Mes 2 - 3 \\
+                5 & Pruebas de presión y estanqueidad conforme a la ITC-ICG 03 & Mes 3 \\
+                6 & Puesta a tierra, conexiones eléctricas y certificación final & Mes 3 \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+
         \subsection{CARACTERÍSTICAS DEL GAS SUMINISTRADO.}
-        ~
+        El gas combustible suministrado es propano comercial, clasificado dentro de la tercera familia de gases de acuerdo con la norma UNE-EN 437. Físicamente se almacena a presión en fase líquida dentro del depósito y se distribuye a la instalación receptora en fase gas. Las propiedades térmicas del combustible son:
+        
+        \begin{itemize}
+            \item Poder Calorífico Superior ($PCS$): $13,95\text{ kWh/kg}$ ($11.980\text{ kcal/kg}$), lo que permite un alto rendimiento en la combustión.
+            \item Densidad relativa (fase gas respecto al aire): $1,55$, lo que implica que es más denso que el aire. Por este motivo, tiende a acumularse en zonas bajas, obligando a diseñar ventilaciones a nivel de suelo en la estación de almacenamiento.
+            \item Calor latente de vaporización ($CLV$): $0,11\text{ kWh/kg}$ ($94,6\text{ kcal/kg}$), que determina la cantidad de energía calorífica necesaria para pasar de fase líquida a fase gaseosa en el almacenamiento.
+        \end{itemize}
+
         \subsection{ACCESOS.}
-        ~
+        La estación de almacenamiento se ubica de modo que se garantiza la accesibilidad directa y segura para los camiones cisterna articulados de suministro de GLP de propano a granel, conforme a las prescripciones de la norma UNE 60250 \cite{une60250}. Se han establecido los siguientes condicionantes geométricos mínimos en la vía de acceso y el recinto:
+        
+        \begin{itemize}
+            \item \underline{Radio de giro mínimo libre:} $12\text{ m}$ en las curvas de acceso de la parcela para posibilitar las maniobras de los camiones cisterna.
+            \item \underline{Pendiente de descarga:} La zona destinada al estacionamiento del camión cisterna durante las operaciones de descarga dispone de una pendiente inferior al $5\%$, totalmente libre de obstáculos y nivelada.
+            \item \underline{Ancho libre de paso del vial:} Mínimo de $4\text{ m}$ en los tramos de acceso al recinto de carga.
+            \item \underline{Salida de vehículos del recinto:} El cerramiento cuenta con una doble puerta que abre hacia el exterior del recinto para facilitar la evacuación rápida en caso de emergencia.
+        \end{itemize}
+
         \subsection{DESCRIPCIÓN Y SISTEMA ELEGIDO.}
+        El sistema de distribución elegido consiste en una red aérea de distribución en Media Presión B (MPB) ejecutada íntegramente con tuberías de cobre duro estirado sin soldadura conforme a la norma UNE-EN 1057 \cite{une1057}. El trazado discurre visto por fachadas e itinerarios aéreos elevados apoyados sobre soportes metálicos estructurales.
+        
+        La elección de una red aérea de cobre frente a una conducción enterrada de polietileno (PE) se justifica técnicamente por las siguientes razones:
+        \begin{itemize}
+            \item Se evita la necesidad de acometer obras civiles de zanja complejas que interferirían con el tráfico de carretillas e infraestructura de la fábrica.
+            \item Se eliminan los riesgos de acumulación de agua por nivel freático alto que podrían provocar problemas mecánicos o de flotación en las conducciones.
+            \item Se descarta la necesidad de instalar protección catódica activa contra la corrosión electroquímica que exige el PE enterrado bajo paso de vehículos.
+            \item Facilidad de inspección visual directa ante eventuales fugas o mantenimiento de la valvulería.
+        \end{itemize}
+        
+        El caudal de cálculo se calcula para un escenario de simultaneidad máxima ($f_s=1$), resultando en un caudal total másico de la instalación de $187,81\text{ kg/h}$ ($99,79\text{ m}^3\text{/h}$). La regulación de primera etapa reduce la presión de los depósitos a una presión constante de $1,7\text{ bar}$ relativos a la salida de la estación. La pérdida de carga admisible en la red general se limita al $5\%$, por lo que la presión no debe descender de $1,615\text{ bar}$. El cálculo hidráulico se ha realizado con la fórmula de Renouard para Media Presión B:
+        
+        \begin{equation}
+            P_A^2 - P_B^2 = 51,5 \cdot d_c \cdot L_c \cdot \frac{Q^{1,82}}{D^{4,82}}
+        \end{equation}
+        
+        Donde las longitudes reales se incrementan con un factor del $5\%$ ($L_c = 1,05 \cdot L_{\text{real}}$) para considerar la longitud equivalente por codos y accesorios de la red. La velocidad del gas se comprueba mediante la ecuación:
+        
+        \begin{equation}
+            v = 378,04 \cdot \frac{Q}{P_{\text{media\_abs}} \cdot D^2}
+        \end{equation}
+        
+        El cálculo hidráulico tramo a tramo confirma que la velocidad en la red de distribución se mantiene por debajo de $10\text{ m/s}$ y que la presión en el consumidor más desfavorable ($C_6$) es de $1,623\text{ bar}$ relativos, lo que supera con creces el límite de $1,615\text{ bar}$ mínimos exigidos. Los resultados del dimensionado de los tramos se presentan en la Tabla~\ref{tab:tramos_red}.
+
+        \begin{table}[H]
+            \centering
+            \caption{Resumen de resultados del dimensionado hidráulico de la red de propano. Fuente: Elaboración propia.}
+            \label{tab:tramos_red}
+            \resizebox{\textwidth}{!}{
+            \begin{tabular}{llccccccrc}
+                \toprule
+                \textbf{Tramo} & \textbf{Tipo de tramo} & \textbf{Longitud real (m)} & \textbf{Caudal ($m^3$/h)} & \textbf{Tubo (ext$\times$esp)} & \textbf{$D_{\text{int}}$ (mm)} & \textbf{$P_{\text{ini}}$ (bar r)} & \textbf{$P_{\text{fin}}$ (bar r)} & \textbf{$\Delta P$ (bar)} & \textbf{Velocidad (m/s)} \\
+                \midrule
+                $D_1$-$D_4$ & Derivación tanque 1 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_2$-$D_4$ & Derivación tanque 2 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_3$-$D_4$ & Derivación tanque 3 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$ vert. & Derivación tanque 4 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$-$A$ & Red Principal & 15,12 & 99,80 & 42$\times$1,5 & 39,0 & 1,700 & 1,682 & 0,018 & 9,20 \\
+                $A$-$C_1$ & Ramal a $C_1$ & 1,81 & 2,29 & 15$\times$1,0 & 13,0 & 1,682 & 1,681 & 0,001 & 1,90 \\
+                $A$-$B$ & Red Principal & 4,97 & 97,51 & 42$\times$1,5 & 39,0 & 1,682 & 1,675 & 0,007 & 9,02 \\
+                $B$-$C_2$ & Ramal a $C_2$ & 21,79 & 2,29 & 15$\times$1,0 & 13,0 & 1,675 & 1,670 & 0,005 & 1,91 \\
+                $B$-$C$ & Red Principal & 17,32 & 95,22 & 42$\times$1,5 & 39,0 & 1,675 & 1,657 & 0,018 & 8,86 \\
+                $C$-$C_3$ & Ramal a $C_3$ & 1,75 & 19,05 & 20$\times$1,5 & 17,0 & 1,657 & 1,648 & 0,009 & 9,36 \\
+                $C$-$D$ & Red Principal & 10,77 & 76,18 & 42$\times$1,5 & 39,0 & 1,657 & 1,649 & 0,008 & 7,11 \\
+                $D$-$C_4$ & Ramal a $C_4$ & 1,68 & 11,43 & 15$\times$1,0 & 13,0 & 1,649 & 1,638 & 0,011 & 9,64 \\
+                $D$-$E$ & Red Principal & 13,06 & 64,75 & 42$\times$1,5 & 39,0 & 1,649 & 1,641 & 0,007 & 6,06 \\
+                $E$-$C_5$ & Ramal a $C_5$ & 1,69 & 26,66 & 22$\times$1,0 & 20,0 & 1,641 & 1,634 & 0,008 & 9,52 \\
+                $E$-$C_6$ & Ramal a $C_6$ & 14,46 & 38,09 & 28$\times$1,0 & 26,0 & 1,641 & 1,620 & 0,021 & 8,09 \\
+                \bottomrule
+            \end{tabular}
+            }
+        \end{table}
         
         \subsection{CLASIFICACIÓN Y DISTANCIAS DE SEGURIDAD.}
-        ~
+        El almacenamiento cuenta con un volumen geométrico total de $124,30\text{ m}^3$. De acuerdo con el Reglamento aprobado por el Real Decreto 919/2006 \cite{rd919} y la norma UNE 60250:2008 \cite{une60250}, la estación se clasifica como una instalación de \textbf{Categoría A-500} ($100\text{ m}^3 < V \le 500\text{ m}^3$).
+        
+        Las distancias de seguridad mínimas respecto a los límites de la parcela industrial y a posibles focos de ignición no clasificados se calculan de acuerdo con las especificaciones de la norma UNE 60250 \cite{une60250}. Para los depósitos aéreos horizontales de esta categoría, se contemplan dos distancias:
+        \begin{itemize}
+            \item $D_o$ (Distancia desde los orificios de los depósitos: válvulas de seguridad, bocas de carga y purgas).
+            \item $D_p$ (Distancia desde la proyección vertical de las paredes del recipiente).
+        \end{itemize}
+        
+        Dada la restricción geométrica de la parcela industrial y la ubicación de linderos con vías públicas y propiedades colindantes, las distancias básicas se reducen al $50\%$ mediante la instalación proyectada de muros cortafuegos con clasificación de resistencia al fuego \textbf{EI-120} y una altura de $3,5\text{ m}$. Las distancias reglamentarias y su verificación real se muestran en la Tabla~\ref{tab:distancias_seguridad}.
+        
+        \begin{table}[H]
+            \centering
+            \caption{Verificación de distancias de seguridad según UNE 60250 en la estación A-500. Fuente: Elaboración propia a partir del Cuadro de Distancias de la norma UNE 60250 \cite{une60250}.}
+            \label{tab:distancias_seguridad}
+            \resizebox{\textwidth}{!}{%
+            \begin{tabular}{lccccc}
+                \toprule
+                \textbf{Elemento del entorno} & \textbf{$D_{o,\text{base}}$ (m)} & \textbf{$D_{p,\text{base}}$ (m)} & \textbf{$D_{o,\text{red}}$ (m)} & \textbf{$D_{p,\text{red}}$ (m)} & \textbf{Estado final} \\
+                \midrule
+                Linderos de propiedad / Focos ignición & 15,00 & 10,00 & 7,50 & 5,00 & Conforme (Muro EI-120) \\
+                Edificios residenciales / Oficinas & 15,00 & 10,00 & 7,50 & 5,00 & Conforme (Muro EI-120) \\
+                Locales de pública concurrencia & 20,00 & 15,00 & 10,00 & 7,50 & Conforme (Sin afección) \\
+                Cerramiento del recinto (lados libres) & - & 5,00 & - & - & Conforme (Espacio libre) \\
+                Proyección líneas eléctricas (AT/BT) & 15,00 & 10,00 & \textbf{No red.} & \textbf{No red.} & Conforme (Sin tendidos) \\
+                \bottomrule
+            \end{tabular}%
+            }
+        \end{table}
+
+        Asimismo, la separación mínima reglamentaria ($d$) entre las paredes de los depósitos adyacentes de la misma batería dispuestos en paralelo se determina por la expresión $d \ge (D_1 + D_2)/4$. Dado que los depósitos adoptados tienen un diámetro exterior de $2.200\text{ mm}$ ($2,2\text{ m}$):
+        
+        \begin{equation}
+            d \ge \frac{2,2 + 2,2}{4} = 1,1\text{ m}
+        \end{equation}
+        
+        La batería mixta se ha implantado con una separación real de $1,10\text{ m}$ entre ejes de paredes de tanques contiguos, cumpliendo exactamente el límite reglamentario (que exige un mínimo absoluto de $1,0\text{ m}$ para recipientes mayores de $20\text{ m}^3$).
+        
+        El recinto de almacenamiento estará delimitado por un cerramiento perimetral de seguridad consistente en un vallado metálico de $2,0\text{ m}$ de altura mínima para impedir el acceso de personas no autorizadas. Este vallado se compone de malla metálica diáfana sobre postes metálicos y un zócalo inferior continuo de hormigón con una altura máxima de $30\text{ cm}$, con objeto de no impedir la ventilación natural cruzada y permitir la evacuación o dispersión de posibles fugas de propano gas, al ser éste un fluido más pesado que el aire.
+
         \subsection{CARACTERÍSTICAS DE LOS EQUIPOS.}
             \subsubsection{Depósitos.}
-            ~
+            Para satisfacer la autonomía mínima exigida y adaptarse a la morfología de la parcela industrial, se ha adoptado una batería de almacenamiento de superficie de tipo mixto con un volumen total de $124,30\text{ m}^3$ ($124.300\text{ litros}$), conformada por:
+            \begin{itemize}
+                \item \underline{Un (1) depósito modelo Lapesa LP46A} (capacidad unitaria $46,60\text{ m}^3$).
+                \item \underline{Tres (3) depósitos modelo Lapesa LP26A} (capacidad unitaria $25,90\text{ m}^3$).
+            \end{itemize}
+            
+            La capacidad conjunta cumple con holgura el volumen mínimo de diseño justificado para cubrir la autonomía de proyecto de 30 días ($115,34\text{ m}^3$ geométricos). Los recipientes están fabricados en chapa de acero de alta resistencia para recipientes a presión y han sido ensayados a una presión de prueba hidráulica de $25\text{ bar}$. Sus características dimensionales y constructivas principales se muestran en la Tabla~\ref{tab:caract_depositos}.
+
+            \begin{table}[H]
+                \centering
+                \caption{Características físicas de los depósitos seleccionados (Lapesa). Fuente: Elaboración propia a partir de catálogo comercial Lapesa.}
+                \label{tab:caract_depositos}
+                \resizebox{\textwidth}{!}{%
+                \begin{tabular}{lccccc}
+                    \toprule
+                    \textbf{Modelo} & \textbf{Volumen ($m^3$)} & \textbf{Diámetro (mm)} & \textbf{Longitud (mm)} & \textbf{Peso vacío (kg)} & \textbf{Superficie ($m^2$)} \\
+                    \midrule
+                    LP46A & 46,60 & 2.200 & 12.830 & 11.080 & 88,58 \\
+                    LP26A & 25,90 & 2.200 & 7.375 & 6.920 & 51,00 \\
+                    \bottomrule
+                \end{tabular}%
+                }
+            \end{table}
+            
+            Los depósitos se especifican con brida de inspección DN400 (Modelo Especial) en el domo superior o lateral, necesaria para el alojamiento del serpentín del vaporizador forzado.
+
             \subsubsection{Canalizaciones.}
-            ~
+            Toda la red exterior de distribución se proyecta con tuberías de cobre de calidad dura estirada sin soldadura según la norma UNE-EN 1057 \cite{une1057}. Para la red general se adoptan diámetros exteriores comerciales de $42\text{ mm}$ ($42\times 1,5$) y ramales de distribución secundaria de $35\text{ mm}$, $28\text{ mm}$, $22\text{ mm}$ y $15\text{ mm}$, en función de los caudales de diseño de cada consumidor.
+            
+            El espesor nominal mínimo de las paredes de cobre es de $1,0\text{ mm}$ en la red de distribución general y se exige de $1,5\text{ mm}$ en las derivaciones verticales de conexión de los depósitos por razones de resistencia mecánica y seguridad de uniones. Para garantizar la estanqueidad absoluta y evitar el desprendimiento por dilataciones térmicas, las uniones y accesorios se realizarán exclusivamente mediante \textbf{soldadura capilar fuerte con metal de aportación con temperatura de fusión superior a 450 $^{\circ}$C}.
+
             \subsubsection{Boca de carga.}
-            ~
+            La recarga de los depósitos se realiza mediante una boca de carga rápida de propano líquido con acoplamiento tipo RegO de $3''$ (o equivalente compatible con la manguera del camión cisterna). El sistema cuenta con un colector de llenado común de fase líquida y fase gas para el equilibrio de presiones durante la descarga.
+            
+            Como elementos de seguridad contra sobrellenado y emisiones, la boca de carga dispone de una doble válvula de retención unidireccional y un purgador de seguridad intermedio con grifo de aguja para despresurizar el acoplamiento antes de su desconexión física. Los depósitos cuentan con un dispositivo limitador de llenado automático tarado al $85\%$ de su volumen geométrico, impidiendo físicamente sobrepasar dicho nivel por seguridad de dilatación del líquido.
+
             \subsubsection{Equipo de vaporización.}
-            ~
+            La verificación de la capacidad de vaporización natural de la batería mixta de depósitos a la temperatura mínima exterior de diseño de León ($-5\ ^{\circ}\text{C}$) y con el nivel de llenado crítico de seguridad del $20\%$, arroja los siguientes resultados:
+            \begin{itemize}
+                \item Vaporización natural del depósito LP46A: $47,00\text{ kg/h}$.
+                \item Vaporización natural unitaria de los depósitos LP26A: $28,10\text{ kg/h}$.
+                \item Capacidad de vaporización natural total de la batería: $47,00 + 3 \cdot 28,10 = 131,30\text{ kg/h}$.
+            \end{itemize}
+            
+            Puesto que la demanda de consumo punta simultáneo de la planta industrial es de $187,81\text{ kg/h}$, se constata un déficit de vaporización natural de:
+            
+            \begin{equation}
+                Q_{\text{def}} = 187,81 - 131,30 = 56,51\text{ kg/h}
+            \end{equation}
+            
+            Para solventar dicho déficit, se instala un sistema de vaporización forzada mixto que consta de:
+            \begin{itemize}
+                \item \underline{Intercambiador de serpentín VIA 150} introducido sobre brida DN400 del depósito principal LP46A, con capacidad de vaporización forzada de $150\text{ kg/h}$.
+                \item \underline{Armario de calefacción VPC30C} exterior, de dimensiones $800\times 400\times 1.200\text{ mm}$, que aloja una caldera mural a gas propano de \textbf{45 kW} (siendo la potencia mínima exigida por el intercambiador de $17,5\text{ kW}$) y bomba de circulación de agua caliente en circuito cerrado hacia el serpentín.
+            \end{itemize}
+
             \subsubsection{Equipos de regulación y medida.}
-            ~
+            La instalación dispone de dos etapas consecutivas de regulación de presión de propano comercial:
+            \begin{itemize}
+                \item \underline{Primera etapa (Red general):} Ubicada a la salida de fase gas de los depósitos colectores comunes. Compuesta por un regulador de presión de gran caudal (modelo RegO 1588V o Clesse APS) que reduce la presión cambiante del depósito a una presión regulada de salida de \textbf{1,7 bar relativos}. Cuenta con válvula de seguridad por sobrepresión incorporada.
+                \item \underline{Segunda etapa (Consumidores):} Instalada en el ramal de entrada de cada consumidor industrial. Regula la presión desde los $1,7\text{ bar}$ de la red de MPB hasta los \textbf{37 mbar} de presión de utilización de los quemadores industriales.
+            \end{itemize}
+            Se disponen llaves de corte general en la salida de gas y líquido de cada depósito para aislar individualmente cualquier recipiente para su inspección, y transiciones cobre-acero homologadas. No se contemplan contadores generales de medida en la estación de almacenamiento por tratarse de un usuario único.
+
             \subsubsection{Equipo de trasvase.}
-            ~
+            La descarga del camión cisterna a los depósitos de almacenamiento se realiza aprovechando la gravedad y la diferencia de presión hidrostática y de equilibrio térmico de la fase gaseosa (colector de retorno de gas). Por lo tanto, no se requiere la incorporación de bombas o compresores mecánicos activos de trasvase de combustible, simplificando la instalación electromecánica y eliminando fuentes de ignición en la zona clasificada.
+
             \subsubsection{Válvulas de seguridad.}
-            ~
+            Cada uno de los cuatro depósitos de la estación dispone de válvulas de alivio de presión por sobrepresión en la fase gas (modelo RegO RS 3145 o similar). Estas válvulas están taradas a una presión nominal de \textbf{20 bar}.
+            
+            Para posibilitar las labores reglamentarias de retarado, mantenimiento o sustitución sin dejar en ningún momento desprotegido el depósito bajo presión, las válvulas de seguridad se montan por duplicado sobre un acoplamiento distribuidor de tres vías (tipo CD45). Dicho dispositivo mecánico permite aislar una de las válvulas de seguridad para su desmontaje mientras la otra permanece comunicada y operativa al $100\%$ con el interior del recipiente.
         
         \clearpage
         \subsection{INSTALACIÓN ELÉCTRICA.}
+        La instalación eléctrica asociada a la estación de almacenamiento de GLP y el sistema de vaporización forzada se diseña conforme a la ITC-ICG 03 \cite{rd919}, el Reglamento Electrotécnico para Baja Tensión (REBT, RD 842/2002 \cite{rd842}) y la norma UNE 60250 \cite{une60250}.
         
+        Debido a la naturaleza inflamable del propano, se delimitan las zonas ATEX (Atmósferas Explosivas) del recinto exterior de almacenamiento. Se define una \textbf{Zona 1} en el interior de las arquetas, fosos y canalizaciones del recinto, así como en un radio de $1,0\text{ m}$ alrededor de las bocas de carga y válvulas de seguridad de los tanques. Se clasifica como \textbf{Zona 2} el espacio circundante a los depósitos dentro del recinto vallado hasta una distancia radial de $3.0\text{ m}$ desde las paredes de los recipientes y el armario del vaporizador.
+        
+        Todos los equipos eléctricos instalados dentro de estas áreas clasificadas (luminarias de alumbrado, motores de bombas de recirculación de agua del armario VPC30C, electroválvulas y presostatos) dispondrán de marcado y certificado de seguridad ATEX de categoría mínima \textbf{II 2G Ex d IIA T3} o superior. La canalización eléctrica se realizará bajo tubos rígidos de acero roscado con prensaestopas antideflagrantes Ex d.
         
         \subsection{INSTALACIONES DE PROTECCIÓN CONTRAINCENDIOS.}
-        ~
+        Las instalaciones de protección contra incendios (PCI) combinan sistemas de protección pasiva y sistemas de extinción activa conformes a la norma UNE 60250 \cite{une60250}, la ITC-ICG 03 \cite{rd919}, el Reglamento de Instalaciones de Protección contra Incendios (RIPCI, RD 513/2017 \cite{rd513}) y el Reglamento de Seguridad contra Incendios en los Establecimientos Industriales (RSCIEI, RD 164/2025 \cite{rd164}):
+        
+        \begin{itemize}
+            \item \underline{Sistemas pasivos:} Cerramiento de seguridad vallado de $2\text{ m}$ de altura, muros EI-120 de $3,5\text{ m}$ de altura para el aislamiento de linderos colindantes, y cartelería normalizada de advertencia visible en los accesos (``Peligro Gas Inflamable'', ``Prohibido Fumar o Encender Fuego'').
+            \item \underline{Extintores portátiles:} Se instalan en el recinto extintores portátiles de polvo químico seco (PQS) de eficacia mínima \textbf{21A-113B} adecuados para fuegos de gas (clase C). Se distribuyen de forma perimetral de modo que la distancia de recorrido desde cualquier depósito a un extintor sea inferior a $15\text{ m}$.
+            \item \underline{Sistema de refrigeración por agua:} Se proyecta un sistema de enfriamiento activo mediante una red de tuberías aéreas de acero provistas de boquillas pulverizadoras de agua (rociadores de diluvio) dispuestas sobre la superficie superior de la chapa exterior de cada uno de los cuatro depósitos de la batería mixta. Este sistema garantiza un caudal específico mínimo de pulverización de \textbf{3 l/min} por cada metro cuadrado de superficie expuesta de los depósitos, con accionamiento manual y automático mediante válvulas de diluvio.
+        \end{itemize}
+        
         \subsection{PUESTA A TIERRA.}
-        ~
+        Para evitar riesgos de ignición derivados de acumulaciones de electricidad estática por la circulación de propano en fase líquida y gas, o descargas atmosféricas (rayos), se proyecta una red equipotencial de puesta a tierra en toda la estación de almacenamiento y distribución de GLP, cumpliendo con el REBT.
+        
+        Se conectan al colector de puesta a tierra:
+        \begin{itemize}
+            \item Las cunas metálicas de soporte de los cuatro depósitos.
+            \item Las bridas de unión de las tuberías de cobre de entrada y salida mediante puentes flexibles de cobre.
+            \item El chasis metálico y cuadro eléctrico del armario de vaporización VPC30C y caldera.
+            \item El vallado perimetral metálico del recinto.
+        \end{itemize}
+        
+        La red se compone de conductores de cobre desnudo de sección mínima $35\text{ mm}^2$ enterrados y conectados mecánicamente mediante soldadura aluminotérmica o grapas de presión a picas de cobre de $2,0\text{ m}$ de longitud hincadas en el terreno. El dimensionado del número y disposición de las picas se diseña de modo que la resistencia de paso a tierra final medida en la arqueta de comprobación sea inferior a \textbf{20 $\Omega$} (fijando un objetivo de diseño práctico menor de $10\ \Omega$ para maximizar la disipación).
+
+        \clearpage
+        \subsection*{\Large BIBLIOGRAFÍA}
+        \addcontentsline{toc}{subsection}{BIBLIOGRAFÍA}
+        
+        \bibliographystyle{IEEEtran}
+        \nocite{*}
+        \begingroup
+        \renewcommand{\section}[2]{} % Evita que el entorno de la bibliografía de IEEEtran inserte un título de sección duplicado
+        \bibliography{refs}
+        \endgroup
+
 
     \portadacapitulo{Cálculos Justificados}
     \section{Cálculos justificados}
@@ -174,8 +477,6 @@
         \subsection{VÁLVULAS DE SEGURIDAD.}
         ~
         \subsection{PUNTO MÁXIMO LLENADO: LONGITUD TUBO SONDA.}
-        ~
-        \subsection{PROTECCIÓN CATÓDICA.}
         ~
         \subsection{PROTECCIÓN CONTRA INCENDIOS.}
         ~
@@ -307,14 +608,8 @@
 
     
 
-    %%%% Referencias------------------------
+    % La bibliografía se ha integrado formalmente como la subsección 2.17 (BIBLIOGRAFÍA) al final de la Memoria.
 
-    % \renewcommand{\refname}{Bibliografía} % Cambia el título de "Referencias" a "Bibliografía"
-    % \bibliographystyle{IEEEtran}
-    % \cleardoublepage
-    % \phantomsection
-    % \addcontentsline{toc}{section}{Bibliografía}
-    % \bibliography{refs}
 
     %%%% Anexos ----------------------------
     % 2. Iniciamos el entorno de anexos

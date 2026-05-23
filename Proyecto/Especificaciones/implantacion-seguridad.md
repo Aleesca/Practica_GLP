@@ -1,41 +1,33 @@
-# Especificación: Implantación y Distancias de Seguridad (Sección 2.2.6)
+# Memoria: Implantación y Distancias de Seguridad
 
-## Propósito
-Justificar la ubicación de la estación de almacenamiento de GLP dentro de la parcela catastral y verificar el cumplimiento de las distancias mínimas de seguridad reglamentarias impuestas por la normativa nacional.
+## 1. Clasificación Reglamentaria de las Instalaciones y Entorno
+El almacenamiento conjunto proyectado cuenta con un volumen geométrico total acumulado de **$124,30\text{ m}^3$** de propano comercial líquido. De acuerdo con lo establecido en la norma **UNE 60250:2008** y el *Reglamento técnico de distribución y utilización de combustibles gaseosos* (RD 919/2006, ITC-ICG 03), la estación de almacenamiento se clasifica como una **instalación del Tipo A-500** al cumplir la condición:
 
-## Contenido obligatorio
-- **Clasificación de la Instalación:**
-  - Definir la clasificación del almacenamiento según UNE 60250 en función del volumen total acumulado ($124,30 \text{ m}^3$): Estación del Tipo A-500 ($100 \text{ m}^3 < V \le 500 \text{ m}^3$).
-- **Verificación de Distancias de Seguridad:**
-  - Tabular y justificar las distancias mínimas de seguridad exigidas por la norma UNE 60250 para almacenamiento aéreo horizontal en estación A-500:
-    - Distancia a linderos de propiedad y vía pública: $10 \text{ m}$ (reducibles al $50\%$ [$5 \text{ m}$] mediante pared cortafuegos $EI-120$).
-    - Distancia a aberturas y focos de inflamación no clasificados: $10 \text{ m}$ (reducibles a $5 \text{ m}$ con muro cortafuegos).
-    - Distancia entre depósitos de la misma batería: diámetro del depósito mayor dividido por dos, con mínimo de $1,0 \text{ m}$. En este caso, al ser diámetro de $2,2 \text{ m}$, la separación mínima entre tanques contiguos es de $1,10 \text{ m}$.
-  - Justificar geométricamente que los depósitos de la batería mixta adoptan la separación de $1,10 \text{ m}$ entre ellos.
-  - Justificar la necesidad de instalar muros de protección cortafuegos $EI-120$ para reducir las distancias de seguridad en los bordes críticos de la parcela catastral donde se sitúa la batería de depósitos.
-- **Vallado y Cerramiento de Seguridad:**
-  - Especificar los requisitos físicos del cerramiento del recinto de almacenamiento (vallado metálico de $2 \text{ m}$ de altura mínima con doble puerta de acceso peatonal y de vehículos abriéndose hacia el exterior).
+$$ 100\text{ m}^3 < V_{total} \le 500\text{ m}^3 $$
 
-## Estilo de redacción
-Tono formal, técnico y prescriptivo. Redactado en tercera persona impersonal. Longitud orientativa: 1,5 a 2 páginas.
+Esta clasificación impone los máximos requisitos de distancias de seguridad y protección contra incendios de la normativa para almacenamientos de GLP de consumo industrial.
 
-## Figuras, tablas y resultados
-- **Figuras a integrar:**
-  - [Plano_distancias_seguridad.pdf](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/Plano_distancias_seguridad.pdf): Plano de implantación detallada y distancias de seguridad en el recinto de almacenamiento de GLP, mostrando los depósitos, colector y muros de protección EI-120.
-  - [distancias_seguridad.png](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/distancias_seguridad.png): Esquema de la distribución en paralelo de la batería de depósitos con la cota de 1,10 m de separación mínima.
-  - [tabla_distancias_de_seguridad.png](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/tabla_distancias_de_seguridad.png): Tabla gráfica reglamentaria de distancias de seguridad según la norma UNE 60250 para instalaciones de GLP de categoría A-500.
-  - [cerramiento.jpeg](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/cerramiento.jpeg): Ilustración física y constructiva del tipo de cerramiento perimetral de seguridad para la estación de GLP.
-- **Tablas obligatorias:**
-  - **Tabla de distancias de seguridad UNE 60250:** Comparativa entre distancia reglamentaria básica, distancia con medidas reductoras y distancias reales medidas en plano.
-- **Resultado final:** Justificación de la suficiencia geométrica de las distancias en la parcela catastral.
+## 2. Justificación Geométrica de la Implantación de la Batería
+La batería de depósitos se sitúa en paralelo en una zona abierta y despejada del exterior de la parcela catastral **8638004TN8183N**, facilitando la ventilación natural y el acceso del camión cisterna de suministro. 
 
-## Conexiones
-- **Alcance:** Requisito 6 (Estación de almacenamiento y distancias de seguridad) y Requisito 7 (Elección de la ubicación de la estación).
-- **Anotaciones:** [distancias_seguridad.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/distancias_seguridad.md) (Criterio Normativo), [criterios_normativos.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/criterios_normativos.md) (Criterio Normativo).
-- **Planos:** Situación y emplazamiento (`situacion-emplazamiento.pdf`), plano de distancias de seguridad (`Plano_distancias_seguridad.pdf`).
+*   **Separación Mínima entre Depósitos de la Batería:**
+    Según la norma UNE 60250, para depósitos aéreos de la misma batería, la distancia mínima de separación entre las paredes de dos tanques contiguos debe ser igual a la mitad del diámetro del depósito mayor, con un límite mínimo absoluto de **$1,0\text{ m}$**. Dado que todos los depósitos seleccionados (LP46A y LP26A) tienen un diámetro común exterior de $2.200\text{ mm}$ ($\phi = 2,2\text{ m}$), la separación mínima reglamentaria resulta:
+    $$ D_{separacion} \ge \frac{\phi}{2} = \frac{2,2\text{ m}}{2} = 1,10\text{ m} $$
+    Para cumplir con este requisito técnico y permitir un paso desahogado para labores de mantenimiento y evacuación de aguas pluviales de los tanques, se adopta una **separación real de $1,10\text{ m}$ en paralelo** entre los ejes de cunas y paredes de los cuatro depósitos de la batería.
 
-## Criterios de aceptación
-- [ ] La batería queda clasificada como Tipo A-500.
-- [ ] Se detalla la separación mínima reglamentaria entre depósitos ($1,10 \text{ m}$).
-- [ ] Se justifican los muros cortafuegos $EI-120$ en la parcela y la reducción al $50\%$ de las distancias críticas.
-- [ ] Se especifica el cerramiento con vallado metálico de $2 \text{ m}$ de altura y doble puerta de salida.
+## 3. Verificación de Distancias de Seguridad y Medidas Reductoras
+La norma UNE 60250 exige mantener unas distancias de seguridad mínimas desde los orificios de los depósitos (válvulas de seguridad, boca de carga y purgas) y desde las paredes exteriores de los tanques hacia elementos externos de la parcela. Para depósitos de Tipo A-500, la distancia de referencia básica es de **$10\text{ metros}$**.
+
+Dada la colindancia de la parcela catastral con límites de propiedad ajena y viales en sus bordes norte y oeste, no es viable cumplir con los $10\text{ metros}$ de separación natural. Se recurre, por tanto, a la aplicación de las **medidas reductoras** contempladas en la normativa (UNE 60250, apartado de muros):
+*   **Instalación de Muros Cortafuegos EI-120:**
+    Se proyecta la construcción de dos muros de protección cortafuegos con clasificación de resistencia al fuego **$EI-120$** (estable, estanco e islante térmico al fuego durante al menos 120 minutos), fabricados en hormigón armado con un espesor mínimo de $150\text{ mm}$ y una altura que sobresale un metro sobre el punto más alto del depósito (altura del muro: $3,50\text{ metros}$).
+*   **Reducción de Distancias al $50\%$:**
+    El uso de estos muros cortafuegos EI-120 permite **reducir al $50\%$** la distancia de seguridad exigida hacia límites de propiedad, locales públicos y focos de ignición no clasificados, reduciéndose la distancia mínima a **$5,0\text{ metros}$** de separación medida alrededor del muro (trayectoria de gas).
+*   **Verificación Real en Plano:**
+    Las distancias reales medidas en el plano de implantación (`Plano_distancias_seguridad.pdf`), considerando la trayectoria de gas bordeando los muros cortafuegos EI-120, superan en todos los puntos críticos los $5,0\text{ metros}$ reglamentarios, demostrando la viabilidad técnica y legal del emplazamiento elegido.
+
+## 4. Vallado y Cerramiento Perimetral de Seguridad
+Para evitar el acceso de personal ajeno a la instalación y prevenir riesgos de sabotaje o manipulación accidental de válvulas, el recinto de la estación de almacenamiento común estará delimitado por un **cerramiento de seguridad perimetral**:
+*   **Características del Vallado:** Vallado metálico tipo Hércules o de malla de simple torsión con una altura mínima de **$2,0\text{ metros}$** sobre postes de acero anclados en solera de hormigón. La parte inferior del vallado se cerrará con un zócalo continuo de hormigón para evitar entradas de vegetación o animales.
+*   **Puertas de Acceso:** Se dispondrán dos puertas metálicas de salida peatonal en extremos opuestos del recinto, equipadas con barra antipánico y sentido de apertura obligatorio hacia el exterior de la estación. Adicionalmente, se dispondrá de una puerta de doble hoja de $4,0\text{ metros}$ de ancho para el acceso y mantenimiento de componentes grandes, abriéndose siempre hacia fuera y permaneciendo cerrada bajo candado de seguridad industrial.
+*   **Señalización de Seguridad:** En las paredes exteriores del vallado se dispondrán carteles normalizados legibles de seguridad con las indicaciones: "Peligro: Materia Inflamable - Propano", "Prohibido Fumar o Encender Fuego" y "Prohibido el Paso a Toda Persona Ajena a la Instalación".

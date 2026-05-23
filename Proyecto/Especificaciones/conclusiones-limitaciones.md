@@ -1,37 +1,17 @@
-# Especificación: Conclusiones y Limitaciones (Sección 3 y Sección 4)
+# Memoria: Conclusiones y Limitaciones del Proyecto
 
-## Propósito
-Sintetizar los resultados técnicos del proyecto, justificar la viabilidad de la solución adoptada y documentar las simplificaciones operativas y limitaciones académicas del diseño.
+## 1. Conclusiones y Valoración de la Solución
+El análisis técnico, el diseño hidráulico y el replanteo geométrico realizados en el presente proyecto permiten extraer las siguientes conclusiones sobre la instalación común de almacenamiento y red de propano del Grupo G1-1:
 
-## Contenido obligatorio
+*   **Viabilidad y Flexibilidad de la Batería Mixta:** La configuración seleccionada ($1 \times \text{LP46A-22} + 3 \times \text{LP26A-22}$) es la única alternativa viable comercialmente que proporciona la capacidad geométrica requerida ($124,30\text{ m}^3$) respetando los límites de propiedad de la parcela catastral. Su diseño modular permite la operación independiente de tanques durante mantenimientos y asegura una autonomía real de $32,5\text{ días}$, superando la exigencia de 30 días.
+*   **Garantía de Suministro por Vaporización Mixta:** El balance térmico a la temperatura exterior mínima de León ($-5\text{ ºC}$) demostró un déficit de vaporización natural de $56,51\text{ kg/h}$. Este déficit se cubre con seguridad mediante el intercambiador interno VIA 150 ($150\text{ kg/h}$ forzados) alimentado por la caldera del armario exterior VPC30C ($45\text{ kW}$), proporcionando un margen de seguridad del $49,8\%$ sobre el caudal de cálculo punta ($187,81\text{ kg/h}$).
+*   **Cumplimiento Normativo y Seguridad:** La estación del Tipo A-500 cumple con todas las distancias de seguridad reglamentarias de la norma UNE 60250 gracias a la instalación estratégica de muros cortafuegos EI-120 en los linderos norte y oeste. La red de cobre aéreo UNE-EN 1057 a $1,7\text{ bar}$ relativos se proyecta vista y visible, facilitando el control de fugas y la señalización amarilla RAL 1021.
+*   **Eficacia Operativa:** El sistema de regulación en doble salto (MPB a $1,7\text{ bar}$ en colector general y reducción a $37\text{ mbar}$ local en hornos) asegura una presión constante en los quemadores industriales, independientemente de fluctuaciones de temperatura exterior o nivel de los tanques, optimizando el rendimiento de la planta.
 
-### Sección 3: Conclusiones.
-- Sintetizar los resultados clave de ingeniería de la planta:
-  - Batería de almacenamiento mixta de $124,30 \text{ m}^3$ útil y geométricamente idónea para cubrir los 30 días de suministro.
-  - Caudal de diseño nominal de $187,81 \text{ kg/h}$ y potencia térmica agregada de $2.620 \text{ kW}$.
-  - Vaporización natural insuficiente a $-5\text{ ºC}$ ($96,72 \text{ kg/h}$ vs $187,81 \text{ kg/h}$), solventada con la selección de intercambiador VIA 150 en armario VPC30C de $45\text{ kW}$ de calefacción de agua caliente.
-  - Red de distribución aérea de cobre UNE-EN 1057 tramo a tramo verificada con pérdidas $<5\%$ e hidráulicamente estable con velocidades de gas $<10 \text{ m/s}$.
-  - Emplazamiento catastral justificado y distancias de seguridad A-500 conformes bajo medidas reductoras (paredes cortafuegos $EI-120$).
-- Declarar que la instalación es viable, segura y cumple las exigencias reglamentarias del RD 919/2006.
+## 2. Limitaciones del Proyecto y del Modelo de Cálculo
+El diseño propuesto está sujeto a las siguientes limitaciones y condicionantes de partida:
 
-### Sección 4: Limitaciones.
-- Detallar las restricciones y supuestos del proyecto:
-  - Dependencia estricta de los datos de partida proporcionados en el enunciado académico.
-  - Simplificación del coeficiente de simultaneidad igual a $1$ (que sobredimensiona la instalación general en favor de la seguridad industrial).
-  - Trazado medido sobre plano catastral bidimensional que requiere un replanteo físico en obra real.
-  - Exclusión de detalles constructivos civiles finos (losas de cimentación profunda) y detalles particulares de la acometida del camión cisterna.
-
-## Estilo de redacción
-Tono de redacción formal de ingeniería, sintético y conclusivo. Redactado en tercera persona del singular. Longitud orientativa: 1,5 páginas.
-
-## Figuras, tablas y resultados
-- **Tabla resumen de resultados técnicos:** Parámetros de potencia, almacenamiento, vaporización, diámetros máximos y mínimos de la red, y presupuesto final.
-
-## Conexiones
-- **Alcance:** Cierre general del proyecto y cumplimiento de los 7 requisitos.
-- **Anotaciones:** [seleccion_deposito.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/seleccion_deposito.md) (Resultados), [dimensionado_tuberias_glp.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/dimensionado_tuberias_glp.md) (Resultados), [distancias_seguridad.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/distancias_seguridad.md) (Resultados).
-
-## Criterios de aceptación
-- [ ] Se presenta un balance sintético y exacto de los resultados numéricos de las fases de cálculo.
-- [ ] Queda justificada la viabilidad técnica y legal del almacenamiento mixto de $124,30 \text{ m}^3$ y del vaporizador de $45 \text{ kW}$.
-- [ ] Se enumeran al menos 4 limitaciones o supuestos específicos del diseño académico.
+*   **Dependencia Climática y Meteorológica:** Los cálculos de vaporización natural asumen una temperatura mínima de $-5\text{ ºC}$ correspondiente a las condiciones históricas de León según IDAE. Descensos térmicos extremos por debajo de $-12\text{ ºC}$ de forma prolongada reducirán drásticamente el rendimiento de auto-vaporización de los tanques, obligando a una mayor dependencia del sistema de calefacción forzada VPC30C.
+*   **Sobredimensionamiento por Simultaneidad:** La adopción del coeficiente de simultaneidad $f_s = 1$ responde a criterios de seguridad en procesos continuos, pero conduce a un sobredimensionamiento de los diámetros de tuberías y equipos de regulación si la planta industrial opera habitualmente con cargas alternas.
+*   **Rigidez Espacial de la Estación de Almacenamiento:** Debido al exhaustivo aprovechamiento de las distancias de seguridad reducidas mediante muros EI-120, la estación de almacenamiento común se encuentra al límite físico de la parcela catastral. Cualquier necesidad de ampliación futura de volumen de almacenamiento (por ejemplo, para aumentar producción) requerirá la reubicación completa de la estación o la compra de terrenos colindantes.
+*   **Exclusiones del Alcance de Red:** Este diseño finaliza en las llaves de corte individuales situadas en los armarios de regulación de segundo salto. La red interior, quemadores, sistemas de ventilación de naves y chimeneas de evacuación quedan fuera del alcance del presente proyecto y deberán legalizarse de forma independiente.

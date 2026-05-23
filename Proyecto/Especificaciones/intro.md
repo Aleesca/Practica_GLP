@@ -1,34 +1,22 @@
-# Especificación: Introducción (Secciones 2.2 Objeto y 2.3 Antecedentes)
+# Memoria: Introducción, Objeto y Antecedentes
 
-## Propósito
-Definir el objeto y los antecedentes de la instalación de almacenamiento y distribución de GLP para el Grupo G1-1, enmarcando el contexto técnico e industrial del abastecimiento energético.
+## 1. Objeto del Proyecto
+El objeto del presente proyecto es definir, justificar y dimensionar la instalación de almacenamiento y la red de distribución de Gases Licuados del Petróleo (GLP), concretamente propano comercial, para dar suministro energético térmico a una planta industrial situada en la provincia de León. 
 
-## Contenido obligatorio
+El alcance del diseño abarca desde la estación de almacenamiento común —constituida por una batería de depósitos aéreos horizontales y su sistema de vaporización asociado— hasta la regulación secundaria e individual a la entrada de cada uno de los seis puntos de consumo (consumidores industriales). El diseño de la instalación se proyecta bajo premisas estrictas de seguridad industrial, optimización vial y eficiencia técnica, garantizando en todo momento el cumplimiento de la reglamentación y normativa española vigente.
 
-### Sección 2.2 OBJETO.
-- Definir el propósito principal del proyecto: dimensionar, justificar y clasificar el sistema de almacenamiento común y la red de distribución de propano comercial para el suministro de calor a una planta industrial.
-- Indicar que se cubre desde la batería de depósitos y su vaporización hasta la regulación individual a la entrada de cada uno de los 6 consumidores.
-- Justificar que se busca cumplir con la normativa técnica nacional y los criterios de seguridad industrial vigentes.
+## 2. Antecedentes
+La planta industrial requiere de un suministro continuo de calor de alta densidad energética y estabilidad térmica para sus procesos de secado, fusión, vaporización y decapado. Ante la inexistencia de una red de distribución de gas natural en las proximidades de la parcela catastral, se realiza un estudio de alternativas energéticas:
+*   **Gasoil o combustibles líquidos:** Descartados debido a su mayor impacto de emisiones contaminantes, costes operativos inestables y requerimientos de mantenimiento más exigentes para los quemadores de hornos de precisión.
+*   **Electricidad:** Descartada por su inviabilidad económica para potencias de calefacción agregadas del orden de megavatios.
+*   **Propano comercial (GLP):** Seleccionado como la alternativa óptima debido a su elevado Poder Calorífico Superior (PCS = $13,95\text{ kWh/kg}$), su combustión limpia, la facilidad de regulación de la temperatura en los quemadores industriales y su estabilidad de suministro mediante transporte por camión cisterna.
 
-### Sección 2.3 ANTECEDENTES.
-- Explicar las razones para elegir propano comercial frente a otras alternativas energéticas (ausencia de red de gas natural cercana, necesidad de alto poder calorífico superior $13,95\text{ kWh/kg}$ y estabilidad en el suministro industrial).
-- Indicar que la planta cuenta con 6 consumidores específicos (hornos de secado, calderas y hornos de fusión/decapado) que requieren un suministro continuo e independiente.
-- Mencionar que el proyecto se redacta a petición de la dirección técnica para legalizar la instalación de almacenamiento común.
+La dirección técnica de la planta industrial ha solicitado la redacción de este proyecto con el propósito de legalizar y ejecutar la instalación común de almacenamiento y la posterior distribución interior de propano, cubriendo los siguientes seis consumidores específicos en la fase de diseño:
+1.  **Horno de secado 1 (C1):** $60\text{ kW}$ de potencia nominal.
+2.  **Horno de secado 2 (C2):** $60\text{ kW}$ de potencia nominal.
+3.  **Caldera de vapor (C3):** $500\text{ kW}$ de potencia nominal.
+4.  **Caldera de agua caliente (C4):** $300\text{ kW}$ de potencia nominal.
+5.  **Horno de fusión (C5):** $700\text{ kW}$ de potencia nominal.
+6.  **Horno de decapado (C6):** $1000\text{ kW}$ de potencia nominal.
 
-## Estilo de redacción
-Tono formal, impersonal y técnico, redactado en tercera persona del singular. Longitud orientativa: 1 página.
-
-## Figuras, tablas y resultados
-- **Figuras a integrar:**
-  - [ule.jpg](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/ule.jpg): Logotipo de la Universidad de León, integrado en la cabecera izquierda de las páginas principales y en la portada del proyecto.
-  - [escudo-ingenierias.png](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Practica_GLPs_LaTeX/Figuras/escudo-ingenierias.png): Escudo de la Escuela de Ingenierías Industrial, Informática y Aeroespacial, integrado en la parte superior derecha de la portada del proyecto.
-- **Otros resultados:** Referencias de linderos generales de la parcela catastral.
-
-## Conexiones
-- **Alcance:** Objeto del proyecto y salida documental.
-- **Anotaciones:** [criterios_normativos.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/criterios_normativos.md) (referencia a RD 919/2006).
-
-## Criterios de aceptación
-- [ ] Queda claramente definido el objeto de la instalación de GLP.
-- [ ] Se justifica formalmente la elección de propano comercial como combustible de los consumidores del Grupo G1-1.
-- [ ] Se menciona explícitamente el cumplimiento del Reglamento de distribución y utilización de combustibles gaseosos (RD 919/2006).
+La redacción de este documento y sus cálculos hidráulicos y de implantación correspondientes servirán como base técnica para la ejecución material de las obras y su posterior tramitación ante los organismos oficiales de Industria de la Junta de Castilla y León.
