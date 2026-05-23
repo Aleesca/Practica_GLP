@@ -7,7 +7,6 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\AddToHook{cmd/section/before}{\clearpage}	%Seccion en nueva pg.
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -21,11 +20,8 @@
 \usepackage[bottom]{footmisc}  % Fuerza footnotes al final de la página
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{graphicx}
-\usepackage{tocloft}
+\usepackage[titles]{tocloft}
 \usepackage{float}  % Permite añadir H para poder forzar posiciones de figuras.
-\usepackage{url}    % Para escritura de URLs.
-\usepackage{cite}   % Manejo de citas en estilo IEEE y controla orden con \bstctlcite
-\usepackage{tocloft}   %
 \usepackage{etoolbox} % Para modificar el comportamiento de \appendix
 \usepackage{pdflscape}
 \usepackage{enumitem}
@@ -38,7 +34,22 @@
 \usetikzlibrary{babel,external}
 \tikzexternalize[prefix=TikZ-Cache/] % Crea una carpeta para las imágenes pre-compiladas
 
+% --- Mini índices por capítulo (etoc) ---
+% Loaded without lof/lot options to avoid hook conflicts with hyperref
+\usepackage{etoc}
 
+% Se activan hipervinculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfstartview={FitH},
+    pdfpagemode={UseNone}
+}
+\usepackage{bookmark}
 
 % --- AJUSTE DE ESPACIADO PARA TÍTULOS DE ÍNDICES ---
 
@@ -64,9 +75,9 @@
 \setlength{\parindent}{0.5cm}
  
 % Formato de titulos, subtitulos...
-\titleformat{\section}{\normalfont\fontsize{24pt}{28.8pt}\selectfont\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\section}{\clearpage\normalfont\fontsize{24pt}{28.8pt}\selectfont\bfseries}{\thesection.}{0.5em}{}
 
-\titleformat{\subsection}{\normalfont\fontsize{14pt}{14pt}\selectfont\bfseries\MakeTextUppercase}{\thesubsection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\fontsize{14pt}{14pt}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
 
 \titleformat{\subsubsection}{\normalfont\fontsize{12pt}{12pt}\selectfont\bfseries}{\thesubsubsection.}{0.5em}{}
 
@@ -138,21 +149,6 @@
 %\renewcommand{\cfttabpresnum}{Tabla~\thetable\quad}
 %\renewcommand{\cfttabaftersnum}{}
 
-% --- Mini índices por capítulo (etoc) ---
-\usepackage[lof,lot]{etoc}
-
-% Se activan hipervinculos
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linktoc=all,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-    pdfstartview={FitH},
-    pdfpagemode={UseNone}
-}
-
 
 % Redefinir formato de referencias de figuras y tablas
 \AtBeginDocument{%
@@ -179,14 +175,10 @@
   \localtableofcontents
 }
 \newcommand{\sectlof}{%
-  \etocsettocstyle{\section*{Índice de figuras}}{}%
-  \etocsetnexttocdepth{3}%
-  \locallistoffigures
+  % Dummy command as lof option is disabled to avoid hook conflicts
 }
 \newcommand{\sectlot}{%
-  \etocsettocstyle{\section*{Índice de tablas}}{}%
-  \etocsetnexttocdepth{3}%
-  \locallistoftables
+  % Dummy command as lot option is disabled to avoid hook conflicts
 }
 
 % --- Custom Appendix Style ---
@@ -235,9 +227,3 @@
     \normalfont % Reset font to normal
     \cleardoublepage
 }
-
-
-
-% Datos del documento
-%\title{}
-%\author{Alberto España Carrete}
