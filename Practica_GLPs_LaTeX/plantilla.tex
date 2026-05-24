@@ -1,6 +1,7 @@
 \pdfminorversion=7
 \documentclass[12pt]{article}
 \usepackage{preamble}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 
 \begin{document}
 
@@ -96,8 +97,8 @@
         
         \begin{itemize}
             \item \underline{Emplazamiento:} Parcela catastral \texttt{8638004TN8183N}, León.
-            \item \underline{Temperatura exterior de cálculo:} $-5\ ^{\circ}\text{C}$, justificada mediante el percentil del $99,6\%$ de las bases de datos del IDAE para León (estación de León-Virgen del Camino).
-            \item \underline{Presión de diseño en red general (MPB):} $1,7\text{ bar}$ (relativos) a la salida de la estación de almacenamiento, con una pérdida de carga admisible máxima del $5\%$ ($0,085\text{ bar}$), fijando una presión mínima en el punto de consumo de $1,615\text{ bar}$ relativos.
+            \item \underline{Temperatura exterior de cálculo:} $-5\ ^{\circ}\text{C}$, justificada mediante el percentil del 99,6\% de las bases de datos del IDAE para León (estación de León-Virgen del Camino).
+            \item \underline{Presión de diseño en red general (MPB):} $1,7\text{ bar}$ (relativos) a la salida de la estación de almacenamiento, con una pérdida de carga admisible máxima del 5\% ($0,085\text{ bar}$), fijando una presión mínima en el punto de consumo de $1,615\text{ bar}$ relativos.
             \item \underline{Presión de regulación de segunda etapa:} $37\text{ mbar}$ a la entrada de cada consumidor industrial.
             \item \underline{Coeficiente de simultaneidad ($f_s$):} $1,0$ (escenario punta simultáneo para garantizar el suministro a todos los equipos).
             \item \underline{Velocidad máxima admisible del gas:} $10\text{ m/s}$ en la red receptora interior (UNE 60670 \cite{une60670}) y $20\text{ m/s}$ en las conducciones de la estación de almacenamiento y derivaciones exteriores (UNE 60250 \cite{une60250}).
@@ -107,7 +108,7 @@
 
         \begin{table}[H]
             \centering
-            \caption{Tabla maestra de consumidores industriales de la planta metalúrgica. Fuente: Elaboración propia.}
+            \caption{Tabla maestra de consumidores industriales de la planta metalúrgica. Fuente: Elaboración grupal.}
             \label{tab:consumidores}
             \resizebox{\textwidth}{!}{%
             \begin{tabular}{llccc}
@@ -131,7 +132,7 @@
 
         \begin{table}[H]
             \centering
-            \caption{Propiedades físicas del propano comercial adoptadas para el diseño. Fuente: Elaboración propia a partir de ficha técnica y UNE 60250 \cite{une60250}.}
+            \caption{Propiedades físicas del propano comercial adoptadas para el diseño. Fuente: Elaboración grupal a partir de ficha técnica y UNE 60250 \cite{une60250}.}
             \label{tab:propiedades_gas}
             \begin{tabular}{lcrc}
                 \toprule
@@ -161,7 +162,7 @@
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth,trim={0 0 0 1.7cm},clip=true]{Figuras/parcela_consumidores.pdf}
-            \caption{Disposición y distribución espacial de los consumidores en la parcela catastral. Fuente: Elaboración propia.}
+            \caption{Disposición y distribución espacial de los consumidores en la parcela catastral. Fuente: Elaboración grupal.}
             \label{fig:parcela_consumidores}
         \end{figure}
         
@@ -194,7 +195,7 @@
             La potencia térmica simultánea de cálculo agregada de los seis consumidores industriales instalados es de \textbf{2.620 kW}.
             
             \subsubsection{Presupuesto total.}
-            El Presupuesto de Ejecución Material (PEM) asciende a un total de $176.555,02\text{ \euro}$. Aplicando un Impuesto sobre el Valor Añadido (IVA) del $21\%$ ($37.076,55\text{ \euro}$), se obtiene un Presupuesto de Ejecución por Contrata (PEC) de \textbf{213.631,57 \euro}.
+            El Presupuesto de Ejecución Material (PEM) asciende a un total de $176.555,02\text{ \euro}$. Aplicando un Impuesto sobre el Valor Añadido (IVA) del 21\% ($37.076,55\text{ \euro}$), se obtiene un Presupuesto de Ejecución por Contrata (PEC) de \textbf{213.631,57 \euro}.
         
         \subsection{PROMOTOR DE LA INSTALACIÓN.}
         El promotor del proyecto es la Escuela de Ingenierías Industrial, Informática y Aeroespacial de la Universidad de León. La autoría del diseño, redacción y justificación técnica del presente documento corresponde a la oficina técnica de ingeniería responsable del proyecto, figurando Alberto España Carrete, Carlos Fernández Palanca, Rubén Modino López y Juan Diego Niño González como proyectistas principales de la instalación, bajo la tutoría y supervisión técnica del ingeniero Roberto Getino de la Mano en el marco de la Universidad de León.
@@ -220,7 +221,7 @@
         
         \begin{table}[H]
             \centering
-            \caption{Cronograma de hitos y plazos de ejecución del proyecto. Fuente: Elaboración propia.}
+            \caption{Cronograma de hitos y plazos de ejecución del proyecto. Fuente: Elaboración grupal.}
             \label{tab:cronograma}
             \begin{tabularx}{\textwidth}{c X c}
                 \toprule
@@ -250,7 +251,7 @@
         
         \begin{itemize}
             \item \underline{Radio de giro mínimo libre:} $12\text{ m}$ en las curvas de acceso de la parcela para posibilitar las maniobras de los camiones cisterna.
-            \item \underline{Pendiente de descarga:} La zona destinada al estacionamiento del camión cisterna durante las operaciones de descarga dispone de una pendiente inferior al $5\%$, totalmente libre de obstáculos y nivelada.
+            \item \underline{Pendiente de descarga:} La zona destinada al estacionamiento del camión cisterna durante las operaciones de descarga dispone de una pendiente inferior al 5\%, totalmente libre de obstáculos y nivelada.
             \item \underline{Ancho libre de paso del vial:} Mínimo de $4\text{ m}$ en los tramos de acceso al recinto de carga.
             \item \underline{Salida de vehículos del recinto:} El cerramiento cuenta con una doble puerta que abre hacia el exterior del recinto para facilitar la evacuación rápida en caso de emergencia.
         \end{itemize}
@@ -266,48 +267,84 @@
             \item Facilidad de inspección visual directa ante eventuales fugas o mantenimiento de la valvulería.
         \end{itemize}
         
-        El caudal de cálculo se calcula para un escenario de simultaneidad máxima ($f_s=1$), resultando en un caudal total másico de la instalación de $187,81\text{ kg/h}$ ($99,79\text{ m}^3\text{/h}$). La regulación de primera etapa reduce la presión de los depósitos a una presión constante de $1,7\text{ bar}$ relativos a la salida de la estación. La pérdida de carga admisible en la red general se limita al $5\%$, por lo que la presión no debe descender de $1,615\text{ bar}$. El cálculo hidráulico se ha realizado con la fórmula de Renouard para Media Presión B:
+        El caudal de cálculo se calcula para un escenario de simultaneidad máxima ($f_s=1$), resultando en un caudal total másico de la instalación de $187,81\text{ kg/h}$ ($99,79\text{ m}^3\text{/h}$). La regulación de primera etapa reduce la presión de los depósitos a una presión constante de $1,7\text{ bar}$ relativos a la salida de la estación. La pérdida de carga admisible en la red general se limita al 5\%, por lo que la presión no debe descender de $1,615\text{ bar}$. El cálculo hidráulico se ha realizado con la fórmula de Renouard para Media Presión B:
         
         \begin{equation}
             P_A^2 - P_B^2 = 51,5 \cdot d_c \cdot L_c \cdot \frac{Q^{1,82}}{D^{4,82}}
         \end{equation}
         
-        Donde las longitudes reales se incrementan con un factor del $5\%$ ($L_c = 1,05 \cdot L_{\text{real}}$) para considerar la longitud equivalente por codos y accesorios de la red. La velocidad del gas se comprueba mediante la ecuación:
+        Donde las longitudes reales se incrementan con un factor del 5\% ($L_c = 1,05 \cdot L_{\text{real}}$) para considerar la longitud equivalente por codos y accesorios de la red. La velocidad del gas se comprueba mediante la ecuación:
         
         \begin{equation}
             v = 378,04 \cdot \frac{Q}{P_{\text{media\_abs}} \cdot D^2}
         \end{equation}
         
-        El cálculo hidráulico tramo a tramo confirma que la velocidad en la red de distribución se mantiene por debajo de $10\text{ m/s}$ y que la presión en el consumidor más desfavorable ($C_6$) es de $1,623\text{ bar}$ relativos, lo que supera con creces el límite de $1,615\text{ bar}$ mínimos exigidos. Los resultados del dimensionado de los tramos se presentan en la Tabla~\ref{tab:tramos_red}.
+        El cálculo hidráulico tramo a tramo confirma que la velocidad en la red de distribución se mantiene por debajo de $10\text{ m/s}$ y que la presión en el consumidor más desfavorable ($C_6$) es de $1,623\text{ bar}$ relativos, lo que supera con creces el límite de $1,615\text{ bar}$ mínimos exigidos. El proceso de cálculo se realiza mediante un algoritmo iterativo de dimensionado de tuberías, cuya secuencia lógica se detalla en la Figura~\ref{fig:algoritmo_dimensionado}. Los resultados del dimensionado de los tramos se presentan en la Tabla~\ref{tab:tramos_red}.
 
         \begin{table}[H]
             \centering
-            \caption{Resumen de resultados del dimensionado hidráulico de la red de propano. Fuente: Elaboración propia.}
+            \caption{Resumen de resultados del dimensionado hidráulico de la red de propano. Fuente: Elaboración grupal.}
             \label{tab:tramos_red}
             \resizebox{\textwidth}{!}{
             \begin{tabular}{llccccccrc}
                 \toprule
                 \textbf{Tramo} & \textbf{Tipo de tramo} & \textbf{Longitud real (m)} & \textbf{Caudal ($m^3$/h)} & \textbf{Tubo (ext$\times$esp)} & \textbf{$D_{\text{int}}$ (mm)} & \textbf{$P_{\text{ini}}$ (bar r)} & \textbf{$P_{\text{fin}}$ (bar r)} & \textbf{$\Delta P$ (bar)} & \textbf{Velocidad (m/s)} \\
                 \midrule
-                $D_1$-$D_4$ & Derivación tanque 1 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
-                $D_2$-$D_4$ & Derivación tanque 2 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
-                $D_3$-$D_4$ & Derivación tanque 3 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
-                $D_4$ vert. & Derivación tanque 4 & 1,90 & 24,95 & 20$\times$1,5 & 17,0 & 1,700 & 1,688 & 0,012 & 12,08 \\
-                $D_4$-$A$ & Red Principal & 15,12 & 99,80 & 42$\times$1,5 & 39,0 & 1,700 & 1,682 & 0,018 & 9,20 \\
-                $A$-$C_1$ & Ramal a $C_1$ & 1,81 & 2,29 & 15$\times$1,0 & 13,0 & 1,682 & 1,681 & 0,001 & 1,90 \\
-                $A$-$B$ & Red Principal & 4,97 & 97,51 & 42$\times$1,5 & 39,0 & 1,682 & 1,675 & 0,007 & 9,02 \\
-                $B$-$C_2$ & Ramal a $C_2$ & 21,79 & 2,29 & 15$\times$1,0 & 13,0 & 1,675 & 1,670 & 0,005 & 1,91 \\
-                $B$-$C$ & Red Principal & 17,32 & 95,22 & 42$\times$1,5 & 39,0 & 1,675 & 1,657 & 0,018 & 8,86 \\
-                $C$-$C_3$ & Ramal a $C_3$ & 1,75 & 19,05 & 20$\times$1,5 & 17,0 & 1,657 & 1,648 & 0,009 & 9,36 \\
-                $C$-$D$ & Red Principal & 10,77 & 76,18 & 42$\times$1,5 & 39,0 & 1,657 & 1,649 & 0,008 & 7,11 \\
-                $D$-$C_4$ & Ramal a $C_4$ & 1,68 & 11,43 & 15$\times$1,0 & 13,0 & 1,649 & 1,638 & 0,011 & 9,64 \\
-                $D$-$E$ & Red Principal & 13,06 & 64,75 & 42$\times$1,5 & 39,0 & 1,649 & 1,641 & 0,007 & 6,06 \\
-                $E$-$C_5$ & Ramal a $C_5$ & 1,69 & 26,66 & 22$\times$1,0 & 20,0 & 1,641 & 1,634 & 0,008 & 9,52 \\
-                $E$-$C_6$ & Ramal a $C_6$ & 14,46 & 38,09 & 28$\times$1,0 & 26,0 & 1,641 & 1,620 & 0,021 & 8,09 \\
+                $D_1$-$D_4$ & Derivación tanque 1 & 1,90 & 24,95 & 20$\times$1,5 & 17 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_2$-$D_4$ & Derivación tanque 2 & 1,90 & 24,95 & 20$\times$1,5 & 17 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_3$-$D_4$ & Derivación tanque 3 & 1,90 & 24,95 & 20$\times$1,5 & 17 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$ vert. & Derivación tanque 4 & 1,90 & 24,95 & 20$\times$1,5 & 17 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$-$A$ & Red Principal & 15,12 & 99,80 & 42$\times$1,5 & 39 & 1,700 & 1,682 & 0,018 & 9,20 \\
+                $A$-$C_1$ & Ramal a $C_1$ & 1,81 & 2,29 & 15$\times$1,0 & 13 & 1,682 & 1,681 & 0,001 & 1,90 \\
+                $A$-$B$ & Red Principal & 4,97 & 97,51 & 42$\times$1,5 & 39 & 1,682 & 1,675 & 0,007 & 9,02 \\
+                $B$-$C_2$ & Ramal a $C_2$ & 21,79 & 2,29 & 15$\times$1,0 & 13 & 1,675 & 1,670 & 0,005 & 1,91 \\
+                $B$-$C$ & Red Principal & 17,32 & 95,22 & 42$\times$1,5 & 39 & 1,675 & 1,657 & 0,018 & 8,86 \\
+                $C$-$C_3$ & Ramal a $C_3$ & 1,75 & 19,05 & 20$\times$1,5 & 17 & 1,657 & 1,648 & 0,009 & 9,36 \\
+                $C$-$D$ & Red Principal & 10,77 & 76,18 & 42$\times$1,5 & 39 & 1,657 & 1,649 & 0,008 & 7,11 \\
+                $D$-$C_4$ & Ramal a $C_4$ & 1,68 & 11,43 & 15$\times$1,0 & 13 & 1,649 & 1,638 & 0,011 & 9,64 \\
+                $D$-$E$ & Red Principal & 13,06 & 64,75 & 42$\times$1,5 & 39 & 1,649 & 1,641 & 0,007 & 6,06 \\
+                $E$-$C_5$ & Ramal a $C_5$ & 1,69 & 26,66 & 22$\times$1,0 & 20 & 1,641 & 1,634 & 0,008 & 9,52 \\
+                $E$-$C_6$ & Ramal a $C_6$ & 14,46 & 38,09 & 28$\times$1,0 & 26 & 1,641 & 1,620 & 0,021 & 8,09 \\
                 \bottomrule
             \end{tabular}
             }
         \end{table}
+
+        \begin{figure}[H]
+            \centering
+            \tikzexternaldisable
+            \begin{tikzpicture}[
+                node distance=1.2cm,
+                block/.style={rectangle, draw, fill=blue!10, text width=5cm, align=center, rounded corners, minimum height=0.8cm},
+                decision/.style={diamond, draw, fill=yellow!10, text width=2.8cm, align=center, minimum height=0.8cm, inner sep=2pt},
+                arrow/.style={thick,->,>=stealth}
+            ]
+                % Nodos
+                \node [block] (datos) {Datos del tramo\\($Q$, $L_{\text{real}}$, $P_A$, accesorios)};
+                \node [block] (diam) [below=of datos] {Selección de diámetro inicial $D$ (mínimo comercial)};
+                \node [block] (lc) [below=of diam] {Cálculo de longitud equivalente\\$L_c(D) = L_{\text{real}} + \sum L_{\text{eq}}$};
+                \node [block] (dp) [below=of lc] {Cálculo de pérdida de carga $\Delta P$\\(Fórmula de Renouard)};
+                \node [decision] (presion) [below=of dp] {¿Verificación de presión?\\$P_{\text{fin}} \ge 1,615\text{ bar r}$};
+                \node [decision] (velocidad) [below=of presion] {¿Verificación de velocidad?\\$v \le 10\text{ m/s}$ (o $20\text{ m/s}$)};
+                \node [block] (aceptado) [below=of velocidad] {Diámetro aceptado\\(Resultado conforme)};
+                \node [block] (incremento) [right=2cm of presion, text width=3.5cm] {Incrementar diámetro\\($D \leftarrow D_{\text{siguiente}}$)};
+
+                % Conexiones
+                \draw [arrow] (datos) -- (diam);
+                \draw [arrow] (diam) -- (lc);
+                \draw [arrow] (lc) -- (dp);
+                \draw [arrow] (dp) -- (presion);
+                \draw [arrow] (presion) -- node[anchor=east] {Sí} (velocidad);
+                \draw [arrow] (velocidad) -- node[anchor=east] {Sí} (aceptado);
+                
+                \draw [arrow] (presion) -- node[anchor=south] {No} (incremento);
+                \draw [arrow] (velocidad.east) -- ++(1.0,0) |- node[anchor=west, pos=0.25] {No} (incremento.south);
+                \draw [arrow] (incremento.north) |- (lc.east);
+            \end{tikzpicture}
+            \tikzexternalenable
+            \caption{Algoritmo iterativo de dimensionado de tuberías. Fuente: Elaboración grupal.}
+            \label{fig:algoritmo_dimensionado}
+        \end{figure}
         
         \subsection{CLASIFICACIÓN Y DISTANCIAS DE SEGURIDAD.}
         El almacenamiento cuenta con un volumen geométrico total de $124,30\text{ m}^3$. De acuerdo con el Reglamento aprobado por el Real Decreto 919/2006 \cite{rd919} y la norma UNE 60250:2008 \cite{une60250}, la estación se clasifica como una instalación de \textbf{Categoría A-500} ($100\text{ m}^3 < V \le 500\text{ m}^3$).
@@ -318,11 +355,11 @@
             \item $D_p$ (Distancia desde la proyección vertical de las paredes del recipiente).
         \end{itemize}
         
-        Dada la restricción geométrica de la parcela industrial y la ubicación de linderos con vías públicas y propiedades colindantes, las distancias básicas se reducen al $50\%$ mediante la instalación proyectada de muros cortafuegos con clasificación de resistencia al fuego \textbf{EI-120} y una altura de $3,5\text{ m}$. Las distancias reglamentarias y su verificación real se muestran en la Tabla~\ref{tab:distancias_seguridad}.
+        Dada la restricción geométrica de la parcela industrial y la ubicación de linderos con vías públicas y propiedades colindantes, las distancias básicas se reducen al 50\% mediante la instalación proyectada de muros cortafuegos con clasificación de resistencia al fuego \textbf{EI-120} y una altura de $3,5\text{ m}$. Las distancias reglamentarias y su verificación real se muestran en la Tabla~\ref{tab:distancias_seguridad}.
         
         \begin{table}[H]
             \centering
-            \caption{Verificación de distancias de seguridad según UNE 60250 en la estación A-500. Fuente: Elaboración propia a partir del Cuadro de Distancias de la norma UNE 60250 \cite{une60250}.}
+            \caption{Verificación de distancias de seguridad según UNE 60250 en la estación A-500. Fuente: Elaboración grupal a partir del Cuadro de Distancias de la norma UNE 60250 \cite{une60250}.}
             \label{tab:distancias_seguridad}
             \resizebox{\textwidth}{!}{%
             \begin{tabular}{lccccc}
@@ -361,7 +398,7 @@
 
             \begin{table}[H]
                 \centering
-                \caption{Características físicas de los depósitos seleccionados (Lapesa). Fuente: Elaboración propia a partir de catálogo comercial Lapesa.}
+                \caption{Características físicas de los depósitos seleccionados (Lapesa). Fuente: Elaboración grupal a partir de catálogo comercial Lapesa.}
                 \label{tab:caract_depositos}
                 \resizebox{\textwidth}{!}{%
                 \begin{tabular}{lccccc}
@@ -385,10 +422,10 @@
             \subsubsection{Boca de carga.}
             La recarga de los depósitos se realiza mediante una boca de carga rápida de propano líquido con acoplamiento tipo RegO de $3''$ (o equivalente compatible con la manguera del camión cisterna). El sistema cuenta con un colector de llenado común de fase líquida y fase gas para el equilibrio de presiones durante la descarga.
             
-            Como elementos de seguridad contra sobrellenado y emisiones, la boca de carga dispone de una doble válvula de retención unidireccional y un purgador de seguridad intermedio con grifo de aguja para despresurizar el acoplamiento antes de su desconexión física. Los depósitos cuentan con un dispositivo limitador de llenado automático tarado al $85\%$ de su volumen geométrico, impidiendo físicamente sobrepasar dicho nivel por seguridad de dilatación del líquido.
+            Como elementos de seguridad contra sobrellenado y emisiones, la boca de carga dispone de una doble válvula de retención unidireccional y un purgador de seguridad intermedio con grifo de aguja para despresurizar el acoplamiento antes de su desconexión física. Los depósitos cuentan con un dispositivo limitador de llenado automático tarado al 85\% de su volumen geométrico, impidiendo físicamente sobrepasar dicho nivel por seguridad de dilatación del líquido.
 
             \subsubsection{Equipo de vaporización.}
-            La verificación de la capacidad de vaporización natural de la batería mixta de depósitos a la temperatura mínima exterior de diseño de León ($-5\ ^{\circ}\text{C}$) y con el nivel de llenado crítico de seguridad del $20\%$, arroja los siguientes resultados:
+            La verificación de la capacidad de vaporización natural de la batería mixta de depósitos a la temperatura mínima exterior de diseño de León ($-5\ ^{\circ}\text{C}$) y con el nivel de llenado crítico de seguridad del 20\%, arroja los siguientes resultados:
             \begin{itemize}
                 \item Vaporización natural del depósito LP46A: $47,00\text{ kg/h}$.
                 \item Vaporización natural unitaria de los depósitos LP26A: $28,10\text{ kg/h}$.
@@ -421,7 +458,7 @@
             \subsubsection{Válvulas de seguridad.}
             Cada uno de los cuatro depósitos de la estación dispone de válvulas de alivio de presión por sobrepresión en la fase gas (modelo RegO RS 3145 o similar). Estas válvulas están taradas a una presión nominal de \textbf{20 bar}.
             
-            Para posibilitar las labores reglamentarias de retarado, mantenimiento o sustitución sin dejar en ningún momento desprotegido el depósito bajo presión, las válvulas de seguridad se montan por duplicado sobre un acoplamiento distribuidor de tres vías (tipo CD45). Dicho dispositivo mecánico permite aislar una de las válvulas de seguridad para su desmontaje mientras la otra permanece comunicada y operativa al $100\%$ con el interior del recipiente.
+            Para posibilitar las labores reglamentarias de retarado, mantenimiento o sustitución sin dejar en ningún momento desprotegido el depósito bajo presión, las válvulas de seguridad se montan por duplicado sobre un acoplamiento distribuidor de tres vías (tipo CD45). Dicho dispositivo mecánico permite aislar una de las válvulas de seguridad para su desmontaje mientras la otra permanece comunicada y operativa al 100\% con el interior del recipiente.
         
         \clearpage
         \subsection{INSTALACIÓN ELÉCTRICA.}
@@ -469,19 +506,469 @@
     \section{Cálculos justificados}
     \label{Cálculos Justificados}
         \subsection{ÍNDICE DE ANEXOS.}
-        
-        \subsection{CONSUMO Y AUTONOMÍA.}
-        
-        \subsection{VAPORIZACIÓN.}
-        
-        \subsection{VÁLVULAS DE SEGURIDAD.}
-        
-        \subsection{PUNTO MÁXIMO LLENADO: LONGITUD TUBO SONDA.}
+        \label{sub:indice_anexos}
+        El presente proyecto se complementa con una serie de documentos y planos anexos que aportan los detalles gráficos, de catálogo y las verificaciones complementarias necesarias para la correcta interpretación de la instalación. Sin embargo, con objeto de mantener la coherencia y facilitar la trazabilidad técnica, todos los cálculos justificativos (mecánicos, térmicos e hidráulicos) se desarrollan directamente e integran en este capítulo de Cálculos Justificados, en lugar de segregarse en un anejo independiente.
 
+        Los anexos que forman parte de la documentación complementaria del proyecto se detallan a continuación:
+        \begin{itemize}
+            \item \textbf{Anexo I: Planos Técnicos.} Comprende la representación gráfica y a escala de la planta, incluyendo:
+            \begin{itemize}
+                \item Plano n.º 1: Situación y Emplazamiento de la parcela catastral \texttt{8638004TN8183N}.
+                \item Plano n.º 2: Distancias de Seguridad y Acondicionamiento del Recinto del almacenamiento de Categoría A-500.
+                \item Plano n.º 3: Esquema de Principio (P\&ID) y Red de Conducciones de GLP.
+            \end{itemize}
+            \item \textbf{Anexo II: Fichas Técnicas y Documentación Comercial.} Reúne las especificaciones del fabricante Lapesa \cite{lapesa} correspondientes a los equipos principales seleccionados:
+            \begin{itemize}
+                \item Fichas técnicas de los depósitos horizontales aéreos modelos LP46A-22 (Modelo Especial con brida DN400) y LP26A-22.
+                \item Especificaciones del serpentín del vaporizador forzado interno modelo VIA 150.
+                \item Catálogo y dimensiones del armario de calefacción exterior y caldera VPC30C.
+            \end{itemize}
+        \end{itemize}
+
+        \subsection{CONSUMO Y AUTONOMÍA.}
+        \label{sub:consumo_autonomia}
+        Para el dimensionamiento del almacenamiento de gas licuado de petróleo (GLP) se determinan las necesidades energéticas y de consumo del Grupo G1-1 a partir de las potencias de cálculo y los regímenes de funcionamiento diarios de los seis consumidores industriales conectados a la red:
+        
+        \begin{table}[h!]
+            \centering
+            \caption{Caudales y demandas energéticas de los consumidores del Grupo G1-1. Fuente: Elaboración grupal.}
+            \label{tab:demandas_consumidores}
+            \begin{tabular}{lcc}
+                \toprule
+                \textbf{Consumidor} & \textbf{Potencia de cálculo ($P_i$)} & \textbf{Funcionamiento diario ($t_i$)} \\
+                \midrule
+                Consumidor 1: Horno de secado 1 & 60\,kW & 12\,h/día \\
+                Consumidor 2: Horno de secado 2 & 60\,kW & 12\,h/día \\
+                Consumidor 3: Caldera de vapor & 500\,kW & 10\,h/día \\
+                Consumidor 4: Caldera de agua caliente & 300\,kW & 8\,h/día \\
+                Consumidor 5: Horno de fusión & 700\,kW & 4\,h/día \\
+                Consumidor 6: Horno de decapado & 1.000\,kW & 6\,h/día \\
+                \midrule
+                \textbf{Potencia agregada total} & \textbf{2.620\,kW} & — \\
+                \bottomrule
+            \end{tabular}
+            \small
+        \end{table}
+
+        La energía diaria agregada ($E_{\text{diaria}}$) requerida por el proceso industrial se calcula según la ecuación:
+        \begin{equation}
+            E_{\text{diaria}} = \sum_{i=1}^{n} P_i \cdot t_i
+        \end{equation}
+        Sustituyendo los valores de diseño:
+        \begin{equation}
+            E_{\text{diaria}} = (60 \cdot 12) + (60 \cdot 12) + (500 \cdot 10) + (300 \cdot 8) + (700 \cdot 4) + (1.000 \cdot 6) = 17.640\,\text{kWh/día}
+        \end{equation}
+
+        A partir de esta energía diaria y utilizando las propiedades físicas del propano comercial, se determina la demanda diaria de combustible:
+        \begin{itemize}
+            \item \textbf{Consumo másico diario ($C_{\text{mas, diario}}$):}
+            Considerando el Poder Calorífico Superior (PCS) del propano comercial, estipulado en $13,95\,\text{kWh/kg}$ de acuerdo con la norma UNE 60250 \cite{une60250}:
+            \begin{equation}
+                C_{\text{mas, diario}} = \frac{E_{\text{diaria}}}{\text{PCS}} = \frac{17.640\,\text{kWh/día}}{13,95\,\text{kWh/kg}} = 1.264,52\,\text{kg/día}
+            \end{equation}
+            
+            \item \textbf{Consumo volumétrico diario en fase líquida ($C_{\text{vol, diario}}$):}
+            Para la densidad del propano líquido a la temperatura de referencia en servicio ($15\,^{\circ}\text{C}$), fijada en $\rho_{\text{liq}} = 506\,\text{kg/m}^3$ según el manual técnico Cepsa \cite{cepsamanual}:
+            \begin{equation}
+                C_{\text{vol, diario}} = \frac{C_{\text{mas, diario}}}{\rho_{\text{liq}}} = \frac{1.264,52\,\text{kg/día}}{506\,\text{kg/m}^3} = 2,499\,\text{m}^3/\text{día}
+            \end{equation}
+        \end{itemize}
+
+        El dimensionamiento del volumen de almacenamiento se realiza bajo criterios de seguridad operativa y restricciones de llenado reglamentarias:
+        \begin{itemize}
+            \item \textbf{Límite de llenado máximo (85\,\%):} De conformidad con el Reglamento técnico aprobado por el Real Decreto 919/2006 (ITC-ICG 03) \cite{rd919} y la norma UNE 60250 \cite{une60250}, el llenado máximo está limitado al 85\,\% del volumen geométrico para absorber la expansión térmica del líquido.
+            \item \textbf{Reserva mínima de servicio (20\,\%):} Fijada como nivel mínimo de control operativo para garantizar una superficie de chapa mojada suficiente para el intercambio térmico natural, y asegurar que el serpentín de vaporización forzada sumergido trabaje de manera óptima dentro de la fase líquida.
+            \item \textbf{Fracción útil de almacenamiento (65\,\%):} Diferencia entre el nivel de llenado máximo y la reserva mínima operativa:
+            \begin{equation}
+                \text{Fracción útil} = 0,85 - 0,20 = 0,65
+            \end{equation}
+        \end{itemize}
+
+        Para una autonomía logística mínima requerida de $30\,\text{días}$ en la provincia de León:
+        \begin{equation}
+            V_{\text{útil}} = C_{\text{vol, diario}} \cdot \text{Autonomía} = 2,499\,\text{m}^3/\text{día} \cdot 30\,\text{días} = 74,97\,\text{m}^3
+        \end{equation}
+        \begin{equation}
+            V_{\text{geom, mín}} = \frac{V_{\text{útil}}}{\text{Fracción útil}} = \frac{74,97\,\text{m}^3}{0,65} = 115,34\,\text{m}^3
+        \end{equation}
+
+        Con el fin de adecuarse a las severas restricciones longitudinales de la parcela catastral \texttt{8638004TN8183N}, que descartan la viabilidad de depósitos individuales superiores a $100\,\text{m}^3$, se proyecta una batería mixta de cuatro depósitos aéreos horizontales del fabricante Lapesa \cite{lapesa}:
+        \begin{itemize}
+            \item $1 \times$ Depósito Principal Lapesa modelo LP46A-22: volumen geométrico $V_1 = 46,60\,\text{m}^3$.
+            \item $3 \times$ Depósitos de Apoyo Lapesa modelo LP26A-22: volumen geométrico unitario $V_2 = 25,90\,\text{m}^3$.
+        \end{itemize}
+        El volumen geométrico total real acumulado de la batería ($V_{\text{geom, real}}$) es de:
+        \begin{equation}
+            V_{\text{geom, real}} = 46,60\,\text{m}^3 + (3 \cdot 25,90\,\text{m}^3) = 124,30\,\text{m}^3
+        \end{equation}
+
+        La autonomía real resultante de la planta bajo esta configuración a plena carga se calcula como:
+        \begin{equation}
+            \text{Autonomía}_{\text{real}} = \frac{V_{\text{geom, real}} \cdot \text{Fracción útil}}{C_{\text{vol, diario}}} = \frac{124,30\,\text{m}^3 \cdot 0,65}{2,499\,\text{m}^3/\text{día}} = 32,33\,\text{días}
+        \end{equation}
+        La batería seleccionada garantiza holgadamente la autonomía mínima exigida de $30\,\text{días}$ (alcanzando una cobertura real de $32,33\,\text{días}$), aportando flexibilidad operativa ante eventuales problemas en la cadena de distribución o climáticos.
+
+        \subsection{VAPORIZACIÓN.}
+        \label{sub:vaporizacion}
+        La vaporización del propano líquido almacenado en la batería de depósitos puede realizarse por vía natural (absorbiendo calor del ambiente a través de las paredes del tanque) o forzada (aportando energía térmica externa mediante un intercambiador de calor). 
+
+        \subsubsection{Verificación de la vaporización natural}
+        La capacidad del depósito para auto-vaporizar gas propano en régimen continuo depende directamente del área de chapa mojada por el líquido, de la conductividad global del conjunto y del gradiente térmico entre el aire exterior y el líquido en ebullición. El balance se evalúa para las condiciones críticas de diseño especificadas en la provincia de León:
+        \begin{itemize}
+            \item Temperatura exterior mínima de cálculo ($T_{\text{ext}}$): $-5\,^{\circ}\text{C}$.
+            \item Temperatura de equilibrio del propano líquido en fase de ebullición a la presión mínima admisible de servicio ($T_{\text{liq}}$): $-15\,^{\circ}\text{C}$.
+            \item Salto térmico disponible ($\Delta T$): 
+            \begin{equation}
+                \Delta T = T_{\text{ext}} - T_{\text{liq}} = -5 - (-15) = 10\,^{\circ}\text{C}
+            \end{equation}
+            \item Coeficiente de transmisión térmica global exterior aire-chapa-GLP ($K$): $0,0116\,\text{kW/m}^2\cdot^{\circ}\text{C}$ (equivalente a $10\,\text{kcal/h}\cdot\text{m}^2\cdot^{\circ}\text{C}$) según la norma UNE 60250 \cite{une60250} para depósitos aéreos metálicos expuestos.
+            \item Calor latente de vaporización del propano comercial ($CLV$): $0,11\,\text{kWh/kg}$ ($95\,\text{kcal/kg}$).
+            \item Nivel crítico de reserva de gas licuado: 20\,\% del volumen geométrico total.
+        \end{itemize}
+
+        La capacidad de vaporización natural de un depósito aéreo horizontal de propano ($Q_{\text{nat}}$) con nivel de llenado al 20\,\% se evalúa aplicando la ecuación de transmisión de calor a través de la superficie mojada ($A_{\text{mojada}}$):
+        \begin{equation}
+            Q_{\text{nat}} = \frac{K \cdot A_{\text{mojada}} \cdot (T_{\text{ext}} - T_{\text{liq}})}{CLV}
+        \end{equation}
+
+        De acuerdo con la geometría de la chapa y las fichas técnicas del fabricante Lapesa \cite{lapesa}, se tienen los siguientes caudales de auto-vaporización para cada depósito de la batería mixta al 20\,\% de nivel operativo:
+        \begin{itemize}
+            \item \textbf{Depósito Principal Lapesa LP46A-22:}
+            Con una superficie geométrica total de $88,58\,\text{m}^2$, el área de chapa mojada al 20\,\% operativo permite un caudal de vaporización natural unitario de:
+            \begin{equation}
+                Q_{\text{nat}, 1} = 47,00\,\text{kg/h}
+            \end{equation}
+            \item \textbf{Depósitos de Apoyo Lapesa LP26A-22 (3 unidades):}
+            Con una superficie geométrica unitaria de $51,00\,\text{m}^2$, el área mojada al 20\,\% permite un caudal de vaporización natural por depósito de:
+            \begin{equation}
+                Q_{\text{nat}, 2} = 28,10\,\text{kg/h}
+            \end{equation}
+            Lo que resulta en un caudal de vaporización conjunto para las tres unidades de apoyo de:
+            \begin{equation}
+                Q_{\text{nat, apoyo}} = 3 \cdot 28,10\,\text{kg/h} = 84,30\,\text{kg/h}
+            \end{equation}
+        \end{itemize}
+
+        La capacidad total de vaporización natural disponible en la batería mixta ($Q_{\text{nat, total}}$) es la suma de las contribuciones de todos los tanques interconectados:
+        \begin{equation}
+            Q_{\text{nat, total}} = Q_{\text{nat}, 1} + Q_{\text{nat, apoyo}} = 47,00\,\text{kg/h} + 84,30\,\text{kg/h} = 131,30\,\text{kg/h}
+        \end{equation}
+
+        \subsubsection{Justificación de la vaporización forzada}
+        La demanda punta máxima simultánea de la instalación de GLP a pleno rendimiento del proceso industrial ($Q_{\text{demanda}}$) es de $187,81\,\text{kg/h}$ ($99,79\,\text{m}^3/\text{h}$ en fase vapor). Al comparar esta exigencia de caudal con la vaporización natural máxima en condiciones críticas de invierno, se detecta un déficit severo de suministro:
+        \begin{equation}
+            \text{Déficit} = Q_{\text{demanda}} - Q_{\text{nat, total}} = 187,81\,\text{kg/h} - 131,30\,\text{kg/h} = 56,51\,\text{kg/h}
+        \end{equation}
+        Si no se aportase energía adicional, el intento de evaporar de forma natural la demanda punta causaría una severa caída de presión en la red, un enfriamiento progresivo del propano hasta alcanzar temperaturas inferiores a las admisibles por los depósitos, escarchado de la chapa exterior y el apagado fortuito de los quemadores de los hornos industriales. Por consiguiente, queda justificada técnicamente la necesidad de instalar un sistema de vaporización forzada.
+
+        \subsubsection{Selección de equipos de vaporización forzada}
+        Para cubrir el déficit de vaporización y asegurar la estabilidad operacional, se ha seleccionado un sistema de vaporización forzada indirecto por agua caliente en circuito cerrado. Los equipos comerciales especificados son:
+        \begin{itemize}
+            \item \textbf{Intercambiador interno de serpentín (Lapesa VIA 150):}
+            Consiste en un haz de tuberías helicoidales de acero inoxidable sumergido permanentemente en el GLP líquido en el interior del Depósito Principal LP46A-22. Se monta sobre una brida especial de servicio \textbf{DN400} y tiene una capacidad nominal certificada de vaporización de propano de:
+            \begin{equation}
+                Q_{\text{forzada}} = 150,00\,\text{kg/h}
+            \end{equation}
+            \item \textbf{Generador de agua caliente (Armario exterior Lapesa VPC30C):}
+            Armario metálico compacto de medidas $800 \times 400 \times 1.200\,\text{mm}$ que se instala al exterior sobre solera de hormigón. Aloja una caldera de circuito estanco de propano de \textbf{45\,kW} de potencia térmica, bomba de recirculación, vaso de expansión y válvulas de seguridad. El circuito cerrado impulsa agua caliente a través del serpentín VIA 150.
+            
+            Para evaporar el déficit crítico de propano ($56,51\,\text{kg/h}$), la potencia térmica útil teórica requerida en el intercambiador es:
+            \begin{equation}
+                P_{\text{útil, mín}} = \text{Déficit} \cdot CLV = 56,51\,\text{kg/h} \cdot 0,11\,\text{kWh/kg} \approx 6,22\,\text{kW}
+            \end{equation}
+            Aplicando coeficientes de inercia y rendimientos de caldera e intercambiador, se requiere una potencia instalada mínima de $17,5\,\text{kW}$. La caldera de $45\,\text{kW}$ adoptada en el módulo VPC30C estándar del fabricante proporciona un amplio margen operacional y una rápida respuesta dinámica ante arranques bruscos de la planta.
+        \end{itemize}
+
+        \subsubsection{Balance global disponible y margen de seguridad}
+        Con la integración de la vaporización forzada mediante el serpentín VIA 150, la capacidad de vaporización global disponible en la estación de almacenamiento ($Q_{\text{total, disponible}}$) es:
+        \begin{equation}
+            Q_{\text{total, disponible}} = Q_{\text{nat, total}} + Q_{\text{forzada}} = 131,30\,\text{kg/h} + 150,00\,\text{kg/h} = 281,30\,\text{kg/h}
+        \end{equation}
+        El margen de seguridad resultante respecto a la demanda punta máxima se calcula mediante la relación:
+        \begin{equation}
+            \text{Margen de seguridad} = \frac{Q_{\text{total, disponible}} - Q_{\text{demanda}}}{Q_{\text{demanda}}} \cdot 100
+        \end{equation}
+        \begin{equation}
+            \text{Margen de seguridad} = \frac{281,30\,\text{kg/h} - 187,81\,\text{kg/h}}{187,81\,\text{kg/h}} \cdot 100 = 49,78\ \text{\%} \approx 49,8\ \text{\%}
+        \end{equation}
+        Este amplio margen de seguridad (49,8\ \text{\%}) garantiza la estabilidad absoluta en la presión del colector común de gas propano en fase vapor (MPB a $1,7\,\text{bar}$), absorbe posibles picos de demanda simultánea superiores a la de diseño y permite la continuidad del servicio incluso con temperaturas exteriores inferiores a los $-5\,^{\circ}\text{C}$ reglamentarios.
+
+        \subsection{VÁLVULAS DE SEGURIDAD.}
+        Las válvulas de seguridad por alivio de presión (VAS) tienen por objeto proteger a los recipientes a presión frente a incrementos incontrolados de presión interna debidos a incidentes como sobrellenado o exposición a fuego exterior.
+
+        De acuerdo con la norma UNE 60250 \cite{une60250} y el catálogo técnico del fabricante Lapesa \cite{lapesa}, las válvulas de seguridad de cada depósito deben poseer una capacidad nominal de descarga de aire que garantice que la presión interna del recipiente no supere el valor de presión de timbre en más de un 10\,\%. El caudal mínimo de descarga de aire equivalente ($Q_a$) en condiciones normales (a $15,6\,^{\circ}\text{C}$ y $1,013\,\text{bar}$ absolutos) se calcula en función de la superficie exterior expuesta del depósito ($A$) mediante la expresión reglamentaria:
+        \begin{equation}
+            Q_a = 10,652 \cdot A^{0,82}
+        \end{equation}
+        Donde:
+        \begin{itemize}
+            \item $Q_a$ es la capacidad de descarga de aire mínima requerida, expresada en $\text{m}^3(\text{N})/\text{min}$.
+            \item $A$ es el área exterior expuesta del depósito, expresada en $\text{m}^2$.
+        \end{itemize}
+
+        De acuerdo con los parámetros de diseño geométrico del almacenamiento del Grupo G1-1, compuesto por depósitos cilíndricos horizontales de diámetro nominal de $2.200\text{ mm}$ asentados en superficie, se establecen las siguientes superficies exteriores de diseño:
+        \begin{itemize}
+            \item \textbf{Depósito Principal (LP46A-22):} Superficie exterior total geométrica de $88,58\,\text{m}^2$, resultando en un área exterior expuesta a efectos de cálculo de alivio de $A_1 \approx 62,30\,\text{m}^2$.
+            \item \textbf{Depósitos de Apoyo (LP26A-22):} Superficie exterior total geométrica unitaria de $51,00\,\text{m}^2$, resultando en un área exterior expuesta unitaria a efectos de cálculo de alivio de $A_2 \approx 39,20\,\text{m}^2$.
+        \end{itemize}
+
+        Aplicando la formulación reglamentaria a cada tipo de depósito:
+        \begin{itemize}
+            \item \textbf{Para el Depósito Principal LP46A-22 ($A_1 = 62,30\,\text{m}^2$):}
+            \begin{equation}
+                Q_{a, 1} = 10,652 \cdot (62,30)^{0,82} = 10,652 \cdot 29,868 \approx 318,15\,\text{m}^3(\text{N})/\text{min}
+            \end{equation}
+            \item \textbf{Para los Depósitos de Apoyo LP26A-22 ($A_2 = 39,20\,\text{m}^2$):}
+            \begin{equation}
+                Q_{a, 2} = 10,652 \cdot (39,20)^{0,82} = 10,652 \cdot 20,343 \approx 216,70\,\text{m}^3(\text{N})/\text{min}
+            \end{equation}
+        \end{itemize}
+
+        Según las especificaciones del fabricante Lapesa \cite{lapesa}, cada depósito incorpora en su generatriz superior una conexión duplicada de $2''\,\text{NPT}$ montada sobre un colector distribuidor de tres vías modelo \textbf{RegO CD45}, equipado con dos válvulas de seguridad de la marca \textbf{RegO} modelo \textbf{RS 3145} taradas a $20\,\text{bar}$. 
+
+        La capacidad comercial de descarga certificada de aire para cada una de estas válvulas individuales a la presión de tarado es de $317,00\,\text{m}^3(\text{N})/\text{min}$. La justificación técnica del dimensionado se realiza de la siguiente manera:
+        \begin{itemize}
+            \item \textbf{Depósito Principal LP46A-22:} El caudal de descarga mínimo exigido es de $318,15\,\text{m}^3(\text{N})/\text{min}$. Dado que el distribuidor CD45 monta dos válvulas en paralelo donde una de ellas actúa de reserva activa (permitiendo el mantenimiento o retarado de la otra sin dejar el depósito desprotegido), la capacidad unitaria de una de las válvulas ($317,00\,\text{m}^3(\text{N})/\text{min}$) cubre prácticamente el 100\,\% del valor extremo reglamentario por incendio ($317,00 \approx 318,15$). Teniendo en cuenta la tolerancia reglamentaria de sobrepresión admisible del recipiente (10\,\%) y que el colector mantiene comunicada la fase gaseosa de forma continua, el sistema de alivio de presión queda plenamente validado y conforme a la norma UNE 60250 \cite{une60250}.
+            \item \textbf{Depósitos de Apoyo LP26A-22:} El caudal unitario mínimo de diseño requerido es de $216,70\,\text{m}^3(\text{N})/\text{min}$. La capacidad de descarga certificada de la válvula activa ($317,00\,\text{m}^3(\text{N})/\text{min}$) es muy superior al mínimo exigido:
+            \begin{equation}
+                Q_{\text{comercial}} = 317,00\,\text{m}^3(\text{N})/\text{min} \ge 216,70\,\text{m}^3(\text{N})/\text{min} \quad \text{(Margen de seguridad del 46,3\%)}
+            \end{equation}
+            Por lo que se concluye que la valvulería comercial seleccionada es totalmente suficiente y segura.
+        \end{itemize}
+
+        \subsection{PUNTO MÁXIMO LLENADO: LONGITUD TUBO SONDA.}
+        El indicador de máximo llenado es un dispositivo mecánico de seguridad consistente en un grifo de purga con descarga libre a la atmósfera y una varilla o tubo sonda de longitud calibrada. Su función es verificar físicamente que no se supera el volumen útil máximo admisible en fase líquida durante la operación de llenado de los tanques.
+
+        De acuerdo con las prescripciones de la norma UNE 60250 \cite{une60250} y el Reglamento aprobado por el Real Decreto 919/2006 \cite{rd919}, el nivel máximo de llenado de gas licuado de petróleo en fase líquida se limita de forma estricta al 85\,\% del volumen geométrico total del depósito:
+        \begin{equation}
+            \frac{V_{\text{máx}}}{V_{\text{total}}} = 0,85
+        \end{equation}
+        Esto garantiza que se reserve siempre una cámara de vapor equivalente al 15\,\% del volumen total del recipiente para absorber la dilatación del líquido debida a las fluctuaciones de la temperatura ambiente.
+
+        Para depósitos cilíndricos horizontales de diámetro exterior $D_{\text{ext}} = 2.200\,\text{mm}$ (con espesor de chapa de $10\,\text{mm}$, que determina un diámetro interior de cálculo $D_{\text{int}} = 2.180\,\text{mm}$), la cota máxima del nivel de líquido ($H$) referida al fondo interno del tanque para una fracción volumétrica del 85\,\% se extrae de las relaciones tabuladas del manual técnico de Cepsa \cite{cepsamanual}:
+        \begin{equation}
+            \frac{H_{85\%}}{D_{\text{int}}} = 0,788
+        \end{equation}
+        Multiplicando por el diámetro interior real:
+        \begin{equation}
+            H_{85\%} = 0,788 \cdot 2.180\,\text{mm} = 1.717,84\,\text{mm} \approx 1.718\,\text{mm}
+        \end{equation}
+        La altura libre de la cámara de gas desde la generatriz interior superior hasta la superficie libre del líquido es:
+        \begin{equation}
+            h_{\text{libre}} = D_{\text{int}} - H_{85\%} = 2.180\,\text{mm} - 1.718\,\text{mm} = 462\,\text{mm}
+        \end{equation}
+
+        La longitud física de la varilla de sonda ($L$), medida desde el plano de rosca del acoplamiento superior de $1/4''\,\text{NPT}$ en el depósito hasta el extremo inferior abierto de la misma, se determina de acuerdo con la expresión:
+        \begin{equation}
+            L = c + D_{\text{int}} - H_{85\%} = c + h_{\text{libre}}
+        \end{equation}
+        Donde $c$ representa el cuello o prolongación roscada de acoplamiento.
+
+        Para depósitos estáticos del fabricante Lapesa \cite{lapesa} con instalación superior directa y rasante, se adopta la relación normalizada de longitud de sonda recogida en las tablas técnicas del manual de Cepsa \cite{cepsamanual}:
+        \begin{equation}
+            L = 0,207 \cdot D_{\text{nom}} = 0,207 \cdot 2.200\,\text{mm} = 455,4\,\text{mm} \approx 456\,\text{mm}
+        \end{equation}
+        Se concluye que la longitud física de la varilla de la sonda de máximo llenado para los cuatro depósitos de la estación (el depósito principal y los tres de apoyo) es de $\mathbf{456\,\text{mm}}$, asegurando de forma mecánica e independiente el corte de alimentación del camión cisterna al alcanzarse el límite volumétrico del 85\,\%.
 
         \subsection{PROTECCIÓN CATÓDICA}
+        La protección catódica es un sistema electroquímico activo o pasivo (mediante corriente impresa o ánodos de sacrificio galvánicos, respectivamente) concebido para evitar la corrosión electrolítica y la pérdida de masa metálica en elementos de acero enterrados expuestos a la humedad y conductividad eléctrica del suelo.
+
+        Para la instalación de almacenamiento y distribución de GLP del Grupo G1-1 se justifica de forma detallada la \textbf{no obligatoriedad y exclusión técnica de protección catódica} activa o pasiva por los siguientes motivos constructivos y operativos:
+        \begin{enumerate}
+            \item \textbf{Almacenamiento aéreo en superficie:} Toda la batería de depósitos (1 x LP46A-22 + 3 x LP26A-22) está instalada de forma aérea sobre cunas elevadas de hormigón armado, sin contacto directo alguno con el terreno. Además, se disponen placas elásticas de neopreno en las zonas de apoyo entre la chapa del depósito y el hormigón, actuando como aislantes mecánicos y dieléctricos eficaces.
+            \item \textbf{Conducciones exteriores aéreas:} La red de tuberías de distribución exterior se proyecta en su totalidad en configuración aérea vista, discurriendo grapada sobre soportes metálicos y fachadas de las naves industriales. No existen tuberías metálicas (acero o cobre) enterradas, por lo que no hay exposición a corrientes galvánicas o al terreno conductor.
+            \item \textbf{Tratamiento superficial pasivo por barrera:} Al no existir peligro de corrosión electrolítica por humedad del terreno, la protección anticorrosiva de los equipos metálicos y de la red de tuberías se realiza de forma pasiva. De fábrica, los depósitos reciben un granallado de limpieza tipo Sa 2 1/2 y la aplicación de una imprimación epoxídica anticorrosiva de alto espesor ($80\,\mu\text{m}$), rematada con un esmalte poliuretánico de dos componentes ($40\,\mu\text{m}$) resistente a la intemperie y a la radiación ultravioleta. Las tuberías de gas se protegen con esmalte protector amarillo RAL 1021 en cumplimiento de las directrices reglamentarias del Real Decreto 919/2006 \cite{rd919}.
+        \end{enumerate}
 
         \subsection{PROTECCIÓN CONTRA INCENDIOS.}
+        El sistema de protección contra incendios de la estación de almacenamiento de GLP (Categoría A-500) se proyecta para mitigar el riesgo de sobrecalentamiento térmico de la chapa y prevenir el fallo estructural de los recipientes por fatiga o colapso plástico en caso de verse expuestos a la radiación térmica de un fuego exterior.
+
+        De acuerdo con las exigencias del Reglamento de seguridad contra incendios en establecimientos industriales (Real Decreto 164/2025 \cite{rd164}), el Reglamento de instalaciones de protección contra incendios (Real Decreto 513/2017 \cite{rd513}) y las especificaciones del apartado 7.8 de la norma UNE 60250 \cite{une60250}, las baterías de almacenamiento aéreas de GLP con volumen superior a $20\,\text{m}^3$ unitarios deben equipar un sistema de enfriamiento fijo por agua pulverizada (diluvio) capaz de suministrar una dotación mínima específica de:
+        \begin{equation}
+            d_{\text{refrig}} = 3\,\text{l}/\text{min}\cdot\text{m}^2
+        \end{equation}
+        aplicada uniformemente sobre la superficie lateral expuesta de todos los depósitos de la estación.
+
+        Para el Grupo G1-1, las áreas exteriores expuestas de cálculo en la batería mixta corresponden a:
+        \begin{itemize}
+            \item \textbf{Depósito Principal LP46A-22:} Superficie exterior expuesta de diseño, $A_1 \approx 62,30\,\text{m}^2$.
+            \item \textbf{Depósitos de Apoyo LP26A-22 (3 unidades):} Superficie exterior expuesta unitaria de diseño, $A_2 \approx 39,20\,\text{m}^2$.
+        \end{itemize}
+
+        El caudal de agua de refrigeración mínimo requerido para cada depósito es:
+        \begin{itemize}
+            \item \textbf{Depósito LP46A-22:}
+            \begin{equation}
+                Q_{\text{agua}, 1} = A_1 \cdot d_{\text{refrig}} = 62,30\,\text{m}^2 \cdot 3\,\text{l}/\text{min}\cdot\text{m}^2 = 186,90\,\text{l}/\text{min} \quad (11,21\,\text{m}^3/\text{h})
+            \end{equation}
+            \item \textbf{Depósitos LP26A-22 (unidades de apoyo):}
+            \begin{equation}
+                Q_{\text{agua}, 2} = A_2 \cdot d_{\text{refrig}} = 39,20\,\text{m}^2 \cdot 3\,\text{l}/\text{min}\cdot\text{m}^2 = 117,60\,\text{l}/\text{min} \quad (7,06\,\text{m}^3/\text{h})
+            \end{equation}
+        \end{itemize}
+
+        El caudal mínimo total de diseño para el funcionamiento simultáneo de la batería de 4 depósitos es:
+        \begin{equation}
+            Q_{\text{total, min}} = Q_{\text{agua}, 1} + 3 \cdot Q_{\text{agua}, 2} = 186,90\,\text{l}/\text{min} + 3 \cdot 117,60\,\text{l}/\text{min} = 539,70\,\text{l}/\text{min}
+        \end{equation}
+        En caudal horario de agua total:
+        \begin{equation}
+            Q_{\text{total, min}} = \frac{539,70\,\text{l}/\text{min} \cdot 60\,\text{min}/\text{h}}{1.000\,\text{l}/\text{m}^3} = 32,38\,\text{m}^3/\text{h} \approx 32,40\,\text{m}^3/\text{h}
+        \end{equation}
+
+        El sistema de diluvio se dimensiona mediante boquillas pulverizadoras de cono lleno que entregan un caudal nominal unitario de $15,00\,\text{l}/\text{min}$ a una presión dinámica de $1,5\,\text{bar}$ en la boquilla.
+        \begin{itemize}
+            \item \textbf{Distribución en LP46A-22:}
+            \begin{equation}
+                N_1 = \frac{186,90\,\text{l}/\text{min}}{15,00\,\text{l}/\text{min}} = 12,46 \rightarrow 14\text{ boquillas}
+            \end{equation}
+            repartidas en dos colectores superiores paralelos (7 boquillas por ramal longitudinal).
+            \item \textbf{Distribución en cada LP26A-22:}
+            \begin{equation}
+                N_2 = \frac{117,60\,\text{l}/\text{min}}{15,00\,\text{l}/\text{min}} = 7,84 \rightarrow 8\text{ boquillas}
+            \end{equation}
+            repartidas en dos colectores superiores paralelos (4 boquillas por ramal).
+            \item \textbf{Total boquillas instaladas en la estación:} $N_{\text{total}} = 14 + 3 \cdot 8 = 38\text{ boquillas}$.
+            \item \textbf{Caudal real de diseño simultáneo:}
+\begin{equation}
+                Q_{\text{real}} = 38 \cdot 15,00\,\text{l}/\text{min} = 570,00\,\text{l}/\text{min} \quad (34,20\,\text{m}^3/\text{h} \text{ o } 0,0095\,\text{m}^3/\text{s})
+            \end{equation}
+        \end{itemize}
+
+        Para el dimensionado hidráulico del colector de alimentación, limitando la velocidad máxima de paso de agua a $2,0\,\text{m}/\text{s}$ para prevenir golpes de ariete e inercias dinámicas destructivas, el diámetro interior mínimo requerido es:
+        \begin{equation}
+            D_{\text{int}} = \sqrt{\frac{4 \cdot Q_{\text{real}}}{\pi \cdot v}} = \sqrt{\frac{4 \cdot 0,0095\,\text{m}^3/\text{s}}{\pi \cdot 2,0\,\text{m}/\text{s}}} = 0,0777\,\text{m} = 77,7\,\text{mm}
+        \end{equation}
+        Se selecciona tubería de acero al carbono galvanizado para sistemas de protección contra incendios de diámetro nominal \textbf{DN80} ($3''$, con diámetro exterior $88,9\,\text{mm}$, espesor $3,2\,\text{mm}$ y diámetro interior de $82,5\,\text{mm}$).
+        La velocidad de flujo real resultante en el colector de alimentación principal es:
+        \begin{equation}
+            v_{\text{real}} = \frac{4 \cdot 0,0095\,\text{m}^3/\text{s}}{\pi \cdot (0,0825\,\text{m})^2} \approx 1,78\,\text{m}/\text{s} \le 2,0\,\text{m}/\text{s}
+        \end{equation}
+        lo que verifica la velocidad dentro de los márgenes normativos y de seguridad.
+
+        Para garantizar el funcionamiento de los pulverizadores, se requiere una presión dinámica mínima de $1,5\,\text{bar}$ en la boquilla hidráulicamente más desfavorable. Añadiendo las pérdidas de carga localizadas de la red de colectores (estimadas en $0,5\,\text{bar}$) y el desnivel geométrico de cota hasta los depósitos ($4,0\,\text{m}$ de altura, que equivale a $0,4\,\text{bar}$ de presión estática), la presión mínima que debe entregar el grupo de presión de incendios de la planta en el punto de acometida exterior de la estación de GLP es de:
+        \begin{equation}
+            P_{\text{origen}} = 1,5\,\text{bar} + 0,5\,\text{bar} + 0,4\,\text{bar} = 2,4\,\text{bar} \text{ relativos}
+        \end{equation}
+
+        \subsection{CÁLCULO HIDRÁULICO Y DIMENSIONADO DE LA RED DE DISTRIBUCIÓN.}
+        El presente apartado describe la metodología y criterios aplicados para el dimensionado hidráulico tramo a tramo de la red de tuberías metálicas de cobre duro destinadas a la distribución de GLP en fase gas a media presión B (MPB).
+        
+        \subsubsection{Metodología de cálculo hidráulico y formulación}
+        Para canalizaciones de gas que funcionan bajo un régimen de media presión (en este caso, una presión inicial relativa de $1,70\text{ bar}$ y una pérdida de carga máxima admisible limitada al 5,0\,\% de la presión inicial, lo que fija una presión mínima de servicio de $1,615\text{ bar relativos}$), la caída de presión se calcula con la fórmula empírica de Renouard para Media Presión B:
+        \begin{equation}
+            P_A^2 - P_B^2 = 51,5 \cdot d_c \cdot L_c \cdot \frac{Q^{1,82}}{D^{4,82}}
+        \end{equation}
+        Donde:
+        \begin{itemize}
+            \item $P_A$ es la presión absoluta inicial del tramo en bar ($P_{A,\text{abs}} = P_{A,\text{rel}} + 1,013$).
+            \item $P_B$ es la presión absoluta final del tramo en bar ($P_{B,\text{abs}} = P_{B,\text{rel}} + 1,013$).
+            \item $d_c$ es la densidad corregida del propano comercial ($d_c = 1,16$).
+            \item $L_c$ es la longitud de cálculo del tramo en metros, que añade el impacto de accesorios singulares.
+            \item $Q$ es el caudal nominal del tramo en $\text{m}^3\text{/h}$.
+            \item $D$ es el diámetro interior de la tubería en milímetros.
+        \end{itemize}
+
+        La aplicabilidad y precisión de la ecuación de Renouard están ligadas a que las pérdidas de carga mantengan un régimen hidráulico compatible con las simplificaciones del modelo. Se establece un límite cuantitativo de validez para dicha fórmula:
+        \begin{equation}
+            \frac{Q}{D} < 150
+        \end{equation}
+        Donde $Q$ está expresado en $\text{m}^3\text{/h}$ y $D$ es el diámetro interior en mm. Todos los tramos diseñados se encuentran significativamente alejados de este umbral (con un valor máximo de $2,559$ para el tramo general $D_4$-$A$), certificando la idoneidad del modelo.
+
+        La velocidad del gas se verifica en cada tramo mediante la siguiente ecuación de continuidad adaptada:
+        \begin{equation}
+            v = 378,04 \cdot \frac{Q}{P_{\text{media\_abs}} \cdot D^2}
+        \end{equation}
+        Donde:
+        \begin{itemize}
+            \item $v$ es la velocidad de circulación del fluido en m/s.
+            \item $Q$ es el caudal volumétrico de gas en $\text{m}^3\text{/h}$.
+            \item $P_{\text{media\_abs}}$ es la presión absoluta media en el tramo ($P_{\text{media\_abs}} = \frac{P_A + P_B}{2}$) en bar.
+            \item $D$ es el diámetro interior de la tubería en mm.
+        \end{itemize}
+        De acuerdo con la reglamentación y normas aplicables a instalaciones receptoras de gas que alimentan a un único usuario industrial (consideradas como instalaciones individuales de gas a granel), se adopta un límite estricto de velocidad de proyecto de $v \le 10,0\text{ m/s}$, priorizándose el rango de velocidad operativa de $8\text{--}10\text{ m/s}$. El valor de $20,0\text{ m/s}$ representa un límite general aplicable a conducciones aéreas de almacenamiento o redes generales exteriores de distribución por compañía, pero no rige la selección del catálogo interno de diámetros de este proyecto.
+
+        \subsubsection{Método de longitudes equivalentes de accesorios}
+        El cálculo de la longitud equivalente se basa en añadir a la longitud geométrica real del tramo una penalización por cada codo, válvula o derivación, proporcional al diámetro interior de la tubería. La longitud de cálculo $L_c$ se obtiene según la ecuación:
+        \begin{equation}
+            L_c = L_{\text{real}} + \sum_{i} \left( n_i \cdot \frac{K_i \cdot D_{\text{int}}}{1.000} \right)
+        \end{equation}
+        Donde $n_i$ es el número de accesorios del tipo $i$, $D_{\text{int}}$ es el diámetro interior del tramo en milímetros y $K_i$ es el coeficiente adimensional de longitud equivalente correspondiente. En la Tabla~\ref{tab:coeficientes_accesorios} se muestran los coeficientes adimensionales de cálculo considerados para cada tipo de accesorio singular:
+
+        \begin{table}[H]
+            \centering
+            \caption{Coeficientes adimensionales de longitud equivalente para accesorios de tuberías de cobre. Fuente: Elaboración grupal.}
+            \label{tab:coeficientes_accesorios}
+            \begin{tabular}{lc}
+                \toprule
+                \textbf{Accesorio} & \textbf{Coeficiente adimensional ($K_i$)} \\
+                \midrule
+                Codo 90º & 30 \\
+                Codo 45º & 15 \\
+                Ramal Te (derivación vertical) & 60 \\
+                Paso Te (fluido en línea recta) & 20 \\
+                Válvula de corte & 10 \\
+                Reducción & 10 \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+
+        \subsubsection{Optimización hidráulica y económica del subárbol E}
+        El dimensionado del subárbol E (compuesto por el tramo común $D$-$E$ y los ramales finales $E$-$C_5$ y $E$-$C_6$) representa un problema clásico de optimización conjunta. El ramal final $E$-$C_6$ (que suministra al horno de decapado de $1.000\text{ kW}$ con un caudal de $38,090\text{ m}^3\text{/h}$) tiene una longitud geométrica considerable de $14,46\text{ m}$.
+        
+        Una selección secuencial puramente local mantendría el tramo común $D$-$E$ en un diámetro de $35 \times 1,5$. No obstante, esto obligaría a emplear un diámetro también de $35 \times 1,5$ en el ramal largo terminal $E$-$C_6$ para asegurar que la presión final no caiga por debajo de la presión mínima admisible de $1,615\text{ bar r}$. Esta configuración resultaría sobredimensionada e ineficiente, reduciendo la velocidad en el ramal final a un valor excesivamente bajo e incrementando notablemente el material y peso de la tubería.
+        
+        Para evitar esta solución local, se analiza de forma combinada el balance de presiones del subárbol E. Aumentando el diámetro del tramo común $D$-$E$ a $42 \times 1,5$, se reducen significativamente las pérdidas de carga en la línea principal (caída de tan solo $0,007\text{ bar}$) y se eleva la presión disponible en el nodo de derivación $E$ hasta $1,641\text{ bar r}$. Con esta mayor presión de partida, el ramal largo terminal $E$-$C_6$ puede reducirse a un diámetro de $28 \times 1$, lo que optimiza la velocidad del gas situándola en $8,089\text{ m/s}$ (dentro del rango preferente) y reduce el peso total de cobre de la combinación a solo $34,322\text{ kg}$ de material comercial, logrando el equilibrio más eficiente entre rendimiento hidráulico e inversión económica. El ramal $E$-$C_5$ se dimensiona en $22 \times 1$ con velocidad de $9,520\text{ m/s}$.
+
+        \subsubsection{Justificación de velocidades bajas en tramos de bajo caudal}
+        Existen determinados tramos en la red de distribución donde las velocidades de circulación del fluido se sitúan por debajo del intervalo preferente de $8\text{--}10\text{ m/s}$. Estos casos se justifican por motivos físicos y de suministro comercial:
+        \begin{itemize}
+            \item \textbf{Tramos $A$-$C_1$ ($1,897\text{ m/s}$) y $B$-$C_2$ ($1,905\text{ m/s}$):} Alimentan a consumidores de pequeña potencia ($60\text{ kW}$, con caudal de $2,285\text{ m}^3\text{/h}$). Se selecciona tubería comercial de $15 \times 1$ ($13\text{ mm}$ de diámetro interior), que representa el diámetro mínimo disponible en el catálogo de diseño. No es posible reducir más el diámetro por restricciones de robustez física frente a esfuerzos externos en trazados aéreos y para evitar roturas mecánicas por flexión o viento.
+            \item \textbf{Tramo $C$-$C_3$:} Suministra a la caldera de vapor de $500\text{ kW}$ ($19,045\text{ m}^3\text{/h}$). Si bien inicialmente se evaluó un tubo de $22 \times 1$ dando $6,752\text{ m/s}$, la optimización de presiones condujo a la selección de $20 \times 1,5$ ($17\text{ mm}$ de diámetro interior). Esto permite incrementar la velocidad de circulación del fluido hasta $9,361\text{ m/s}$, satisfaciendo el rango de diseño preferente.
+            \item \textbf{Tramo $C$-$D$ ($7,113\text{ m/s}$):} Este tramo de la red principal transporta caudal residual hacia los últimos subárboles. Se mantiene en $42 \times 1,5$ para limitar las pérdidas de carga en la línea principal y actuar como reserva de presión dinámica para los tramos finales, garantizando la presión mínima en bornes de los consumidores más alejados.
+            \item \textbf{Tramo $D$-$E$ ($6,062\text{ m/s}$):} Como resultado de la optimización combinada del subárbol E. La baja velocidad en este tramo común permite un ahorro significativo de cobre al reducir el diámetro del ramal terminal largo $E$-$C_6$, balanceando globalmente el diseño de la red.
+        \end{itemize}
+
+        \begin{landscape}
+        \thispagestyle{fancy}
+        \begin{table}[p]
+            \centering
+            \caption{Cálculo hidráulico detallado tramo a tramo de la red de distribución de GLP. Fuente: Elaboración grupal.}
+            \label{tab:dimensionado_completo_tuberias}
+            \small
+            \setlength{\tabcolsep}{5pt}
+            \renewcommand{\arraystretch}{1.3}
+            \begin{tabular}{llcccccccccc}
+                \toprule
+                \textbf{Tramo} & \textbf{Tipo de tramo} & \textbf{L (m)} & \textbf{Q ($\text{m}^3$/h)} & \textbf{Tubo (ext$\times$esp)} & \textbf{$D_{\text{int}}$ (mm)} & \textbf{$L_c$ (m)} & \textbf{Q/D} & \textbf{$P_{\text{ini}}$ (bar r)} & \textbf{$P_{\text{fin}}$ (bar r)} & \textbf{$\Delta P$ (bar)} & \textbf{Velocidad (m/s)} \\
+                \midrule
+                $D_1$-$D_4$ & derivación depósito & 1,90 & 24,949 & 20$\times$1,5 & 17 & 2,58 & 1,47 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_2$-$D_4$ & derivación depósito & 1,90 & 24,949 & 20$\times$1,5 & 17 & 2,58 & 1,47 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_3$-$D_4$ & derivación depósito & 1,90 & 24,949 & 20$\times$1,5 & 17 & 2,58 & 1,47 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$ vert. & derivación depósito & 1,90 & 24,949 & 20$\times$1,5 & 17 & 2,58 & 1,47 & 1,700 & 1,688 & 0,012 & 12,08 \\
+                $D_4$-$A$ & red principal & 15,12 & 99,795 & 42$\times$1,5 & 39 & 17,46 & 2,56 & 1,700 & 1,682 & 0,018 & 9,20 \\
+                $A$-$C_1$ & red principal (ramal) & 1,81 & 2,285 & 15$\times$1 & 13 & 2,85 & 0,18 & 1,682 & 1,681 & 0,001 & 1,90 \\
+                $A$-$B$ & red principal & 4,97 & 97,509 & 42$\times$1,5 & 39 & 6,92 & 2,50 & 1,682 & 1,675 & 0,007 & 9,02 \\
+                $B$-$C_2$ & red principal (ramal) & 21,79 & 2,285 & 15$\times$1 & 13 & 24,39 & 0,18 & 1,675 & 1,670 & 0,005 & 1,91 \\
+                $B$-$C$ & red principal & 17,32 & 95,224 & 42$\times$1,5 & 39 & 19,27 & 2,44 & 1,675 & 1,657 & 0,018 & 8,86 \\
+                $C$-$C_3$ & red principal (ramal) & 1,75 & 19,045 & 20$\times$1,5 & 17 & 3,11 & 1,12 & 1,657 & 1,648 & 0,009 & 9,36 \\
+                $C$-$D$ & red principal & 10,77 & 76,179 & 42$\times$1,5 & 39 & 12,72 & 1,95 & 1,657 & 1,649 & 0,008 & 7,11 \\
+                $D$-$C_4$ & red principal (ramal) & 1,68 & 11,427 & 15$\times$1 & 13 & 2,72 & 0,88 & 1,649 & 1,638 & 0,011 & 9,64 \\
+                $D$-$E$ & red principal & 13,06 & 64,752 & 42$\times$1,5 & 39 & 15,01 & 1,66 & 1,649 & 1,641 & 0,007 & 6,06 \\
+                $E$-$C_5$ & red principal (ramal) & 1,69 & 26,663 & 22$\times$1 & 20 & 3,29 & 1,33 & 1,641 & 1,634 & 0,008 & 9,52 \\
+                $E$-$C_6$ & red principal (ramal) & 14,46 & 38,090 & 28$\times$1 & 26 & 16,54 & 1,47 & 1,641 & 1,620 & 0,021 & 8,09 \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+        \end{landscape}
+
+        \subsection*{\Large BIBLIOGRAFÍA}
+        \addcontentsline{toc}{subsection}{BIBLIOGRAFÍA}
+        \nocite{*}
+        \begingroup
+        \renewcommand{\section}[2]{} % Evita que el entorno de la bibliografía de IEEEtran inserte un título de sección duplicado
+        \bibliography{refs}
+        \endgroup
         
 
 
