@@ -97,14 +97,14 @@
         
         \begin{itemize}
             \item \underline{Emplazamiento:} Parcela catastral \texttt{8638004TN8183N}, León.
-            \item \underline{Temperatura exterior de cálculo:} $-5\ ^{\circ}\text{C}$, justificada mediante el percentil del 99,6\% de las bases de datos del IDAE para León (estación de León-Virgen del Camino).
+            \item \underline{Temperatura exterior de cálculo:} $-5\ ^{\circ}\text{C}$, justificada mediante el percentil del 99,6\% de las bases de datos del IDAE \cite{idaeclima} para León (estación de León-Virgen del Camino).
             \item \underline{Presión de diseño en red general (MPB):} $1,7\text{ bar}$ (relativos) a la salida de la estación de almacenamiento, con una pérdida de carga admisible máxima del 5\% ($0,085\text{ bar}$), fijando una presión mínima en el punto de consumo de $1,615\text{ bar}$ relativos.
             \item \underline{Presión de regulación de segunda etapa:} $37\text{ mbar}$ a la entrada de cada consumidor industrial.
             \item \underline{Coeficiente de simultaneidad ($f_s$):} $1,0$ (escenario punta simultáneo para garantizar el suministro a todos los equipos).
             \item \underline{Velocidad máxima admisible del gas:} $10\text{ m/s}$ en la red receptora interior (UNE 60670 \cite{une60670}) y $20\text{ m/s}$ en las conducciones de la estación de almacenamiento y derivaciones exteriores (UNE 60250 \cite{une60250}).
         \end{itemize}
 
-        La planta cuenta con seis consumidores específicos identificados como $C_1$ a $C_6$, cuyas potencias nominales, regímenes de funcionamiento diario y consumos energéticos resultantes se detallan en la Tabla~\ref{tab:consumidores}.
+        La planta cuenta con seis consumidores específicos identificados como $C_1$ a $C_6$, cuyas potencias nominales, regímenes de funcionamiento diario y consumos energéticos resultantes se detallan en la \cleverref{tab:consumidores}.
 
         \begin{table}[H]
             \centering
@@ -117,33 +117,33 @@
                 \midrule
                 $C_1$ & Horno de secado 1 & 60 & 12 & 720 \\
                 $C_2$ & Horno de secado 2 & 60 & 12 & 720 \\
-                $C_3$ & Caldera de vapor & 500 & 10 & 5.000 \\
-                $C_4$ & Caldera de agua caliente & 300 & 8 & 2.400 \\
-                $C_5$ & Horno de fusión & 700 & 4 & 2.800 \\
-                $C_6$ & Horno de decapado & 1.000 & 6 & 6.000 \\
+                $C_3$ & Caldera de vapor & 500 & 10 & 5000 \\
+                $C_4$ & Caldera de agua caliente & 300 & 8 & 2400 \\
+                $C_5$ & Horno de fusión & 700 & 4 & 2800 \\
+                $C_6$ & Horno de decapado & 1000 & 6 & 6000 \\
                 \midrule
-                \textbf{Total} & & \textbf{2.620} & & \textbf{17.640} \\
+                \textbf{Total} & & \textbf{2620} & & \textbf{17640} \\
                 \bottomrule
             \end{tabular}%
             }
         \end{table}
 
-        Para los cálculos termodinámicos y dimensionales se adoptan las propiedades físicas del propano comercial establecidas en la Tabla~\ref{tab:propiedades_gas}.
+        Para los cálculos termodinámicos y dimensionales se adoptan las propiedades físicas del propano comercial establecidas en la \cleverref{tab:propiedades_gas}.
 
         \begin{table}[H]
             \centering
             \caption{Propiedades físicas del propano comercial adoptadas para el diseño. Fuente: Elaboración grupal a partir de ficha técnica y UNE 60250 \cite{une60250}.}
             \label{tab:propiedades_gas}
-            \begin{tabular}{lcrc}
+            \begin{tabular}{lrc}
                 \toprule
-                \textbf{Propiedad} & \textbf{Símbolo} & \textbf{Valor} & \textbf{Unidad} \\
+                \textbf{Propiedad} & \textbf{Valor} & \textbf{Unidad} \\
                 \midrule
-                Poder Calorífico Superior & $PCS$ & $13,95$ & $\text{kWh/kg}$ \\
-                Densidad en fase líquida (a $20\ ^{\circ}\text{C}$) & $\rho_{\text{liq}}$ & $506,00$ & $\text{kg/m}^3$ \\
-                Densidad en fase gas (de diseño) & $\rho_{\text{gas}}$ & $1,882$ & $\text{kg/m}^3$ \\
-                Calor Latente de Vaporización & $CLV$ & $0,11$ & $\text{kWh/kg}$ \\
-                Coef. transmisión de calor (recipientes aéreos) & $K$ & $0,0116$ & $\text{kW/m}^2\cdot^{\circ}\text{C}$ \\
-                Temperatura de equilibrio del gas & $T_g$ & $-15,00$ & $^{\circ}\text{C}$ \\
+                Poder Calorífico Superior ($PCS$) & $13,95$ & $\text{kWh/kg}$ \\
+                Densidad en fase líquida a $20\ ^{\circ}\text{C}$ ($\rho_{\text{liq}}$) & $506,00$ & $\text{kg/m}^3$ \\
+                Densidad en fase gas de diseño ($\rho_{\text{gas}}$) & $1,882$ & $\text{kg/m}^3$ \\
+                Calor Latente de Vaporización ($CLV$) & $0,11$ & $\text{kWh/kg}$ \\
+                Coef. transmisión de calor recipientes aéreos ($K$) & $0,0116$ & $\text{kW/m}^2\cdot^{\circ}\text{C}$ \\
+                Temperatura de equilibrio del gas ($T_g$) & $-15,00$ & $^{\circ}\text{C}$ \\
                 \bottomrule
             \end{tabular}
         \end{table}
@@ -157,7 +157,7 @@
         \subsection{ANTECEDENTES.}
         La planta industrial, dedicada a procesos térmicos metalúrgicos y de generación de vapor, requiere un combustible limpio, con alto poder calorífico superior ($13,95\text{ kWh/kg}$) y con un suministro continuo que garantice la estabilidad operacional de los hornos de secado, fusión, decapado y las calderas de servicio.
         
-        La planta de producción consta de seis consumidores principales independientes cuyos datos de partida operativos (potencia nominal y régimen de funcionamiento diario) se detallan en la Tabla~\ref{tab:consumidores}. La distribución espacial y la disposición de estos consumidores sobre la parcela industrial de referencia se representa en la Figura~\ref{fig:parcela_consumidores}.
+        La planta de producción consta de seis consumidores principales independientes cuyos datos de partida operativos (potencia nominal y régimen de funcionamiento diario) se detallan en la \cleverref{tab:consumidores}. La distribución espacial y la disposición de estos consumidores sobre la parcela industrial de referencia se representa en la \cleverref{fig:parcela_consumidores}.
         
         \begin{figure}[H]
             \centering
@@ -195,10 +195,10 @@
             La potencia térmica simultánea de cálculo agregada de los seis consumidores industriales instalados es de \textbf{2.620 kW}.
             
             \subsubsection{Presupuesto total.}
-            El Presupuesto de Ejecución Material (PEM) asciende a un total de $176.555,02\text{ \euro}$. Aplicando un Impuesto sobre el Valor Añadido (IVA) del 21\% ($37.076,55\text{ \euro}$), se obtiene un Presupuesto de Ejecución por Contrata (PEC) de \textbf{213.631,57 \euro}.
+            El Presupuesto de Ejecución Material asciende a un total de $176.555,02\text{ \euro}$. Aplicando un Impuesto sobre el Valor Añadido (IVA) del 21\%, se obtiene un Presupuesto de Ejecución por Contrata de \textbf{213.631,57 \euro}.
         
         \subsection{PROMOTOR DE LA INSTALACIÓN.}
-        El promotor del proyecto es la Escuela de Ingenierías Industrial, Informática y Aeroespacial de la Universidad de León. La autoría del diseño, redacción y justificación técnica del presente documento corresponde a la oficina técnica de ingeniería responsable del proyecto, figurando Alberto España Carrete, Carlos Fernández Palanca, Rubén Modino López y Juan Diego Niño González como proyectistas principales de la instalación, bajo la tutoría y supervisión técnica del ingeniero Roberto Getino de la Mano en el marco de la Universidad de León.
+        El promotor del proyecto es la Escuela de Ingenierías Industrial, Informática y Aeroespacial de la Universidad de León. La autoría del diseño, redacción y justificación técnica del presente documento corresponde a la oficina técnica de ingeniería responsable del proyecto, figurando Alberto España Carrete, Carlos Fernández Palanca, Rubén Modino López y Juan Diego Niño González como proyectistas principales de la instalación, bajo la tutoría y supervisión técnica de Roberto Getino de la Mano en el marco de la Universidad de León.
         
         \subsection{EMPLAZAMIENTO DE LAS INSTALACIONES.}
         Las instalaciones se emplazan en una parcela industrial dentro del término municipal de León, de alta accesibilidad logística. Los límites espaciales del emplazamiento y sus distancias geométricas se definen sobre la parcela catastral \texttt{8638004TN8183N}. La ubicación de la estación se ha elegido en una zona perimetral del solar para cumplir con la normativa de seguridad de forma óptima, aprovechando las alineaciones ciegas y delimitando el espacio mediante muros cortafuegos en los lindes de propiedad más comprometidos.
@@ -207,17 +207,17 @@
         \subsection{REGLAMENTACIÓN Y NORMAS TÉCNICAS CONSIDERADAS.}
         El proyecto de almacenamiento y distribución de GLP se redacta y justifica bajo el estricto cumplimiento del marco legal español e internacional en materia de seguridad industrial e instalaciones de gas. La normativa básica considerada comprende:
         
-        \begin{description}
-            \item[Real Decreto 919/2006, de 28 de julio \cite{rd919}:] Aprueba el Reglamento técnico de distribución y utilización de combustibles gaseosos y sus Instrucciones Técnicas Complementarias (ITC-ICG 01 a 11), siendo de aplicación directa la \textbf{ITC-ICG 03} sobre instalaciones de almacenamiento de gases licuados del petróleo en depósitos fijos.
-            \item[Norma UNE 60250:2008 \cite{une60250}:] "Instalaciones de almacenamiento de gases licuados del petróleo (GLP) en depósitos fijos para su consumo en instalaciones receptoras".
-            \item[Norma UNE 60670:2023 \cite{une60670}:] "Instalaciones receptoras de gas suministradas a una presión máxima de operación (MOP) inferior o igual a $5\text{ bar}$" (Partes 1 a 13).
-            \item[Código Técnico de la Edificación (CTE) - Documento Básico DB-SI \cite{rd314}:] "Seguridad en caso de incendio", de aplicación para la justificación de los muros cortafuegos.
-            \item[Directiva 2014/34/UE (ATEX):] Sobre la aproximación de las legislaciones de los Estados miembros bajo aparatos y sistemas de protección para uso en atmósferas potencialmente explosivas.
-            \item[Norma UNE-EN 1057 \cite{une1057}:] Relativa a tubos redondos de cobre sin soldadura para agua y gas en aplicaciones sanitarias y de calefacción.
-        \end{description}
+        \begin{itemize}
+            \item \underline{Real Decreto 919/2006, de 28 de julio \cite{rd919}:} Aprueba el Reglamento técnico de distribución y utilización de combustibles gaseosos y sus Instrucciones Técnicas Complementarias (ITC-ICG 01 a 11), siendo de aplicación directa la \textbf{ITC-ICG 03} sobre instalaciones de almacenamiento de gases licuados del petróleo en depósitos fijos.
+            \item \underline{Norma UNE 60250:2008 \cite{une60250}:} ``Instalaciones de almacenamiento de gases licuados del petróleo (GLP) en depósitos fijos para su consumo en instalaciones receptoras''.
+            \item \underline{Norma UNE 60670:2023 \cite{une60670}:} ``Instalaciones receptoras de gas suministradas a una presión máxima de operación (MOP) inferior o igual a $5\text{ bar}$'' (Partes 1 a 13).
+            \item \underline{Código Técnico de la Edificación (CTE) - Documento Básico DB-SI \cite{rd314}:} ``Seguridad en caso de incendio'', de aplicación para la justificación de los muros cortafuegos.
+            \item \underline{Directiva 2014/34/UE (ATEX):} Sobre la aproximación de las legislaciones de los Estados miembros bajo aparatos y sistemas de protección para uso en atmósferas potencialmente explosivas.
+            \item \underline{Norma UNE-EN 1057 \cite{une1057}:} Relativa a tubos redondos de cobre sin soldadura para agua y gas en aplicaciones sanitarias y de calefacción.
+        \end{itemize}
 
         \subsection{PLAZO DE EJECUCIÓN.}
-        El plazo total estimado para la ejecución material de las obras civiles y el montaje mecánico, eléctrico y de instrumentación de la estación de almacenamiento y la red de distribución es de \textbf{tres (3) meses}. El cronograma de hitos propuesto se detalla en la Tabla~\ref{tab:cronograma}.
+        El plazo total estimado para la ejecución material de las obras civiles y el montaje mecánico, eléctrico y de instrumentación de la estación de almacenamiento y la red de distribución es de \textbf{tres (3) meses}. El cronograma de hitos propuesto se detalla en la \cleverref{tab:cronograma}.
         
         \begin{table}[H]
             \centering
@@ -249,12 +249,12 @@
         \subsection{ACCESOS.}
         La estación de almacenamiento se ubica de modo que se garantiza la accesibilidad directa y segura para los camiones cisterna articulados de suministro de GLP de propano a granel, conforme a las prescripciones de la norma UNE 60250 \cite{une60250}. Se han establecido los siguientes condicionantes geométricos mínimos en la vía de acceso y el recinto:
         
-        \begin{description}
-            \item[Radio de giro mínimo libre:] $12\text{ m}$ en las curvas de acceso de la parcela para posibilitar las maniobras de los camiones cisterna.
-            \item[Pendiente de descarga:] La zona destinada al estacionamiento del camión cisterna durante las operaciones de descarga dispone de una pendiente inferior al 5\%, totalmente libre de obstáculos y nivelada.
-            \item[Ancho libre de paso del vial:] Mínimo de $4\text{ m}$ en los tramos de acceso al recinto de carga.
-            \item[Salida de vehículos del recinto:] El cerramiento cuenta con una doble puerta que abre hacia el exterior del recinto para facilitar la evacuación rápida en caso de emergencia.
-        \end{description}
+        \begin{itemize}
+            \item \underline{Radio de giro mínimo libre:} $12\text{ m}$ en las curvas de acceso de la parcela para posibilitar las maniobras de los camiones cisterna.
+            \item \underline{Pendiente de descarga:} La zona destinada al estacionamiento del camión cisterna durante las operaciones de descarga dispone de una pendiente inferior al 5\%, totalmente libre de obstáculos y nivelada.
+            \item \underline{Ancho libre de paso del vial:} Mínimo de $4\text{ m}$ en los tramos de acceso al recinto de carga.
+            \item \underline{Salida de vehículos del recinto:} El cerramiento cuenta con una doble puerta que abre hacia el exterior del recinto para facilitar la evacuación rápida en caso de emergencia.
+        \end{itemize}
 
         \subsection{DESCRIPCIÓN Y SISTEMA ELEGIDO.}
         El sistema de distribución elegido consiste en una red aérea de distribución en Media Presión B (MPB) ejecutada íntegramente con tuberías de cobre duro estirado sin soldadura conforme a la norma UNE-EN 1057 \cite{une1057}. El trazado discurre visto por fachadas e itinerarios aéreos elevados apoyados sobre soportes metálicos estructurales.
@@ -279,7 +279,7 @@
             v = 378,04 \cdot \frac{Q}{P_{\text{media\_abs}} \cdot D^2}
         \end{equation}
         
-        El cálculo hidráulico tramo a tramo confirma que la velocidad en la red de distribución se mantiene por debajo de $10\text{ m/s}$ y que la presión en el consumidor más desfavorable ($C_6$) es de $1,623\text{ bar}$ relativos, lo que supera con creces el límite de $1,615\text{ bar}$ mínimos exigidos. El proceso de cálculo se realiza mediante un algoritmo iterativo de dimensionado de tuberías, cuya secuencia lógica se detalla en la Figura~\ref{fig:algoritmo_dimensionado}, y cuyos resultados detallados se presentan en la Tabla~\ref{tab:dimensionado_completo_tuberias}.
+        El cálculo hidráulico tramo a tramo confirma que la velocidad en la red de distribución se mantiene por debajo de $10\text{ m/s}$ y que la presión en el consumidor más desfavorable ($C_6$) es de $1,623\text{ bar}$ relativos, lo que supera con creces el límite de $1,615\text{ bar}$ mínimos exigidos. El proceso de cálculo se realiza mediante un algoritmo iterativo de dimensionado de tuberías, cuya secuencia lógica se detalla en la \cleverref{fig:algoritmo_dimensionado}, y cuyos resultados detallados se presentan en la \cleverref{tab:dimensionado_completo_tuberias}.
 
         \begin{figure}[H]
             \centering
@@ -294,12 +294,12 @@
                 % Nodos
                 \node [block] (datos) {Datos del tramo\\($Q$, $L_{\text{real}}$, $P_A$, accesorios)};
                 \node [block] (diam) [below=of datos] {Selección de \mbox{diámetro} inicial $D$\\(\mbox{mínimo} comercial)};
-                \node [block] (lc) [below=of diam] {Cálculo de \mbox{longitud} \mbox{equivalente}\\$L_c(D) = L_{\text{real}} + \sum L_{\text{eq}}$};
-                \node [block] (dp) [below=of lc] {Cálculo de \mbox{pérdida} de carga $\Delta P$\\(\mbox{Fórmula} de \mbox{Renouard} Cuadrática)};
-                \node [decision] (presion) [below=of dp] {\mbox{¿Verificación} de \mbox{presión}?\\$P_{\text{fin}} \ge 1,615\text{ bar r}$};
-                \node [decision] (velocidad) [below=of presion] {\mbox{¿Verificación} de \mbox{velocidad}?\\$v \le 10\text{ m/s}$ (o $20\text{ m/s}$)};
+                \node [block] (lc) [below=of diam] {Cálculo de longitud equivalente\\$L_c(D) = L_{\text{real}} + \sum L_{\text{eq}}$};
+                \node [block] (dp) [below=of lc] {Cálculo de pérdida de carga $\Delta P$\\(\text{Fórmula} de Renouard Cuadrática)};
+                \node [decision] (presion) [below=of dp] {¿Verificación de presión?\\$P_{\text{fin}} \ge 1,615 \text{ bar (g)}$};
+                \node [decision] (velocidad) [below=of presion] {¿Verificación de velocidad?\\$v \le 10 \text{ m/s}$ (o $20 \text{ m/s}$)};
                 \node [block] (aceptado) [below=of velocidad] {Diámetro aceptado\\(Resultado conforme)};
-                \node [block] (incremento) [right=0.8cm of presion, text width=3.3cm, fill=purple!10] {\mbox{Incrementar} \mbox{diámetro}\\($D \leftarrow D_{\text{siguiente}}$)};
+                \node [block] (incremento) [right=0.8cm of presion, text width=3.3cm, fill=purple!10] {Incrementar diámetro\\($D \leftarrow D_{\text{siguiente}}$)};
 
                 % Conexiones
                 \draw [arrow] (datos) -- (diam);
@@ -321,7 +321,7 @@
         \subsection{CLASIFICACIÓN Y DISTANCIAS DE SEGURIDAD.}
         El almacenamiento cuenta con un volumen geométrico total de $124,30\text{ m}^3$. De acuerdo con el Reglamento aprobado por el Real Decreto 919/2006 \cite{rd919} y la norma UNE 60250:2008 \cite{une60250}, la estación se clasifica como una instalación de \textbf{Categoría A-500} ($100\text{ m}^3 < V \le 500\text{ m}^3$).
         
-        Las distancias de seguridad mínimas respecto a los límites de la parcela industrial y a posibles focos de ignición no clasificados se calculan de acuerdo con las especificaciones de la norma UNE 60250 \cite{une60250}. Para los depósitos aéreos horizontales de esta categoría, se contemplan dos distancias (véase la Figura~\ref{fig:distancias_seguridad}):
+        Las distancias de seguridad mínimas respecto a los límites de la parcela industrial y a posibles focos de ignición no clasificados se calculan de acuerdo con las especificaciones de la norma UNE 60250 \cite{une60250}. Para los depósitos aéreos horizontales de esta categoría, se contemplan dos distancias (véase la \cleverref{fig:distancias_seguridad}):
         \begin{itemize}
             \item $D_o$ (Distancia desde los orificios de los depósitos: válvulas de seguridad, bocas de carga y purgas).
             \item $D_p$ (Distancia desde la proyección vertical de las paredes del recipiente).
@@ -334,7 +334,7 @@
             \label{fig:distancias_seguridad}
         \end{figure}
         
-        Dada la restricción geométrica de la parcela industrial y la ubicación de linderos con vías públicas y propiedades colindantes, las distancias básicas se reducen al 50\% mediante la instalación proyectada de muros cortafuegos con clasificación de resistencia al fuego \textbf{EI-120} y una altura de $3,5\text{ m}$. Las distancias reglamentarias y su verificación real se muestran en la Tabla~\ref{tab:distancias_seguridad} y en el correspondiente cuadro normativo de referencia en la Figura~\ref{fig:tabla_distancias_seguridad}.
+        Dada la restricción geométrica de la parcela industrial y la ubicación de linderos con vías públicas y propiedades colindantes, las distancias básicas se reducen al 50\% mediante la instalación proyectada de muros cortafuegos con clasificación de resistencia al fuego \textbf{EI-120} y una altura de $3,5\text{ m}$. Las distancias reglamentarias y su verificación real se muestran en la \cleverref{tab:distancias_seguridad} y en el correspondiente cuadro normativo de referencia en la \cleverref{fig:tabla_distancias_seguridad}.
         
         \begin{table}[H]
             \centering
@@ -376,7 +376,7 @@
         
         La batería mixta se ha implantado con una separación real de $1,10\text{ m}$ entre ejes de paredes de tanques contiguos, cumpliendo exactamente el límite reglamentario (que exige un mínimo absoluto de $1,0\text{ m}$ para recipientes mayores de $20\text{ m}^3$).
         
-        El recinto de almacenamiento estará delimitado por un cerramiento perimetral de seguridad (ilustrado en la Figura~\ref{fig:cerramiento}) consistente en un vallado metálico de $2,0\text{ m}$ de altura mínima para impedir el acceso de personas no autorizadas. Este vallado se compone de malla metálica diáfana sobre postes metálicos y un zócalo inferior continuo de hormigón con una altura máxima de $30\text{ cm}$, con objeto de no impedir la ventilación natural cruzada y permitir la evacuación o dispersión de posibles fugas de propano gas, al ser éste un fluido más pesado que el aire.
+        El recinto de almacenamiento estará delimitado por un cerramiento perimetral de seguridad (ilustrado en la \cleverref{fig:cerramiento}) consistente en un vallado metálico de $2,0\text{ m}$ de altura mínima para impedir el acceso de personas no autorizadas. Este vallado se compone de malla metálica diáfana sobre postes metálicos y un zócalo inferior continuo de hormigón con una altura máxima de $30\text{ cm}$, con objeto de no impedir la ventilación natural cruzada y permitir la evacuación o dispersión de posibles fugas de propano gas, al ser éste un fluido más pesado que el aire.
 
         \begin{figure}[H]
             \centering
@@ -387,7 +387,7 @@
 
         \subsection{CARACTERÍSTICAS DE LOS EQUIPOS.}
             \subsubsection{Depósitos.}
-            Para satisfacer la autonomía mínima exigida y adaptarse a la morfología de la parcela industrial, se ha adoptado una batería de almacenamiento de superficie de tipo mixto (representada gráficamente en la Figura~\ref{fig:deposito_seleccionado}) con un volumen total de $124,30\text{ m}^3$ ($124.300\text{ litros}$), conformada por:
+            Para satisfacer la autonomía mínima exigida y adaptarse a la morfología de la parcela industrial, se ha adoptado una batería de almacenamiento de superficie de tipo mixto (representada gráficamente en la \cleverref{fig:deposito_seleccionado}) con un volumen total de $124,30\text{ m}^3$ ($124.300\text{ litros}$), conformada por:
             \begin{itemize}
                 \item \underline {Un (1) depósito modelo Lapesa LP46A} (capacidad unitaria $46,60\text{ m}^3$).
                 \item \underline{Tres (3) depósitos modelo Lapesa LP26A} (capacidad unitaria $25,90\text{ m}^3$).
@@ -400,7 +400,7 @@
                 \label{fig:deposito_seleccionado}
             \end{figure}
             
-            La capacidad conjunta cumple con holgura el volumen mínimo de diseño justificado para cubrir la autonomía de proyecto de 30 días ($115,34\text{ m}^3$ geométricos). Los recipientes están fabricados en chapa de acero de alta resistencia para recipientes a presión y han sido ensayados a una presión de prueba hidráulica de $25\text{ bar}$. Sus características dimensionales y constructivas principales se muestran en la Tabla~\ref{tab:caract_depositos} y en la correspondiente ficha técnica comercial de la Figura~\ref{fig:tabla_de_caracteristicas}.
+            La capacidad conjunta cumple con holgura el volumen mínimo de diseño justificado para cubrir la autonomía de proyecto de 30 días ($115,34\text{ m}^3$ geométricos). Los recipientes están fabricados en chapa de acero de alta resistencia para recipientes a presión y han sido ensayados a una presión de prueba hidráulica de $25\text{ bar}$. Sus características dimensionales y constructivas principales se muestran en la \cleverref{tab:caract_depositos} y en la correspondiente ficha técnica comercial de la \cleverref{fig:tabla_de_caracteristicas}.
 
             \begin{table}[H]
                 \centering
@@ -454,7 +454,7 @@
             Para solventar dicho déficit, se instala un sistema de vaporización forzada mixto que consta de:
             \begin{itemize}
                 \item \underline{Intercambiador de serpentín VIA 150} introducido sobre brida DN400 del depósito principal LP46A, con capacidad de vaporización forzada de $150\text{ kg/h}$.
-                \item \underline{Armario de calefacción VPC30C} exterior, de dimensiones $800\times 400\times 1.200\text{ mm}$, que aloja una caldera mural a gas propano de \textbf{45 kW} (véase la Figura~\ref{fig:armario_calefaccion}), siendo la potencia mínima exigida por el intercambiador de $17,5\text{ kW}$, y bomba de circulación de agua caliente en circuito cerrado hacia el serpentín.
+                \item \underline{Armario de calefacción VPC30C} exterior, de dimensiones $800\times 400\times 1.200\text{ mm}$, que aloja una caldera mural a gas propano de \textbf{45 kW} (véase la \cleverref{fig:armario_calefaccion}), siendo la potencia mínima exigida por el intercambiador de $17,5\text{ kW}$, y bomba de circulación de agua caliente en circuito cerrado hacia el serpentín.
             \end{itemize}
             
             \begin{figure}[H]
@@ -601,7 +601,7 @@
         \begin{equation}
             \text{Autonomía real} = \frac{V_{\text{geom, real}} \cdot \text{Fracción útil}}{C_{\text{vol, diario}}} = \frac{124,30\,\text{m}^3 \cdot 0,65}{2,499\,\text{m}^3/\text{día}} = 32,33\,\text{días}
         \end{equation}
-        La batería seleccionada garantiza holgadamente la autonomía mínima exigida de $30\,\text{días}$ (alcanzando una cobertura real de $32,33\,\text{días}$), aportando flexibilidad operativa ante eventuales problemas en la cadena de distribución o climáticos.
+        La batería seleccionada garantiza holgadamente la autonomía mínima exigida de $30\,\text{días}$ (alcanzando una cobertura real de $32,33\,\text{días}$), aportando flexibilidad operativa ante eventuales problemas en la cadena de distribución o climáticos. Todos los cálculos y comprobaciones anteriores han sido programados de forma iterativa y automatizada, tal y como se detalla en el \cleverref{Codigo}.
 
         \subsection{VAPORIZACIÓN.}
         \label{sub:vaporizacion}
@@ -610,7 +610,7 @@
         \subsubsection{Verificación de la vaporización natural}
         La capacidad del depósito para auto-vaporizar gas propano en régimen continuo depende directamente del área de chapa mojada por el líquido, de la conductividad global del conjunto y del gradiente térmico entre el aire exterior y el líquido en ebullición. El balance se evalúa para las condiciones críticas de diseño especificadas en la provincia de León:
         \begin{itemize}
-            \item Temperatura exterior mínima de cálculo ($T_{\text{ext}}$): $-5\,^{\circ}\text{C}$.
+            \item Temperatura exterior mínima de cálculo ($T_{\text{ext}}$): $-5\,^{\circ}\text{C}$ \cite{idaeclima}.
             \item Temperatura de equilibrio del propano líquido en fase de ebullición a la presión mínima admisible de servicio ($T_{\text{liq}}$): $-15\,^{\circ}\text{C}$.
             \item Salto térmico disponible ($\Delta T$): 
             \begin{equation}
@@ -885,7 +885,7 @@
         \begin{equation}
             L_c = L_{\text{real}} + \sum_{i} \left( n_i \cdot \frac{K_i \cdot D_{\text{int}}}{1.000} \right)
         \end{equation}
-        Donde $n_i$ es el número de accesorios del tipo $i$, $D_{\text{int}}$ es el diámetro interior del tramo en milímetros y $K_i$ es el coeficiente adimensional de longitud equivalente correspondiente. En la Tabla~\ref{tab:coeficientes_accesorios} se muestran los coeficientes adimensionales de cálculo considerados para cada tipo de accesorio singular:
+        Donde $n_i$ es el número de accesorios del tipo $i$, $D_{\text{int}}$ es el diámetro interior del tramo en milímetros y $K_i$ es el coeficiente adimensional de longitud equivalente correspondiente. En la \cleverref{tab:coeficientes_accesorios} se muestran los coeficientes adimensionales de cálculo considerados para cada tipo de accesorio singular:
 
         \begin{table}[H]
             \centering

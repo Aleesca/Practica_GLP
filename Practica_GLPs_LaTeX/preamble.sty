@@ -225,8 +225,7 @@
     \cleardoublepage
     \thispagestyle{empty}
     \ifstrequal{#1}{Índice General}{}{%
-        \stepcounter{part}%
-        \phantomsection
+        \refstepcounter{part}%
         \addcontentsline{toc}{part}{#1}%
     }%
     \vspace*{\fill}
@@ -267,3 +266,21 @@
     \normalfont % Reset font to normal
     \cleardoublepage
 }
+
+% --- cleveref setup ---
+\usepackage[spanish,noabbrev,nameinlink]{cleveref}
+
+\crefname{section}{Sección}{Secciones}
+\Crefname{section}{Sección}{Secciones}
+\crefname{figure}{Figura}{Figuras}
+\Crefname{figure}{Figura}{Figuras}
+\crefname{table}{Tabla}{Tablas}
+\Crefname{table}{Tabla}{Tablas}
+\crefname{equation}{Ecuación}{Ecuaciones}
+\Crefname{equation}{Ecuación}{Ecuaciones}
+\crefname{part}{Capítulo}{Capítulos}
+\Crefname{part}{Capítulo}{Capítulos}
+
+% Alias for \cleverref
+\newcommand{\cleverref}[1]{\cref{#1}}
+
