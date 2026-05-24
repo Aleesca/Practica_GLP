@@ -1,10 +1,8 @@
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
+
 import pandas as pd
 import numpy as np
 
-# 1. Parámetros y Constantes (Fuente: Proyecto/Anotaciones/calculo_volumen_deposito.md)
+# 1. Parámetros y Constantes
 PCS_PROPANO = 13.95  # kWh/kg
 DENSIDAD_LIQ = 506.0  # kg/m3 a 20°C
 LLENADO_MAX = 0.85
@@ -20,10 +18,8 @@ print(f"Temperatura exterior de diseño: {TEMP_DISENO} ºC")
 print(f"Presión de servicio para comprobación: {PRESION_SERVICIO} bar")
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
-# 2. Datos de Consumidores (Fuente: Proyecto/Datos.md)
+
+# 2. Datos de Consumidores
 consumidores = [
     {"nombre": "Horno secado 1", "potencia_kw": 60, "horas_dia": 12},
     {"nombre": "Horno secado 2", "potencia_kw": 60, "horas_dia": 12},
@@ -43,9 +39,6 @@ print(f"Energía total diaria: {energia_total_dia} kWh/d")
 print(f"Potencia máxima simultánea (S=1): {potencia_max_simultanea} kW")
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 3. Cálculo de Consumo Másico y Volumétrico
 m_dia = energia_total_dia / PCS_PROPANO
 v_liq_dia = m_dia / DENSIDAD_LIQ  # m3/día
@@ -57,10 +50,7 @@ print(f"Volumen líquido diario: {v_liq_dia:.3f} m3/día")
 print(f"--- Volumen geométrico mínimo requerido: {v_geom_min:.2f} m3 ---")
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
-# 4. Selección del Depósito Comercial (Nueva Configuración por Distancias)
+# 4. Selección del Depósito Comercial
 df_dep = pd.read_csv('datos/tabla_caracteristicas_secadores.csv')
 df_vap_table = pd.read_csv('datos/caudal_vaporizacion.csv')
 df_vapi_table = pd.read_csv('datos/deposito_vaporizador_interno.csv')
@@ -79,9 +69,6 @@ print(f"Configuración de Almacenamiento: {n_grande} x {dep_grande_ref} + {n_peq
 print(f"Capacidad total: {v_total} litros")
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 5. Verificación de Vaporización y Selección de Vaporizador Forzado
 caudal_nec_kgh = potencia_max_simultanea / PCS_PROPANO
 print(f"Demanda punta necesaria: {caudal_nec_kgh:.2f} kg/h")
@@ -129,9 +116,6 @@ else:
     print("Vaporización natural suficiente.")
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 6. Calculo de potencia termica del armario de calefaccion
 armario_calefaccion = 'VPC30C'
 potencia_nominal_armario_kw = 45.0  # kW, caldera integrada en VPC30C según ficha tecnica consultada en GLP
@@ -159,9 +143,6 @@ else:
     print('No se requiere potencia de armario: la vaporizacion natural resulta suficiente.')
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.1. Ejecución del dimensionado por tramos en la propia libreta
 from math import sqrt
 from functools import lru_cache
@@ -504,27 +485,18 @@ print(f'Tramos dimensionados: {len(df_dimensionado)}')
 print(f'No conformidades: {len(df_no_conformidades)}')
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.2. Tramos y caudales
 cols_tramos_visible = ['designacion', 'tipo_tramo', 'longitud_m', 'q_m3_h', 'q_kg_h']
 df_tramos_visible = df_tramos_limpio[cols_tramos_visible].copy()
 df_tramos_visible
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.3. Consumidores y caudales de calculo
 cols_consumidores_visible = ['nodo', 'nombre', 'potencia_kw', 'q_kg_h', 'q_m3_h']
 df_consumidores_visible = df_consumidores_red[cols_consumidores_visible].copy()
 df_consumidores_visible
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.4. Accesorios considerados, vista resumida
 resumen_accesorios_visible = (
     df_accesorios
@@ -541,9 +513,6 @@ resumen_accesorios_visible = (
 resumen_accesorios_visible
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.5. Resultados finales de dimensionado, vista compacta
 cols_dimensionado_visible = [
     'designacion', 'tipo_tramo', 'longitud_m', 'q_m3_h', 'designacion_tubo',
@@ -554,9 +523,6 @@ df_dimensionado_visible = df_dimensionado[cols_dimensionado_visible].copy()
 df_dimensionado_visible
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 7.6. Control final de conformidad
 cols_depositos_visible = [
     'designacion', 'unidades', 'longitud_m_por_unidad', 'q_m3_h_por_unidad',
@@ -577,9 +543,6 @@ else:
     print(df_no_conformidades[cols_dimensionado_visible].to_string(index=False))
 
 
-# ------------------------------------------------------------
-# Code Cell
-# ------------------------------------------------------------
 # 8. Visión final del dimensionado
 columnas_vision = [
     'designacion', 'tipo_tramo', 'longitud_m', 'q_m3_h', 'designacion_tubo',
