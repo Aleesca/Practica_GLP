@@ -41,3 +41,6 @@ Los accesorios seleccionados deben cumplir con el siguiente marco normativo iden
 - [Valvulería y accesorios](valvuleria_accesorios.md)
 - [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
 - [Criterios normativos](criterios_normativos.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](../Especificaciones/equipos-auxiliares.md)
+- [Cálculos justificados: Cálculos de seguridad y auxiliares](../Especificaciones/calculos-auxiliares.md)

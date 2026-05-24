@@ -30,3 +30,7 @@ Para reducir la huella longitudinal y ganar flexibilidad en la implantación, se
 - [Distancias de seguridad](distancias_seguridad.md)
 - [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
 - [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
+- [Memoria: Selección y dimensionado del depósito](../Especificaciones/deposito.md)
+- [Memoria: Autonomía de almacenamiento](../Especificaciones/autonomia.md)
+- [Memoria: Implantación y distancias de seguridad](../Especificaciones/implantacion-seguridad.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)

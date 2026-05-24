@@ -50,7 +50,17 @@ Tono contable, descriptivo, preciso y formal. Presentación estructurada en tabl
 
 ## Conexiones
 - **Alcance:** Requisito 5 (Conducción - mediciones) y Requisito 6 (Estación y esquema - recuentos).
-- **Anotaciones:** [recopilacion_accesorios_costes_glp.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/recopilacion_accesorios_costes_glp.md) (Evidencia), [reporte_accesorios.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/reporte_accesorios.md) (Evidencia), [trazado_red.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/4_GLPs/Proyecto/Anotaciones/trazado_red.md) (Decisión).
+- **Anotaciones:** [Recopilación y coste de accesorios por tramo GLP](../Anotaciones/recopilacion_accesorios_costes_glp.md) (evidencia), [Reporte: catálogos y precios de accesorios GLP](../Anotaciones/reporte_accesorios.md) (evidencia), [Trazado de red](../Anotaciones/trazado_red.md) (decisión).
+
+## Referencias relacionadas
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](equipos-auxiliares.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](instalaciones-auxiliares.md)
+- [Recopilación y coste de accesorios por tramo GLP](../Anotaciones/recopilacion_accesorios_costes_glp.md)
+- [Reporte: catálogos y precios de accesorios GLP](../Anotaciones/reporte_accesorios.md)
+- [Pliego de condiciones técnicas: adquisición de equipos principales GLP](../Anotaciones/pliego_condiciones_equipos_glp.md)
+- [Dimensionado de tuberías GLP](../Anotaciones/dimensionado_tuberias_glp.md)
 
 ## Criterios de aceptación
 - [ ] El presupuesto está estructurado en al menos 6 capítulos lógicos.

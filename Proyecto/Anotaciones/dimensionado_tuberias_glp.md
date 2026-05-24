@@ -278,10 +278,14 @@ Con las hipotesis adoptadas, la red queda dimensionada para un caudal punta simu
 
 ---
 **Véase también:**
-- [Datos de partida](../Datos.md)
+- [Memoria: Hipótesis y datos de partida](../Especificaciones/datos-partida.md)
 - [Caudales de consumidores](caudales_consumidores.md)
 - [Trazado de red](trazado_red.md)
 - [Valvulería y accesorios](valvuleria_accesorios.md)
 - [Criterios normativos](criterios_normativos.md)
 - [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
 - [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
+- [Memoria: Red de distribución y regulación](../Especificaciones/red-distribucion.md)
+- [Especificación: Metodología de longitud y cálculo hidráulico](../Especificaciones/metodologia-longitud-calculo.md)
+- [Especificación: Capítulo de Cálculos justificados](../Especificaciones/calculos-justificados.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)

@@ -31,3 +31,12 @@ Para evitar el acceso de personal ajeno a la instalación y prevenir riesgos de 
 *   **Características del Vallado:** Vallado metálico tipo Hércules o de malla de simple torsión con una altura mínima de **$2,0\text{ metros}$** sobre postes de acero anclados en solera de hormigón. La parte inferior del vallado se cerrará con un zócalo continuo de hormigón para evitar entradas de vegetación o animales.
 *   **Puertas de Acceso:** Se dispondrán dos puertas metálicas de salida peatonal en extremos opuestos del recinto, equipadas con barra antipánico y sentido de apertura obligatorio hacia el exterior de la estación. Adicionalmente, se dispondrá de una puerta de doble hoja de $4,0\text{ metros}$ de ancho para el acceso y mantenimiento de componentes grandes, abriéndose siempre hacia fuera y permaneciendo cerrada bajo candado de seguridad industrial.
 *   **Señalización de Seguridad:** En las paredes exteriores del vallado se dispondrán carteles normalizados legibles de seguridad con las indicaciones: "Peligro: Materia Inflamable - Propano", "Prohibido Fumar o Encender Fuego" y "Prohibido el Paso a Toda Persona Ajena a la Instalación".
+
+## Referencias relacionadas
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](instalaciones-auxiliares.md)
+- [Memoria: Promotor, plazo de ejecución y accesos](promotor-plazo-accesos.md)
+- [Cálculos justificados: Cálculos de seguridad y auxiliares](calculos-auxiliares.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)
+- [Criterios normativos](../Anotaciones/criterios_normativos.md)
+- [Selección del depósito](../Anotaciones/seleccion_deposito.md)

@@ -38,3 +38,11 @@ La estación de almacenamiento Tipo A-500 requiere de recargas periódicas media
 *   **Radio de Giro:** Se ha verificado que el radio de curvatura de la calzada de acceso y del recinto de aproximación de la estación es superior a **$12,5\text{ metros}$** (medidos en el eje interior), permitiendo la entrada directa y salida en marcha hacia adelante del camión cisterna sin necesidad de maniobras de marcha atrás complejas.
 *   **Pendiente Vial:** Las rampas y calzadas del entorno del recinto de almacenamiento presentan pendientes longitudinales inferiores al **$5\%$**, cumpliendo holgadamente el límite reglamentario de la norma UNE 60250 para evitar deslizamientos del vehículo pesado durante la descarga de GLP en condiciones invernales de heladas o nieve en León.
 *   **Zona de Descarga:** El camión cisterna se posicionará en paralelo al cerramiento de la estación, en una zona llana y delimitada donde se ubican la boca de carga del colector y las conexiones del camión. El conductor mantendrá visibilidad directa continua sobre los manómetros de los depósitos durante toda la operación de descarga.
+
+## Referencias relacionadas
+- [Memoria: Introducción, objeto y antecedentes](intro.md)
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Especificación: Presupuesto y mediciones](presupuesto.md)
+- [Cálculos justificados: Índice de anexos e inserción de planos](anejos.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)
+- [Selección del depósito](../Anotaciones/seleccion_deposito.md)

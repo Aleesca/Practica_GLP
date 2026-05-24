@@ -25,13 +25,27 @@ Tono prescriptivo, procedimental y de gestión de calidad técnica. Redactado en
 
 ## Figuras, tablas y resultados
 - No contiene tablas de cálculo numérico, sino un diagrama de flujo metodológico de dependencias de cálculo (Datos de partida $\rightarrow$ Caudales $\rightarrow$ Autonomía/Vaporización $\rightarrow$ Selección Depósito $\rightarrow$ Trazado Red $\rightarrow$ Pérdidas Hidráulicas $\rightarrow$ Distancias de Seguridad).
+- Además, la Memoria debe incorporar el diagrama del método de dimensionado hidráulico iterativo elegido, tomando como referencia el esquema Mermaid de trabajo y adaptándolo a LaTeX mediante `tikzpicture` o figura vectorial/PDF. Este diagrama debe ubicarse en el apartado de red de distribución/canalizaciones y no sustituye al desarrollo numérico del capítulo **Cálculos justificados**.
 
 ## Conexiones
 - **Alcance:** Guía general de salida documental del proyecto.
 - **Anotaciones:** Enlaza transversalmente con las 16 notas técnicas de `Proyecto/Anotaciones/`.
 
+## Referencias relacionadas
+- [Memoria: Hipótesis y datos de partida](datos-partida.md)
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Memoria: Autonomía de almacenamiento](autonomia.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Caudales de consumidores](../Anotaciones/caudales_consumidores.md)
+- [Dimensionado de tuberías GLP](../Anotaciones/dimensionado_tuberias_glp.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)
+
 ## Criterios de aceptación
 - [ ] Prescribe explícitamente el orden secuencial lógico de cálculos del proyecto.
 - [ ] Define la obligatoriedad de la coherencia en las magnitudes críticas (caudal másico agregando $187,81 \text{ kg/h}$ y presión de $1,7 \text{ bar}$).
 - [ ] Establece reglas de validación dimensional.
+- [ ] Exige integrar en Memoria el diagrama del método iterativo de dimensionado hidráulico, adaptado a LaTeX desde Mermaid.
 - [ ] Queda marcado formalmente que no se vuelca literal a la plantilla LaTeX.

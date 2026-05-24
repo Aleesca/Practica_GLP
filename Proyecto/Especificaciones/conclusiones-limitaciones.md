@@ -15,3 +15,13 @@ El diseño propuesto está sujeto a las siguientes limitaciones y condicionantes
 *   **Sobredimensionamiento por Simultaneidad:** La adopción del coeficiente de simultaneidad $f_s = 1$ responde a criterios de seguridad en procesos continuos, pero conduce a un sobredimensionamiento de los diámetros de tuberías y equipos de regulación si la planta industrial opera habitualmente con cargas alternas.
 *   **Rigidez Espacial de la Estación de Almacenamiento:** Debido al exhaustivo aprovechamiento de las distancias de seguridad reducidas mediante muros EI-120, la estación de almacenamiento común se encuentra al límite físico de la parcela catastral. Cualquier necesidad de ampliación futura de volumen de almacenamiento (por ejemplo, para aumentar producción) requerirá la reubicación completa de la estación o la compra de terrenos colindantes.
 *   **Exclusiones del Alcance de Red:** Este diseño finaliza en las llaves de corte individuales situadas en los armarios de regulación de segundo salto. La red interior, quemadores, sistemas de ventilación de naves y chimeneas de evacuación quedan fuera del alcance del presente proyecto y deberán legalizarse de forma independiente.
+
+## Referencias relacionadas
+- [Memoria: Autonomía de almacenamiento](autonomia.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Selección del depósito](../Anotaciones/seleccion_deposito.md)
+- [Dimensionado de tuberías GLP](../Anotaciones/dimensionado_tuberias_glp.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)

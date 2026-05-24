@@ -57,3 +57,7 @@ Tras el montaje mecánico, el adjudicatario del montaje (con soporte del fabrica
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Potencia del armario de calefacción](potencia_armario_calefaccion.md)
 - [Valvulería y accesorios](valvuleria_accesorios.md)
+- [Memoria: Selección y dimensionado del depósito](../Especificaciones/deposito.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](../Especificaciones/vaporizacion.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](../Especificaciones/equipos-auxiliares.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)

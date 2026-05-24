@@ -29,3 +29,11 @@ A partir de estas hipótesis, se calculan las necesidades físicas de almacenami
 
 ## 4. Consecuencias en la Configuración del Sistema
 Un volumen geométrico mínimo de **$115,34\text{ m}^3$** supera la capacidad unitaria de los tanques comerciales aéreos horizontales estándar de catálogo de gran volumen, cuya longitud para capacidades superiores a $100\text{ m}^3$ excede las limitaciones de implantación física dentro de la parcela catastral. Por consiguiente, resulta obligatoria e indispensable la implantación de una **batería mixta de depósitos acoplados en paralelo**, distribuyendo el volumen necesario en varios tanques de longitudes contenidas para lograr la flexibilidad y el encaje geométrico que exige el emplazamiento industrial.
+
+## Referencias relacionadas
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Autonomía de 30 días](../Anotaciones/autonomia_30_dias.md)
+- [Cálculo del volumen del depósito](../Anotaciones/calculo_volumen_deposito.md)
+- [Selección del depósito](../Anotaciones/seleccion_deposito.md)

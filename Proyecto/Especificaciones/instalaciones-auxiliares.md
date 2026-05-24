@@ -31,3 +31,12 @@ Para evitar riesgos de ignición por acumulación de electricidad estática gene
     *   Las tuberías generales de distribución de gas de cobre a la salida de la estación y en la entrada de los consumidores, intercalando **puentes de cobre flexibles** para asegurar la continuidad eléctrica en las uniones roscadas o bridas.
 *   **Resistencia Máxima de Tierra:**
     La resistencia de la red de tierras de la estación se verificará mediante telurómetro en fase de puesta en servicio, garantizando un valor de resistencia óhmica inferior a **$20\ \Omega$** en las peores condiciones de sequedad del terreno.
+
+## Referencias relacionadas
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](equipos-auxiliares.md)
+- [Cálculos justificados: Cálculos de seguridad y auxiliares](calculos-auxiliares.md)
+- [Vaporización forzada](../Anotaciones/vaporizacion_forzada.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)
+- [Potencia del armario de calefacción](../Anotaciones/potencia_armario_calefaccion.md)
+- [Criterios normativos](../Anotaciones/criterios_normativos.md)

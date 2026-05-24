@@ -63,4 +63,5 @@ La redaccion detallada de este bloque se desarrolla en `Proyecto/Especificacione
 ## 6. Anejos
 - Anejo I: Planos.
 - Anejo II: Comprobaciones y tablas auxiliares.
-- Anejo III: Calculos.
+
+Los cálculos desarrollados no constituyen un anejo independiente. Su desarrollo numérico, tablas de comprobación y bibliografía propia se integran en el capítulo **Cálculos justificados** del cuerpo principal.

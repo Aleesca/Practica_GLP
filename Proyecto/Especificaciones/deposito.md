@@ -40,3 +40,13 @@ Los depósitos se proyectan según el código de diseño europeo de recipientes 
     *   Superficie exterior expuesta para intercambio unitaria: $\approx 51,00\text{ m}^2$.
 
 Todos los depósitos disponen de apoyos soldados de fábrica (cunas metálicas) que descansan sobre placas de neopreno elástico colocadas sobre cunas de hormigón armado, permitiendo la libre dilatación longitudinal de los recipientes ante fluctuaciones térmicas estacionales.
+
+## Referencias relacionadas
+- [Memoria: Autonomía de almacenamiento](autonomia.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](equipos-auxiliares.md)
+- [Selección del depósito](../Anotaciones/seleccion_deposito.md)
+- [Cálculo del volumen del depósito](../Anotaciones/calculo_volumen_deposito.md)
+- [Implantación y distancias de seguridad](../Anotaciones/distancias_seguridad.md)
+- [Vaporización forzada](../Anotaciones/vaporizacion_forzada.md)

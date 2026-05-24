@@ -51,3 +51,13 @@ Este valor total disponible ($281,30\text{ kg/h}$) supera con un **margen de seg
 *   La estabilidad absoluta de la presión de regulación MPB a $1,7\text{ bar}$ en el colector común, eliminando oscilaciones en los quemadores.
 *   Capacidad de respuesta ante eventuales descensos térmicos transitorios por debajo de los $-5\text{ ºC}$ de diseño.
 *   Seguridad de funcionamiento incluso con niveles de almacenamiento residuales inferiores al $20\%$.
+
+## Referencias relacionadas
+- [Memoria: Hipótesis y datos de partida](datos-partida.md)
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](instalaciones-auxiliares.md)
+- [Vaporización natural](../Anotaciones/vaporizacion_natural.md)
+- [Vaporización forzada](../Anotaciones/vaporizacion_forzada.md)
+- [Temperatura exterior de cálculo](../Anotaciones/temperatura_diseno.md)
+- [Potencia del armario de calefacción](../Anotaciones/potencia_armario_calefaccion.md)

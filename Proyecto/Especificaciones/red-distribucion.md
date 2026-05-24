@@ -23,3 +23,12 @@ La presión del gas propano en el interior de los depósitos varía sustancialme
 
 ## 3. Dispositivos de Medida
 Para el control de consumos de la planta fabril y balances de eficiencia térmica de los procesos, se dispondrán **contadores de gas de turbina o de pistones rotativos** con compensación térmica integrados en el interior de los armarios de regulación secundarios de cada consumidor, aguas abajo del segundo salto de regulación y protegidos contra intemperie.
+
+## Referencias relacionadas
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Especificación: Metodología de longitud y cálculo hidráulico](metodologia-longitud-calculo.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](equipos-auxiliares.md)
+- [Especificación: Presupuesto y mediciones](presupuesto.md)
+- [Trazado de red](../Anotaciones/trazado_red.md)
+- [Dimensionado de tuberías GLP](../Anotaciones/dimensionado_tuberias_glp.md)
+- [Valvulería y accesorios comerciales](../Anotaciones/valvuleria_accesorios.md)

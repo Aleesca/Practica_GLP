@@ -18,3 +18,7 @@ Los diámetros y materiales deben cumplir con los [criterios normativos](criteri
 - [Criterios normativos](criterios_normativos.md)
 - [Dimensionado de tuberías GLP](dimensionado_tuberias_glp.md)
 - [Valvulería y accesorios](valvuleria_accesorios.md)
+- [Memoria: Red de distribución y regulación](../Especificaciones/red-distribucion.md)
+- [Especificación: Metodología de longitud y cálculo hidráulico](../Especificaciones/metodologia-longitud-calculo.md)
+- [Memoria: Demanda y caudales de cálculo](../Especificaciones/demanda-consumo.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)

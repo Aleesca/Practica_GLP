@@ -91,6 +91,10 @@ A continuación se detallan todos los enlaces y catálogos consultados para la e
 - [Dimensionado de tuberías GLP](dimensionado_tuberias_glp.md)
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Reporte de accesorios](reporte_accesorios.md)
+- [Especificación: Presupuesto y mediciones](../Especificaciones/presupuesto.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](../Especificaciones/equipos-auxiliares.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](../Especificaciones/instalaciones-auxiliares.md)
+- [Memoria: Red de distribución y regulación](../Especificaciones/red-distribucion.md)
 
 ## Limitaciones y Notas Finales
 - **Volatilidad del Cobre**: Los precios del cobre están sujetos a cotización diaria (LME); se recomienda revisión antes de compra.

@@ -67,3 +67,7 @@ Para la definición de este sistema se han consultado las siguientes fuentes ofi
 - [Caudales de consumidores](caudales_consumidores.md)
 - [Recopilación de accesorios y costes](recopilacion_accesorios_costes_glp.md)
 - [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](../Especificaciones/vaporizacion.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](../Especificaciones/equipos-auxiliares.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](../Especificaciones/instalaciones-auxiliares.md)
+- [Memoria: Selección y dimensionado del depósito](../Especificaciones/deposito.md)

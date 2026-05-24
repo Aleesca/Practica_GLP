@@ -73,4 +73,6 @@ La instalacion del armario de calefaccion es necesaria porque la vaporizacion na
 - [Selección del depósito](seleccion_deposito.md)
 - [Temperatura exterior de cálculo](temperatura_diseno.md)
 - [Pliego de condiciones de equipos](pliego_condiciones_equipos_glp.md)
-
+- [Memoria: Vaporización natural vs. vaporización forzada](../Especificaciones/vaporizacion.md)
+- [Memoria: Características de los equipos auxiliares del almacenamiento](../Especificaciones/equipos-auxiliares.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](../Especificaciones/instalaciones-auxiliares.md)

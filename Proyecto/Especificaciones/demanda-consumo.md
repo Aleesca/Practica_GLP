@@ -50,3 +50,11 @@ Los valores de cálculo globales para el conjunto del sistema resultan:
 *   **Caudal másico de cálculo global ($Q_{mas, total}$):** **$187,81\text{ kg/h}$** (suma exacta de consumos individuales, $4,30 + 4,30 + 35,84 + 21,51 + 50,18 + 71,68 = 187,81\text{ kg/h}$).
 *   **Caudal volumétrico de cálculo global ($Q_{vol, total}$):** **$99,79\text{ m}^3/\text{h}$** (equivalente a $187,81\text{ kg/h} / 1,882\text{ kg/m}^3$).
 *   **Energía diaria demandada acumulada ($E_{diaria}$):** **$17.640\text{ kWh/día}$** (equivalente a un consumo de **$1.264,52\text{ kg/día}$** de propano comercial).
+
+## Referencias relacionadas
+- [Memoria: Hipótesis y datos de partida](datos-partida.md)
+- [Memoria: Autonomía de almacenamiento](autonomia.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Caudales de consumidores](../Anotaciones/caudales_consumidores.md)
+- [Dimensionado de tuberías GLP](../Anotaciones/dimensionado_tuberias_glp.md)

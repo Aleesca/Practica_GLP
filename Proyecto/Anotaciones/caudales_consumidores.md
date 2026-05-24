@@ -26,3 +26,7 @@ Se utiliza la potencia nominal de cada equipo y sus horas de funcionamiento prev
 - [Trazado de red](trazado_red.md)
 - [Vaporización natural](vaporizacion_natural.md)
 - [Dimensionado de tuberías GLP](dimensionado_tuberias_glp.md)
+- [Memoria: Hipótesis y datos de partida](../Especificaciones/datos-partida.md)
+- [Memoria: Demanda y caudales de cálculo](../Especificaciones/demanda-consumo.md)
+- [Memoria: Red de distribución y regulación](../Especificaciones/red-distribucion.md)
+- [Memoria: Autonomía de almacenamiento](../Especificaciones/autonomia.md)

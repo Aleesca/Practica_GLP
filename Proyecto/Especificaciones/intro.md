@@ -20,3 +20,12 @@ La dirección técnica de la planta industrial ha solicitado la redacción de es
 6.  **Horno de decapado (C6):** $1000\text{ kW}$ de potencia nominal.
 
 La redacción de este documento y sus cálculos hidráulicos y de implantación correspondientes servirán como base técnica para la ejecución material de las obras y su posterior tramitación ante los organismos oficiales de Industria de la Junta de Castilla y León.
+
+## Referencias relacionadas
+- [Memoria: Hipótesis y datos de partida](datos-partida.md)
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Memoria: Implantación y distancias de seguridad](implantacion-seguridad.md)
+- [Criterios normativos](../Anotaciones/criterios_normativos.md)
+- [Caudales de consumidores](../Anotaciones/caudales_consumidores.md)

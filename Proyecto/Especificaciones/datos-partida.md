@@ -44,3 +44,11 @@ Se adopta como combustible el **propano comercial** (según especificaciones té
     *   Presión de utilización a la entrada de los quemadores: regulada localmente a **$37\text{ mbar}$** (Baja Presión / Media Presión A).
 *   **Límites de Velocidad del Gas:** Se establece un límite de velocidad de circulación del fluido de **$10\text{ m/s}$** para la red general de distribución, extendiéndose a un límite de **$20\text{ m/s}$** únicamente en las tuberías cortas de interconexión y valvulería de la propia estación de almacenamiento.
 *   **Coeficiente de Simultaneidad ($f_s$):** Dado el carácter industrial y continuo de los procesos de fabricación de la planta (hornos de fusión y decapado), se establece un coeficiente de simultaneidad **$f_s = 1$**. Se diseña para el escenario punta más desfavorable en el que todos los equipos demandan potencia máxima al mismo tiempo.
+
+## Referencias relacionadas
+- [Memoria: Demanda y caudales de cálculo](demanda-consumo.md)
+- [Memoria: Autonomía de almacenamiento](autonomia.md)
+- [Memoria: Red de distribución y regulación](red-distribucion.md)
+- [Temperatura exterior de cálculo](../Anotaciones/temperatura_diseno.md)
+- [Criterios normativos](../Anotaciones/criterios_normativos.md)
+- [Caudales de consumidores](../Anotaciones/caudales_consumidores.md)

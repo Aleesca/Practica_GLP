@@ -22,3 +22,6 @@ El déficit de **56,51 kg/h** bajo condiciones críticas justifica la necesidad 
 - [Vaporización forzada](vaporizacion_forzada.md)
 - [Selección del depósito](seleccion_deposito.md)
 - [Potencia del armario de calefacción](potencia_armario_calefaccion.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](../Especificaciones/vaporizacion.md)
+- [Memoria: Demanda y caudales de cálculo](../Especificaciones/demanda-consumo.md)
+- [Memoria: Selección y dimensionado del depósito](../Especificaciones/deposito.md)

@@ -21,3 +21,12 @@ Para proteger los depósitos de almacenamiento frente a sobrepresiones excesivas
 *   **Modelo de Válvula:** Válvula de alivio de presión **RegO RS 3145** (o equivalente de Lapesa) fabricada en bronce y acero inoxidable.
 *   **Presión de Tarado:** Apertura completa a **$20\text{ bar relativos}$**, presión inferior a la presión de prueba del recipiente ($25\text{ bar}$) para garantizar que no se supera el límite elástico del acero del depósito en caso de emergencia.
 *   **Acoplamiento y Colector de Escape:** Las válvulas se montan sobre colectores de desvío de tres vías (**colectores de acoplamiento CD45**), lo que permite desmontar e inspeccionar periódicamente una de las dos válvulas de seguridad sin necesidad de desgasificar o vaciar el depósito de almacenamiento, garantizando que al menos una de las válvulas de alivio permanece en servicio en todo momento. Las descargas se conducen de forma vertical a la atmósfera mediante tubos deflectores que sobresalen por encima del depósito.
+
+## Referencias relacionadas
+- [Memoria: Selección y dimensionado del depósito](deposito.md)
+- [Memoria: Vaporización natural vs. vaporización forzada](vaporizacion.md)
+- [Memoria: Instalaciones auxiliares y de seguridad de la estación](instalaciones-auxiliares.md)
+- [Cálculos justificados: Cálculos de seguridad y auxiliares](calculos-auxiliares.md)
+- [Valvulería y accesorios comerciales](../Anotaciones/valvuleria_accesorios.md)
+- [Pliego de condiciones técnicas: adquisición de equipos principales GLP](../Anotaciones/pliego_condiciones_equipos_glp.md)
+- [Vaporización forzada](../Anotaciones/vaporizacion_forzada.md)
